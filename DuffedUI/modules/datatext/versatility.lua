@@ -4,7 +4,7 @@ if C["datatext"].versatility and C["datatext"].versatility > 0 then
 	local vDB = GetCombatRatingBonus(CR_VERSATILITY_DAMAGE_DONE) + GetVersatilityBonus(CR_VERSATILITY_DAMAGE_DONE)
 	local vDTR = GetCombatRatingBonus(CR_VERSATILITY_DAMAGE_TAKEN) + GetVersatilityBonus(CR_VERSATILITY_DAMAGE_TAKEN)
 
-	local font = D.Font(C["font"].datatext)
+	local font = C["media"].font, 11, "THINOUTLINE"
 	local Stat = CreateFrame("Frame", "DuffedUIStatVersatility")
 	Stat:EnableMouse(true)
 	Stat:SetFrameStrata("BACKGROUND")

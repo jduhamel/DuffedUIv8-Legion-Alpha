@@ -10,7 +10,7 @@ if C["datatext"].avd and C["datatext"].avd > 0 then
 	Stat.Color1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 	Stat.Color2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
-	local font = D.Font(C["font"].datatext)
+	local font = C["media"].font, 11, "THINOUTLINE"
 	local Text  = Stat:CreateFontString("DuffedUIStatAvoidanceText", "OVERLAY")
 	Text:SetFontObject(font)
 	D.DataTextPosition(C["datatext"].avd, Text)
