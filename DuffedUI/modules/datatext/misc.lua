@@ -6,7 +6,7 @@ local D, C, L = unpack(select(2, ...))
 if C["datatext"].honor and C["datatext"].honor > 0 then
 	local Stat = CreateFrame("Frame", "DuffedUIStatHonor")
 
-	local font = C["media"].font, 11, "THINOUTLINE"
+	local font = D.Font(C["font"].datatext)
 	local Text  = Stat:CreateFontString("DuffedUIStatHonorText", "LOW")
 	Text:SetFontObject(font)
 	D.DataTextPosition(C["datatext"].honor, Text)
@@ -27,7 +27,7 @@ end
 if C["datatext"].honorablekills and C["datatext"].honorablekills > 0 then
 	local Stat = CreateFrame("Frame", "DuffedUIStatHK")
 
-	local font = C["media"].font, 11, "THINOUTLINE"
+	local font = D.Font(C["font"].datatext)
 	local Text  = Stat:CreateFontString("DuffedUIStatHKText", "LOW")
 	Text:SetFontObject(font)
 	D.DataTextPosition(C["datatext"].honorablekills, Text)

@@ -7,7 +7,7 @@ Stat:EnableMouse(true)
 Stat:SetFrameStrata("BACKGROUND")
 Stat:SetFrameLevel(3)
 
-local font = C["media"].font, 11, "THINOUTLINE"
+local font = D.Font(C["font"].datatext)
 local Text = Stat:CreateFontString("DuffedUIStatProfessionText", "OVERLAY")
 Text:SetFontObject(font)
 D.DataTextPosition(C["datatext"].profession, Text)

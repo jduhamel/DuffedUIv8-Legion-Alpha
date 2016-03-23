@@ -23,7 +23,7 @@ elseif D.Client == "zhCN" then
 	C["media"].dmgfont = C["media"].cn_dmgfont
 end
 
---[[local duffed = CreateFont("DuffedUI")
+local duffed = CreateFont("DuffedUI")
 duffed:SetFont(C["media"].font, C["font"].duffeduisize, "THINOUTLINE")
 
 local duffed_alt = CreateFont("DuffedUI_Alt")
@@ -40,4 +40,4 @@ local MakeFont = {
 
 D.Font = function(value)
 	if MakeFont[value] then return MakeFont[value] else return MakeFont["DuffedUI"] end
-end]]--
+end

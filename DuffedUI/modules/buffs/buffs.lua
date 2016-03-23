@@ -11,7 +11,7 @@ local filter = C["auras"].consolidate
 local sexID = UnitSex("player")
 local sex = "male"
 local race = D.MyRace
-local font = C["media"].font, 11, "THINOUTLINE"
+local font = D.Font(C["font"].auras)
 
 if sexID == 3 or race == "Pandaren" then sex = "female" end
 if race == "Scourge" then race = "Undead" end
@@ -74,7 +74,6 @@ end
 local UpdateAura = function(self, index)
 	local name, rank, texture, count, dtype, duration, expirationTime, caster, isStealable, shouldConsolidate, spellID, canApplyAura, isBossDebuff = UnitAura(self:GetParent():GetAttribute"unit", index, self.filter)
 	local consolidate = self.consolidate
-	local timeLeft
 	if name then
 		if (duration > 0 and expirationTime and not consolidate) then
 			local timeLeft = expirationTime - GetTime()
@@ -102,11 +101,7 @@ local UpdateAura = function(self, index)
 			if not C["auras"].classictimer then self.Holder:Hide() end
 		end
 
-		if count > 1 then 
-			self.Count:SetText(count)
-		else
-			self.Count:SetText("")
-		end
+		if count > 1 then self.Count:SetText(count) else self.Count:SetText("") end
 
 		if self.filter == "HARMFUL" then
 			local color = DebuffTypeColor[dtype or "none"]

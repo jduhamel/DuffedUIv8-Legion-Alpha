@@ -6,7 +6,7 @@ local Stat = CreateFrame("Frame", "DuffedUIStatDodge")
 Stat:SetFrameStrata("BACKGROUND")
 Stat:SetFrameLevel(3)
 
-local font = C["media"].font, 11, "THINOUTLINE"
+local font = D.Font(C["font"].datatext)
 local Text  = Stat:CreateFontString("DuffedUIStatRegenDodgeText", "OVERLAY")
 Text:SetFontObject(font)
 D.DataTextPosition(C["datatext"].dodge, Text)

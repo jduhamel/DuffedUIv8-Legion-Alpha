@@ -68,7 +68,7 @@ bgframe:SetScript("OnEnter", function(self)
 end) 
 bgframe:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
 
-local font = C["media"].font, 11, "THINOUTLINE"
+local font = D.Font(C["font"].datatext)
 local Stat = CreateFrame("Frame", "DuffedUIStatBattleGround", UIParent)
 Stat:EnableMouse(true)
 Stat.Option = C["datatext"].battleground

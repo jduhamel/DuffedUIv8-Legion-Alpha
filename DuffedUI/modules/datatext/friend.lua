@@ -23,7 +23,7 @@ Stat.Option = C["datatext"].friends
 Stat.Color1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 Stat.Color2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
-local font = C["media"].font, 11, "THINOUTLINE"
+local font = D.Font(C["font"].datatext)
 local Text  = Stat:CreateFontString("DuffedUIStatFriendsText", "OVERLAY")
 Text:SetFontObject(font)
 Text:SetShadowOffset(D.mult, -D.mult)
