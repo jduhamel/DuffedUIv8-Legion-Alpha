@@ -39,7 +39,7 @@ local FACTION_BAR_COLORS = FACTION_BAR_COLORS
 
 local playerFaction = select(1, UnitFactionGroup("player")) == "Horde" and 1 or 0
 local playerGUID = UnitGUID("player")
-local mult = 768 / match(GetCVar("gxResolution"), "%d+x(%d+)")
+local mult = 768 / match(GetCVar("gxWindowedResolution"), "%d+x(%d+)")
 
 local ScheduleFrame = CreateFrame("Frame", "ScheduleFrame", UIParent)
 local ScheduleFrameActive = false
