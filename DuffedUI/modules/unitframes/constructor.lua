@@ -7,7 +7,7 @@ assert(oUF, "DuffedUI was unable to locate oUF install.")
 ns._Objects = {}
 ns._Headers = {}
 
-local font = D.Font(C["font"]["unitframes"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local layout = C["unitframes"]["layout"]
 local move = D["move"]
 
@@ -160,7 +160,7 @@ D["SpawnUF"] = function(self)
 			oUF_PrepArena[i].Health:SetStatusBarTexture(C["media"]["normTex"])
 			oUF_PrepArena[i].Health:SetStatusBarColor(.3, .3, .3, 1)
 			oUF_PrepArena[i].SpecClass = oUF_PrepArena[i].Health:CreateFontString(nil, "OVERLAY")
-			oUF_PrepArena[i].SpecClass:SetFontObject(D.Font(C["font"]["unitframes"]))
+			oUF_PrepArena[i].SpecClass:SetFont(f, fs, ff)
 			oUF_PrepArena[i].SpecClass:Point("CENTER", oUF_PrepArena[i].Health)
 			oUF_PrepArena[i]:Hide()
 		end

@@ -11,21 +11,6 @@ C["general"] = {
 	["calendarevent"] = false,
 }
 
-C["font"] = {
-	["duffeduisize"] = 11,
-	["duffedui_altsize"] = 12,
-	["pixelfontsize"] = 10,
-	["actionbars"] = "DuffedUI",
-	["auras"] = "DuffedUI",
-	["classtimer"] = "DuffedUI",
-	["ses"] = "DuffedUI",
-	["datatext"] = "DuffedUI",
-	["unitframes"] = "DuffedUI",
-	["scd"] = "DuffedUI",
-	["rcd"] = "DuffedUI",
-	["experience"] = "DuffedUI",
-}
-
 C["unitframes"] = {
 	["enable"] = true,
 	["layout"] = 1,

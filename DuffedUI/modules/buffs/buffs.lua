@@ -11,7 +11,7 @@ local filter = C["auras"].consolidate
 local sexID = UnitSex("player")
 local sex = "male"
 local race = D.MyRace
-local font = D.Font(C["font"].auras)
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 
 if sexID == 3 or race == "Pandaren" then sex = "female" end
 if race == "Scourge" then race = "Undead" end
@@ -159,7 +159,7 @@ local Skin = function(self)
 	self.Icon = Icon
 
 	local Count = self:CreateFontString(nil, "OVERLAY")
-	Count:SetFontObject(font)
+	Count:SetFont(f, fs, ff)
 	Count:SetPoint("TOP", self, 1, -4)
 	self.Count = Count
 
@@ -177,7 +177,7 @@ local Skin = function(self)
 		self.Bar = Bar
 
 		local Duration = self:CreateFontString(nil, "OVERLAY")
-		Duration:SetFontObject(font)
+		Duration:SetFont(f, fs, ff)
 		Duration:SetPoint("BOTTOM", 1, -15)
 		self.Duration = Duration
 

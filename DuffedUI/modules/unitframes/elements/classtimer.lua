@@ -24,7 +24,7 @@ local PLAYER_DEBUFF_COLOR = nil
 local TARGET_BAR_COLOR = C["classtimer"]["targetbuffcolor"]
 local TARGET_DEBUFF_COLOR = C["classtimer"]["targetdebuffcolor"]
 local TRINKET_BAR_COLOR = C["classtimer"]["trinketcolor"]
-local font = D.Font(C["font"]["classtimer"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local layout = C["unitframes"]["layout"]
 local move = D["move"]
 
@@ -871,7 +871,7 @@ D["ClassTimer"] = function(self)
 				result.icon = icon
 
 				local stacks = result:CreateFontString(nil, "OVERLAY", nil)
-				stacks:SetFontObject(font)
+				stacks:SetFont(f, fs, ff)
 				stacks:SetShadowColor(0, 0, 0)
 				stacks:SetShadowOffset(1.25, -1.25)
 				stacks:SetJustifyH("RIGHT")
@@ -905,7 +905,7 @@ D["ClassTimer"] = function(self)
 				end
 
 				local name = bar:CreateFontString(nil, "OVERLAY", nil)
-				name:SetFontObject(font)
+				name:SetFont(f, fs, ff)
 				name:SetShadowColor(0, 0, 0)
 				name:SetShadowOffset(1.25, -1.25)
 				name:SetJustifyH("LEFT")
@@ -914,7 +914,7 @@ D["ClassTimer"] = function(self)
 				result.name = name
 
 				local time = bar:CreateFontString(nil, "OVERLAY", nil)
-				time:SetFontObject(font)
+				time:SetFont(f, fs, ff)
 				time:SetJustifyH("RIGHT")
 				time:Point("LEFT", name, "RIGHT", 0, 0)
 				time:Point("RIGHT", bar, "RIGHT", -TEXT_MARGIN, 0)

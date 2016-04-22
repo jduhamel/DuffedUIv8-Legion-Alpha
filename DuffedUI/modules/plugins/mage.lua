@@ -68,7 +68,7 @@ local r = CreateFrame("Frame", nil, f)
 r:Size(DuffedUIMinimap:GetWidth() - 4, 20)
 r:SetPoint("TOPLEFT", f, "TOPLEFT", 2, -2)
 local l = r:CreateFontString("Title", "OVERLAY")
-l:SetFontObject(font)
+l:SetFont(f, fs, ff)
 l:SetPoint("CENTER", r, "CENTER")
 r:SetFrameStrata("HIGH")
  
@@ -81,7 +81,7 @@ for i, spell in pairs(spells) do
 	b:CreateBackdrop()
  
 	local l = b:CreateFontString(nil,"OVERLAY")
-	l:SetFontObject(font)
+	l:SetFont(f, fs, ff)
 	l:SetText(abbrev(GetSpellInfo(spell[1])))
 	b:SetFontString(l)
  

@@ -2,7 +2,7 @@ local D, C, L = unpack(select(2, ...))
 
 local class = select(2, UnitClass("player"))
 local texture = C["media"]["normTex"]
-local font = D.Font(C["font"]["unitframes"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local layout = C["unitframes"]["layout"]
 local backdrop = {
 	bgFile = C["media"]["blank"],
@@ -125,7 +125,7 @@ D["ClassRessource"]["DRUID"] = function(self)
 
 	EclipseBar.Text = EclipseBar:CreateFontString(nil, "OVERLAY")
 	EclipseBar.Text:SetPoint("CENTER", self.Health, "CENTER", 0, 0)
-	EclipseBar.Text:SetFontObject(font)
+	EclipseBar.Text:SetFont(f, fs, ff)
 
 	EclipseBar.PostUpdatePower = D["EclipseDirection"]
 	self.EclipseBar = EclipseBar

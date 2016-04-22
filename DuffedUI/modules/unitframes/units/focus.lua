@@ -8,7 +8,7 @@ ns._Objects = {}
 ns._Headers = {}
 
 local texture = C["media"]["normTex"]
-local font = D.Font(C["font"]["unitframes"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local backdrop = {
 	bgFile = C["media"].blank,
 	insets = {top = -D["mult"], left = -D["mult"], bottom = -D["mult"], right = -D["mult"]},
@@ -40,7 +40,7 @@ D["ConstructUFFocus"] = function(self)
 	healthBG:SetTexture(0, 0, 0)
 
 	health.value =health:CreateFontString(nil, "OVERLAY")
-	health.value:SetFontObject(font)
+	health.value:SetFont(f, fs, ff)
 	health.value:Point("RIGHT", 0, 1)
 
 	health.PostUpdate = D.PostUpdateHealth
@@ -105,7 +105,7 @@ D["ConstructUFFocus"] = function(self)
 	local Name = health:CreateFontString(nil, "OVERLAY")
 	Name:SetPoint("LEFT", health, "LEFT", 2, 0)
 	Name:SetJustifyH("CENTER")
-	Name:SetFontObject(font)
+	Name:SetFont(f, fs, ff)
 	Name:SetShadowColor(0, 0, 0)
 	Name:SetShadowOffset(1.25, -1.25)
 	self:Tag(Name, "[DuffedUI:getnamecolor][DuffedUI:namelong]")
@@ -136,14 +136,14 @@ D["ConstructUFFocus"] = function(self)
 	castbar:CreateBackdrop()
 
 	castbar.time = castbar:CreateFontString(nil, "OVERLAY")
-	castbar.time:SetFontObject(font)
+	castbar.time:SetFont(f, fs, ff)
 	castbar.time:Point("RIGHT", castbar, "RIGHT", -4, 0)
 	castbar.time:SetTextColor(.84, .75, .65)
 	castbar.time:SetJustifyH("RIGHT")
 	castbar.CustomTimeText = D.CustomTimeText
 
 	castbar.Text = castbar:CreateFontString(nil, "OVERLAY")
-	castbar.Text:SetFontObject(font)
+	castbar.Text:SetFont(f, fs, ff)
 	castbar.Text:SetPoint("LEFT", castbar, "LEFT", 4, 0)
 	castbar.Text:SetTextColor(.84, .75, .65)
 	castbar.CustomDelayText = D["CustomDelayText"]

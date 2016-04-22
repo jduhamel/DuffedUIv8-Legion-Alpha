@@ -8,7 +8,7 @@ ns._Objects = {}
 ns._Headers = {}
 
 local texture = C["media"].normTex
-local font = D.Font(C["font"].unitframes)
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local layout = C["unitframes"]["layout"]
 local move = D["move"]
 local backdrop = {
@@ -75,7 +75,7 @@ D["ConstructUFTarget"] = function(self)
 	end
 
 	health.value = health:CreateFontString(nil, "OVERLAY")
-	health.value:SetFontObject(font)
+	health.value:SetFont(f, fs, ff)
 	if layout == 4 then health.value:Point("LEFT", health, "LEFT", 4, 10) else health.value:Point("RIGHT", health, "RIGHT", -4, -1) end
 	health.PostUpdate = D.PostUpdateHealth
 
@@ -134,7 +134,7 @@ D["ConstructUFTarget"] = function(self)
 
 	if layout == 2 or layout == 4 then
 		power.value = health:CreateFontString(nil, "OVERLAY")
-		power.value:SetFontObject(font)
+		power.value:SetFont(f, fs, ff)
 		if layout == 4 then power.value:Point("LEFT", health, "LEFT", 4, -1) else power.value:Point("RIGHT", panel, "RIGHT", -4, -1) end
 	end
 
@@ -234,7 +234,7 @@ D["ConstructUFTarget"] = function(self)
 	local Name = health:CreateFontString(nil, "OVERLAY")
 	if layout == 4 then Name:Point("RIGHT", health, "RIGHT", -4, 0) else Name:Point("LEFT", health, "LEFT", 4, 0) end
 	Name:SetJustifyH("LEFT")
-	Name:SetFontObject(font)
+	Name:SetFont(f, fs, ff)
 	Name:SetShadowOffset(1.25, -1.25)
 	self:Tag(Name, "[DuffedUI:getnamecolor][DuffedUI:namelong] [DuffedUI:diffcolor][level] [shortclassification]")
 
@@ -360,13 +360,13 @@ D["ConstructUFTarget"] = function(self)
 		castbar.PostChannelStart = D["CastBar"]
 
 		castbar.time = castbar:CreateFontString(nil, "OVERLAY")
-		castbar.time:SetFontObject(font)
+		castbar.time:SetFont(f, fs, ff)
 		castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
 		castbar.time:SetTextColor(.84, .75, .65)
 		castbar.time:SetJustifyH("RIGHT")
 
 		castbar.Text = castbar:CreateFontString(nil, "OVERLAY")
-		castbar.Text:SetFontObject(font)
+		castbar.Text:SetFont(f, fs, ff)
 		castbar.Text:Point("LEFT", castbar, "LEFT", 6, 0)
 		castbar.Text:SetTextColor(.84, .75, .65)
 		castbar:CreateBackdrop()

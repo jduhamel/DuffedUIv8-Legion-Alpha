@@ -8,7 +8,7 @@ ns._Objects = {}
 ns._Headers = {}
 
 local texture = C["media"]["normTex"]
-local font = D.Font(C["font"]["unitframes"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local backdrop = {
 	bgFile = C["media"]["blank"],
 	insets = {top = -D["mult"], left = -D["mult"], bottom = -D["mult"], right = -D["mult"]},
@@ -69,7 +69,7 @@ D["ConstructUFMaintank"] = function(self)
 	local Name = health:CreateFontString(nil, "OVERLAY")
 	Name:SetPoint("CENTER", health, "CENTER", 0, 1)
 	Name:SetJustifyH("CENTER")
-	Name:SetFontObject(font)
+	Name:SetFont(f, fs, ff)
 	Name:SetShadowColor(0, 0, 0)
 	Name:SetShadowOffset(1.25, -1.25)
 

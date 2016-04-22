@@ -335,7 +335,7 @@ D.Delay = function(delay, func, ...)
 end
 
 D.CreateBtn = function(name, parent, w, h, tt_txt, txt)
-	local font = D.Font(C["font"].ses)
+	local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 	local b = CreateFrame("Button", name, parent, "SecureActionButtonTemplate")
 	b:Width(w)
 	b:Height(h)
@@ -349,7 +349,7 @@ D.CreateBtn = function(name, parent, w, h, tt_txt, txt)
 	b:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
 
 	b.text = b:CreateFontString(nil, "OVERLAY")
-	b.text:SetFontObject(font)
+	b.text:SetFont(f, fs, ff)
 	b.text:SetText(D.PanelColor..txt)
 	b.text:SetPoint("CENTER", b, "CENTER", 1, -1)
 	b.text:SetJustifyH("CENTER")

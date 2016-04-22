@@ -1,7 +1,7 @@
 local D, C, L = unpack(select(2, ...))
 if C["cooldown"]["scdenable"] ~= true then return end
 
-local font = D.Font(C["font"]["scd"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local texture = C["media"]["normTex"]
 local size = D.Scale(C["cooldown"]["scdsize"])
 local spacing = D.Scale(C["cooldown"]["scdspacing"])
@@ -629,7 +629,7 @@ local function createCooldownFrame(spell)
 	frame.Icon = icon
 
 	local durationText = frame:CreateFontString(nil, "OVERLAY")
-	durationText:SetFontObject(font)
+	durationText:SetFont(f, fs, ff)
 	durationText:SetTextColor(unpack(color))
 	durationText:SetText("")
 	durationText:SetPoint("BOTTOMLEFT", frame, "BOTTOMLEFT", 2, 2)

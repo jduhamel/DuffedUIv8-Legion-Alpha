@@ -9,7 +9,7 @@ ns._Headers = {}
 
 local class = select(2, UnitClass("player"))
 local texture = C["media"]["normTex"]
-local font = D.Font(C["font"]["unitframes"])
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local layout = C["unitframes"]["layout"]
 local move = D["move"]
 local backdrop = {
@@ -83,7 +83,7 @@ D["ConstructUFPlayer"] = function(self)
 	end
 
 	health.value = health:CreateFontString(nil, "OVERLAY")
-	health.value:SetFontObject(font)
+	health.value:SetFont(f, fs, ff)
 	if layout == 4 then health.value:Point("RIGHT", health, "RIGHT", -4, 10) else health.value:Point("RIGHT", health, "RIGHT", -4, -1) end
 	health.PostUpdate = D.PostUpdateHealth
 
@@ -141,7 +141,7 @@ D["ConstructUFPlayer"] = function(self)
 	powerBG.multiplier = .3
 
 	power.value = health:CreateFontString(nil, "OVERLAY")
-	power.value:SetFontObject(font)
+	power.value:SetFont(f, fs, ff)
 	if layout == 4 then power.value:Point("RIGHT", health, "RIGHT", -4, -1) else power.value:Point("LEFT", health, "LEFT", 4, -1) end
 
 	power.PostUpdate = D.PostUpdatePower
@@ -225,7 +225,7 @@ D["ConstructUFPlayer"] = function(self)
 	FlashInfo.parent = self
 	FlashInfo:SetAllPoints(health)
 	FlashInfo.ManaLevel = FlashInfo:CreateFontString(nil, "OVERLAY")
-	FlashInfo.ManaLevel:SetFontObject(font)
+	FlashInfo.ManaLevel:SetFont(f, fs, ff)
 	FlashInfo.ManaLevel:Point("CENTER", health, "CENTER", 0, 1)
 
 	local PVP = health:CreateTexture(nil, "OVERLAY")
@@ -276,7 +276,7 @@ D["ConstructUFPlayer"] = function(self)
 		local Name = health:CreateFontString(nil, "OVERLAY")
 		Name:Point("LEFT", health, "LEFT", 4, 0)
 		Name:SetJustifyH("LEFT")
-		Name:SetFontObject(font)
+		Name:SetFont(f, fs, ff)
 		Name:SetShadowOffset(1.25, -1.25)
 		self:Tag(Name, "[DuffedUI:getnamecolor][DuffedUI:namelong] [DuffedUI:diffcolor][level] [shortclassification]")
 		self.Name = Name
@@ -356,13 +356,13 @@ D["ConstructUFPlayer"] = function(self)
 		castbar.PostChannelStart = D["CastBar"]
 
 		castbar.time = castbar:CreateFontString(nil, "OVERLAY")
-		castbar.time:SetFontObject(font)
+		castbar.time:SetFont(f, fs, ff)
 		castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
 		castbar.time:SetTextColor(.84, .75, .65)
 		castbar.time:SetJustifyH("RIGHT")
 
 		castbar.Text = castbar:CreateFontString(nil, "OVERLAY")
-		castbar.Text:SetFontObject(font)
+		castbar.Text:SetFont(f, fs, ff)
 		castbar.Text:Point("LEFT", castbar, "LEFT", 6, 0)
 		castbar.Text:SetTextColor(.84, .75, .65)
 		castbar:CreateBackdrop()
