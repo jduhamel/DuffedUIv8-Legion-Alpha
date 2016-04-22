@@ -626,8 +626,6 @@ end
 function Options()
 	SetSortBagsRightToLeft(false)
 	SetInsertItemsLeftToRight(false)
-	InterfaceOptionsControlsPanelReverseCleanUpBags:Hide()
-	InterfaceOptionsControlsPanelReverseNewLoot:Hide()
 end
 
 ContainerFrame1Item1:SetScript("OnHide", function()
