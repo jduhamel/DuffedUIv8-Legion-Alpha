@@ -5,8 +5,8 @@
 	<Script file="combat.lua" />
 	<Script file="currency.lua" />
 	<Script file="efl.lua" />
-	<Script file="flightpoint.lua" />
-	<Include file="flightpoint.xml" />
+	<!--<Script file="flightpoint.lua" />
+	<Include file="flightpoint.xml" />-->
 	<Script file="HatTrick.lua" />
 	<Script file="ilevel.lua" />
 	<Script file="ilvlr.lua" />

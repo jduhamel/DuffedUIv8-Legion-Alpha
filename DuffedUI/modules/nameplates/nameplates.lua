@@ -1,10 +1,10 @@
-local D, C, L = unpack(select(2, ...))
+--[[local D, C, L = unpack(select(2, ...))
 if C["nameplate"]["active"] ~= true then return end
 
-local Plates = CreateFrame("Frame", "Plates", UIParent)
+local Plates = CreateFrame("Frame", "Plates", UIParent)]]--
 
 --[[variables]]--
-local Font = C["media"]["font"]
+--[[local Font = C["media"]["font"]
 local _G = _G
 local UnitGUID = UnitGUID
 local GetTime = GetTime
@@ -208,10 +208,10 @@ local UpdateIcon = function(self, texture, expiration, stacks)
 	else
 		ScheduleHide(self, 0)
 	end
-end
+end]]--
 
 --[[Update nameplate debuffs]]--
-function Plates:UpdateAuraWidget(self, guid)
+--[[function Plates:UpdateAuraWidget(self, guid)
 	local widget = self.AuraWidget
 	if not widget then return end
 	local AuraIconFrames = widget.AuraIconFrames
@@ -250,10 +250,10 @@ function Plates:UpdateAuraWidget(self, guid)
 	end
 	for AuraSlotIndex = AuraSlotIndex, C["nameplate"].MaxDebuffs do UpdateIcon(AuraIconFrames[AuraSlotIndex]) end
 	DebuffCache = wipe(DebuffCache)
-end
+end]]--
 
 --[[Create nameplate debuffs]]--
-local CreateAuraIcon = function(parent)
+--[[local CreateAuraIcon = function(parent)
 	local button = CreateFrame("Frame", nil, parent)
 	button:Hide()
 
@@ -283,10 +283,10 @@ local CreateAuraIcon = function(parent)
 
 	button.Poll = parent.PollFunction
 	return button
-end
+end]]--
 
 --[[Create nameplate debuffs with stacks]]--
-local VirtualSetAura = function(guid, spellid, expiration, stacks, caster, duration, texture)
+--[[local VirtualSetAura = function(guid, spellid, expiration, stacks, caster, duration, texture)
 	local filter = false
 	if (caster == playerGUID) then filter = true end
 	if #FilterSpellsCashe > 0 then filter = FilterSpellsCashe[spellid] ~= nil end
@@ -464,10 +464,10 @@ local badR, badG, badB = unpack(C["nameplate"]["threat_badcolor"])
 local transitionR, transitionG, transitionB = unpack(C["nameplate"]["threat_transitioncolor"])
 local UpdateThreat = function(self)
 	if self.health == nil then return end
-	if self.hasClass or self.isTagged then return end
+	if self.hasClass or self.isTagged then return end]]--
 
 	--[[Enhanced Threat feature]]--
-	if not self.old_threat:IsShown() then
+	--[[if not self.old_threat:IsShown() then
 		if InCombatLockdown() and self.isFriendly ~= true then
 			if D.Role == "Tank" then
 				self.health:SetStatusBarColor(badR, badG, badB)
@@ -899,4 +899,4 @@ end)
 
 Plates:RegisterEvent("PLAYER_LOGIN")
 Plates:RegisterEvent("PLAYER_ENTERING_WORLD")
-Plates.updateAll(Plates)
+Plates.updateAll(Plates)]]--

@@ -40,7 +40,7 @@
 	<Script file="opacity.lua" />
 	<Script file="others.lua" />
 	<Script file="petition.lua" />
-	<Script file="pets.lua" />
+	<!--<Script file="pets.lua" />-->
 	<Script file="premade.lua" />
 	<Script file="pve.lua" />
 	<Script file="pvp.lua" />
