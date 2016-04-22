@@ -1,7 +1,7 @@
 local D, C, L = unpack(select(2, ...))
 if (select(2, UnitClass("player")) ~= "MAGE") or not DuffedUIMinimapStatsLeft or not C["misc"]["magemenu"] then return end
 
-local font = D.Font(C["font"].datatext)
+local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
 local spells = (UnitFactionGroup("player") == "Horde") and {
 	--  Tepelort id, Portal id
 	[1] = {53140,53142}, -- Dalaran

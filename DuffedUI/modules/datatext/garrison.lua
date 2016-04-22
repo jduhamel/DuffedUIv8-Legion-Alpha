@@ -18,9 +18,9 @@ Stat.Option = C["datatext"].garrison
 Stat.Color1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 Stat.Color2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
-local font = D.Font(C["font"].datatext)
+local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
 local Text  = Stat:CreateFontString("DuffedUIStatgarrisonText", "OVERLAY")
-Text:SetFontObject(font)
+Text:SetFont(f, fs, ff)
 D.DataTextPosition(C["datatext"].garrison, Text)
 
 --[[Update for textfield]]--
