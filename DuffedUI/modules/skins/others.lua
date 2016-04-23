@@ -459,7 +459,7 @@ local function LoadSkin()
 				DropDownList1:SetTemplate("Transparent")
 			end
 		end
-		InterfaceOptionsHelpPanelResetTutorials:SkinButton()
+		--InterfaceOptionsHelpPanelResetTutorials:SkinButton()
 
 		local optioncheckbox = {
 			-- Graphics
@@ -596,26 +596,26 @@ local function LoadSkin()
 		GraphicsButton:StripTextures()
 		GraphicsButton:SkinButton()
 		Graphics_Quality:SetScript("OnUpdate", function(self) Graphics_Quality:SkinSlideBar(11) end)
-		Graphics_RightQuality:SetAlpha(0)
+		--Graphics_RightQuality:SetAlpha(0)
 
-		Graphics_QualityLow2:Point("BOTTOM", 0, -20)
-		Graphics_QualityFair:Point("BOTTOM", 0, -20)
-		Graphics_RightQualityLabel:Point("TOP", 0, 16)
-		Graphics_QualityMed:Point("BOTTOM", 0, -20)
-		Graphics_QualityHigh2:Point("BOTTOM", 0, -20)
-		Graphics_QualityUltra:Point("BOTTOM", 0, -20)
+		--Graphics_QualityLow2:Point("BOTTOM", 0, -20)
+		--Graphics_QualityFair:Point("BOTTOM", 0, -20)
+		--Graphics_RightQualityLabel:Point("TOP", 0, 16)
+		--Graphics_QualityMed:Point("BOTTOM", 0, -20)
+		--Graphics_QualityHigh2:Point("BOTTOM", 0, -20)
+		--Graphics_QualityUltra:Point("BOTTOM", 0, -20)
 
 		RaidButton:StripTextures()
 		RaidButton:SkinButton()
 		RaidGraphics_Quality:SetScript("OnUpdate", function(self) RaidGraphics_Quality:SkinSlideBar(11) end)
-		RaidGraphics_RightQuality:SetAlpha(0)
+		--[[RaidGraphics_RightQuality:SetAlpha(0)
 
 		RaidGraphics_QualityLow2:Point("BOTTOM", 0, -20)
 		RaidGraphics_QualityFair:Point("BOTTOM", 0, -20)
 		RaidGraphics_RightQualityLabel:Point("TOP", 0, 16)
 		RaidGraphics_QualityMed:Point("BOTTOM", 0, -20)
 		RaidGraphics_QualityHigh2:Point("BOTTOM", 0, -20)
-		RaidGraphics_QualityUltra:Point("BOTTOM", 0, -20)
+		RaidGraphics_QualityUltra:Point("BOTTOM", 0, -20)]]--
 
 		if IsMacClient() then
 			MacOptionsFrame:StripTextures()

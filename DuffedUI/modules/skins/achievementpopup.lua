@@ -45,7 +45,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetAchievementAnchors", SkinAchievePopUp)
+	--hooksecurefunc("AlertFrame_SetAchievementAnchors", SkinAchievePopUp)
 
 	local function SkinDungeonPopUp()
 		for i = 1, DUNGEON_COMPLETION_MAX_REWARDS do
@@ -93,7 +93,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetDungeonCompletionAnchors", SkinDungeonPopUp)
+	--hooksecurefunc("AlertFrame_SetDungeonCompletionAnchors", SkinDungeonPopUp)
 
 	local function DungeonCompletionAlertFrameReward_SetReward(self) self:Hide() end
 	hooksecurefunc("DungeonCompletionAlertFrameReward_SetReward", DungeonCompletionAlertFrameReward_SetReward)
@@ -133,7 +133,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetGuildChallengeAnchors", SkinGuildChallengePopUp)
+	--hooksecurefunc("AlertFrame_SetGuildChallengeAnchors", SkinGuildChallengePopUp)
 
 	local function SkinChallengePopUp()
 		local frame = _G["ChallengeModeAlertFrame1"]
@@ -178,7 +178,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetChallengeModeAnchors", SkinChallengePopUp)
+	--hooksecurefunc("AlertFrame_SetChallengeModeAnchors", SkinChallengePopUp)
 
 	local function SkinScenarioPopUp()
 		local frame = _G["ScenarioAlertFrame1"]
@@ -222,7 +222,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetScenarioAnchors", SkinScenarioPopUp)
+	--hooksecurefunc("AlertFrame_SetScenarioAnchors", SkinScenarioPopUp)
 
 	local function SkinCriteriaPopUp()
 		for i = 1, MAX_ACHIEVEMENT_ALERTS do
@@ -257,7 +257,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetCriteriaAnchors", SkinCriteriaPopUp)
+	--hooksecurefunc("AlertFrame_SetCriteriaAnchors", SkinCriteriaPopUp)
 
 	local function SetLootWonAnchors()
 		for i=1, #LOOT_WON_ALERT_FRAMES do
@@ -288,7 +288,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetLootWonAnchors", SetLootWonAnchors)
+	--hooksecurefunc("AlertFrame_SetLootWonAnchors", SetLootWonAnchors)
 
 	local function SetMoneyWonAnchors()
 		for i=1, #MONEY_WON_ALERT_FRAMES do
@@ -317,7 +317,7 @@ local function LoadSkin()
 			end
 		end
 	end
-	hooksecurefunc("AlertFrame_SetMoneyWonAnchors", SetMoneyWonAnchors)
+	--hooksecurefunc("AlertFrame_SetMoneyWonAnchors", SetMoneyWonAnchors)
 
 	BonusRollLootWonFrame:StripTextures()
 	BonusRollLootWonFrame:SetTemplate("Transparent")

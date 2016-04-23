@@ -3,7 +3,7 @@ if IsAddOnLoaded("AddOnSkins") then return end
 
 local function LoadSkin()
 	CharacterFrameCloseButton:SkinCloseButton()
-	CharacterStatsPaneScrollBar:SkinScrollBar()
+	--CharacterStatsPaneScrollBar:SkinScrollBar()
 	ReputationListScrollFrameScrollBar:SkinScrollBar()
 	TokenFrameContainerScrollBar:SkinScrollBar()
 	GearManagerDialogPopupScrollFrameScrollBar:SkinScrollBar()
@@ -175,7 +175,7 @@ local function LoadSkin()
 	end)
 
 	--[[Handle Tabs at bottom of character frame]]--
-	for i = 1, 4 do _G["CharacterFrameTab" .. i]:SkinTab() end
+	for i = 1, 2 do _G["CharacterFrameTab" .. i]:SkinTab() end
 
 	--[[Buttons used to toggle between equipment manager, titles, and character stats]]--
 	local function FixSidebarTabCoords()
@@ -206,9 +206,6 @@ local function LoadSkin()
 		end
 	end
 	hooksecurefunc("PaperDollFrame_UpdateSidebarTabs", FixSidebarTabCoords)
-
-	--[[Stat panels, atm it looks like 7 is the max]]--
-	for i = 1, 7 do _G["CharacterStatsPaneCategory" .. i]:StripTextures() end
 
 	--[[Reputation]]--
 	local function UpdateFactionSkins()
@@ -258,7 +255,7 @@ local function LoadSkin()
 	end)
 
 	--[[Pet]]--
-	PetModelFrame:CreateBackdrop("Default")
+	--[[PetModelFrame:CreateBackdrop("Default")
 	PetModelFrameRotateRightButton:SkinRotateButton()
 	PetModelFrameRotateLeftButton:SkinRotateButton()
 	PetModelFrameRotateRightButton:ClearAllPoints()
@@ -267,7 +264,7 @@ local function LoadSkin()
 	local xtex = PetPaperDollPetInfo:GetRegions()
 	xtex:SetTexCoord(.12, .63, .15, .55)
 	PetPaperDollPetInfo:CreateBackdrop("Default")
-	PetPaperDollPetInfo:Size(24, 24)
+	PetPaperDollPetInfo:Size(24, 24)]]--
 end
 
 tinsert(D.SkinFuncs["DuffedUI"], LoadSkin)
