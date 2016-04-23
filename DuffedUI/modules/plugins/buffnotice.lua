@@ -1,4 +1,4 @@
-local D, C, L = unpack(select(2, ...))
+--[[local D, C, L = unpack(select(2, ...))
 if C["auras"]["buffnotice"] ~= true then return end
 
 local WarningSound = C["media"]["warning"]
@@ -143,10 +143,10 @@ local function SoundThrottle(self, elapsed)
 	end
 end
 
-local BuffsWarning1 = CreateWarningFrame("BuffsWarning1")
-BuffsWarning1.Buffs = BuffReminder1[D["Class"]] or {}
-BuffsWarning1:SetScript("OnEvent", OnEvent)
+local BuffsWarning1 = CreateWarningFrame("BuffsWarning1")]]--
+--BuffsWarning1.Buffs = BuffReminder1[D["Class"]] or {}
+--[[BuffsWarning1:SetScript("OnEvent", OnEvent)
 
 local BuffsWarningFrame = CreateFrame("Frame", "BuffsWarningFrame", UIParent)
 BuffsWarningFrame:SetSize(40, 40)
-BuffsWarningFrame:SetScript("OnUpdate", SoundThrottle)
+BuffsWarningFrame:SetScript("OnUpdate", SoundThrottle)]]--
