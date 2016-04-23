@@ -105,7 +105,7 @@ end
 
 local function cvarsetup()
 	SetCVar("buffDurations", 1)
-	SetCVar("consolidateBuffs", 0)
+	--SetCVar("consolidateBuffs", 0)
 	SetCVar("scriptErrors", 1)
 	SetCVar("ShowClassColorInNameplate", 1)
 	SetCVar("screenshotQuality", 8)
@@ -120,8 +120,8 @@ local function cvarsetup()
 	SetCVar("UberTooltips", 1)
 	SetCVar("removeChatDelay", 1)
 	SetCVar("showVKeyCastbar", 1)
-	SetCVar("bloatthreat", 0)
-	SetCVar("bloattest", 0)
+	--SetCVar("bloatthreat", 0)
+	--SetCVar("bloattest", 0)
 	SetCVar("showArenaEnemyFrames", 0)
 	SetCVar("alwaysShowActionBars", 1)
 	SetCVar("autoOpenLootHistory", 0)
@@ -138,10 +138,6 @@ OnLogon:SetScript("OnEvent", function(self, event)
 
 	local CD = GetCVar("countdownForCooldowns")
 	if CD == "1" then SetCVar("countdownForCooldowns", "0") end
-	--[[ Remove me if Blizzard fix the issue ]]--
-	--local Bindings = GetCVar("synchronizeBindings")
-	--if Bindings == "1" then SetCVar("synchronizeBindings", "0") end
-	--[[ Remove me if Blizzard fix the issue ]]--
 end)
 
 local function positionsetup()
@@ -153,10 +149,10 @@ local v = CreateFrame("Button", "DuffedUIVersionFrame", UIParent)
 v:SetSize(300, 66)
 v:SetPoint("CENTER")
 v:SetTemplate("Transparent")
-v:FontString("text", C["media"].font, 20)
-v:FontString("text2", C["media"].font, 11)
+v.text = D.SetFontString("text", C["media"].font, 20)
 v.text:SetPoint("CENTER")
 v.text:SetText("|cffC41F3BDuffedUI|r ".. D.Version)
+v.text2 = D.SetFontString("text2", C["media"].font, 11)
 v.text2:SetPoint("BOTTOM", 0, 2)
 v.text2:SetText("by |cffC41F3BMerith - liquidbase|r")
 v:SetScript("OnClick", function() v:Hide() end)
@@ -208,7 +204,7 @@ logo.bg:Point("BOTTOMRIGHT", -2, 2)
 logo.bg:SetTexture(C["media"].duffed_logo)
 
 local name = title:CreateFontString(nil, "OVERLAY")
-name:SetFont( C["media"].font, 16)
+name:SetFont(C["media"].font, 16)
 name:SetPoint("LEFT", title, 7, -1)
 name:SetText(D.Version)
 
