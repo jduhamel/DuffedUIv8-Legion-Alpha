@@ -346,7 +346,7 @@ D.HidePortrait = function(self, unit)
 end
 
 D.PortraitUpdate = function(self, unit)
-	if self:GetModel() and self:GetModel().find and self:GetModel():find("worgenmale") then self:SetCamera(1) end
+	--if self:GetModel() and self:GetModel().find and self:GetModel():find("worgenmale") then self:SetCamera(1) end
 end
 
 local ticks = {}

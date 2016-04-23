@@ -46,7 +46,7 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 	if C["auras"].player then
 		BuffFrame:Kill()
 		TemporaryEnchantFrame:Kill()
-		ConsolidatedBuffs:Kill()
+		--ConsolidatedBuffs:Kill()
 		InterfaceOptionsFrameCategoriesButton12:SetScale(0.00001)
 		InterfaceOptionsFrameCategoriesButton12:SetAlpha(0)	
 	end
@@ -55,14 +55,14 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 	if C["raid"].arena then
 		InterfaceOptionsFrameCategoriesButton10:SetScale(0.00001)
 		InterfaceOptionsFrameCategoriesButton10:SetAlpha(0) 
-		InterfaceOptionsUnitFramePanelArenaEnemyFrames:Kill()
-		InterfaceOptionsUnitFramePanelArenaEnemyCastBar:Kill()
-		InterfaceOptionsUnitFramePanelArenaEnemyPets:Kill()
+		--InterfaceOptionsUnitFramePanelArenaEnemyFrames:Kill()
+		--InterfaceOptionsUnitFramePanelArenaEnemyCastBar:Kill()
+		--InterfaceOptionsUnitFramePanelArenaEnemyPets:Kill()
 	end
 
 	if C["chat"].enable then
 		SetCVar("WholeChatWindowClickable", 0)
-		InterfaceOptionsSocialPanelWholeChatWindowClickable:Kill()
+		--InterfaceOptionsSocialPanelWholeChatWindowClickable:Kill()
 	end
 
 	if C["unitframes"].enable then

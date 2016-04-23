@@ -116,7 +116,7 @@ end)
 local function SkinScenarioButtons()
 	local block = ScenarioStageBlock
 	local _, currentStage, numStages, flags = C_Scenario.GetInfo()
-	local inChallengeMode = C_Scenario.IsChallengeMode()
+	--local inChallengeMode = C_Scenario.IsChallengeMode()
 
 	block:StripTextures()
 	block.NormalBG:SetSize(otf:GetWidth(), 50)
