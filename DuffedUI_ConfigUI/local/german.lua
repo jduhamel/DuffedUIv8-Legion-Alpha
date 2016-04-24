@@ -10,21 +10,6 @@
 	DuffedUIConfigUILocalization.generalcalendarevent = "Deaktiviere die Texturen, der Events, im Kalender"
 	DuffedUIConfigUILocalization.generalautoaccept = "Aktiviere die automatische Einladung von Freunden und Gildenmitgliedern"
 
-	--[[Font]]--
-	DuffedUIConfigUILocalization.font = "Schriftarten"
-	DuffedUIConfigUILocalization.fontduffeduisize = "Schriftgröße der Schriftart 'DuffedUI' (Standard = 11)"
-	DuffedUIConfigUILocalization.fontduffedui_altsize = "Schriftgröße der Schriftart 'DuffedUI Alternativ' (Standard = 12)"
-	DuffedUIConfigUILocalization.fontpixelfontsize = "Schriftgröße der Schriftart 'Pixel Font' (Standard = 12)"
-	DuffedUIConfigUILocalization.fontactionbars = "Schriftart der Aktionsleisten (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r"
-	DuffedUIConfigUILocalization.fontauras = "Schriftart der Auren (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontclasstimer = "Schriftart des Classtimers (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontses = "Schriftart des Talentwechslers (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontdatatext = "Schriftart des Datatexts (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontunitframes = "Schriftart der Einheitenfenster (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontscd = "Schriftart der Abklingzeiten 'Zauber' (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontrcd = "Schriftart der Abklingzeigen 'Raid' (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-	DuffedUIConfigUILocalization.fontexperience = "Schriftart der 'Erfahrungsleiste' (Auswahl: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-
 	--[[Unit Frames]]--
 	DuffedUIConfigUILocalization.unitframes = "Einheitenfenster"
 	DuffedUIConfigUILocalization.unitframesenable = "Aktiviere die DuffedUI Einheitenfenster"

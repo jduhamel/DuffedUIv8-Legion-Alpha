@@ -238,7 +238,7 @@ local CreateAuraTimer = function(self, elapsed)
 				self.remaining:SetText(time)
 				if self.timeLeft <= 5 then self.remaining:SetTextColor(.99, .31, .31) else self.remaining:SetTextColor(1, 1, 1) end
 			else
-				--self.remaining:Hide()
+				self.remaining:Hide()
 				self:SetScript("OnUpdate", nil)
 			end
 			self.elapsed = 0
@@ -249,8 +249,8 @@ end
 D.PostCreateAura = function(self, button)
 	button:SetTemplate("Default")
 
-	--button.remaining = D.SetFontString(button, C["media"].font, 10, "THINOUTLINE")
-	--button.remaining:Point("TOPLEFT", 0, -3)
+	button.remaining = D.SetFontString(button, C["media"].font, 10, "THINOUTLINE")
+	button.remaining:Point("TOPLEFT", 0, -3)
 
 	button.cd.noOCC = true
 	button.cd.noCooldownCount = true
@@ -263,7 +263,7 @@ D.PostCreateAura = function(self, button)
 
 	button.count:Point("BOTTOMRIGHT", 1, 1)
 	button.count:SetJustifyH("RIGHT")
-	--button.count:SetFont(C["media"].font, 9, "THINOUTLINE")
+	button.count:SetFont(C["media"].font, 9, "THINOUTLINE")
 	button.count:SetFontObject("GameFontNormal")
 	button.count:SetTextColor(.84, .75, .65)
 
@@ -275,7 +275,7 @@ D.PostCreateAura = function(self, button)
 	button.overlayFrame:SetFrameLevel(button.cd:GetFrameLevel() + 1)
 	button.overlay:SetParent(button.overlayFrame)
 	button.count:SetParent(button.overlayFrame)
-	--button.remaining:SetParent(button.overlayFrame)
+	button.remaining:SetParent(button.overlayFrame)
 
 	button.Glow = CreateFrame("Frame", nil, button)
 	button.Glow:Point("TOPLEFT", button, "TOPLEFT", -3, 3)

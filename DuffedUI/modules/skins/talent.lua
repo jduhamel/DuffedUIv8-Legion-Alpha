@@ -3,10 +3,13 @@ if IsAddOnLoaded("AddOnSkins") then return end
 
 local function LoadSkin()
 	local buttons = {
-		"PlayerTalentFrameTalentsLearnButton",
+		"PlayerTalentFrameSpecializationSpecButton1",
+		"PlayerTalentFrameSpecializationSpecButton2",
+		"PlayerTalentFrameSpecializationSpecButton3",
+		--"PlayerTalentFrameTalentsLearnButton",
 		"PlayerTalentFrameActivateButton",
-		"PlayerTalentFramePetSpecializationLearnButton",
-		"PlayerTalentFrameSpecializationLearnButton"
+		"PlayerTalentFramePetSpecializationLearnButton"
+		--"PlayerTalentFrameSpecializationLearnButton"
 	}
 
 	for i = 1, #buttons do
@@ -42,10 +45,10 @@ local function LoadSkin()
 		select(i, PlayerTalentFrameSpecializationSpellScrollFrameScrollChild:GetRegions()):Hide()
 	end
 
-	PlayerTalentFrameTalentsClearInfoFrame:SetTemplate("Default")
+	--[[PlayerTalentFrameTalentsClearInfoFrame:SetTemplate("Default")
 	PlayerTalentFrameTalentsClearInfoFrameIcon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 	PlayerTalentFrameTalentsClearInfoFrameIcon:Point("TOPLEFT", 2, -2)
-	PlayerTalentFrameTalentsClearInfoFrameIcon:Point("BOTTOMRIGHT", -2, 2)
+	PlayerTalentFrameTalentsClearInfoFrameIcon:Point("BOTTOMRIGHT", -2, 2)]]
 
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetTexture(1, 1, 1)
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetAlpha(0.2)
@@ -221,11 +224,11 @@ local function LoadSkin()
 					bu.bg.backdrop:SetBackdropColor(unpack(C["media"].backdropcolor))
 					bu.bg.backdrop:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 				end
-				if bu.learnSelection:IsShown() then
+				--[[if bu.learnSelection:IsShown() then
 					bu.backdrop:SetBackdropBorderColor(1, 0.82, 0, 1)
 					bu.bg.backdrop:SetBackdropColor(.2, .2, 0, 1)
 					bu.bg.backdrop:SetBackdropBorderColor(1, 0.82, 0, 1)
-				end
+				end]]
 			end
 		end
 	end)

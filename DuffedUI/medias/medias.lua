@@ -1,10 +1,12 @@
 local D, C, L = unpack(select(2, ...))
 
 C["media"] = {
-	["font"] = [[Interface\Addons\DuffedUI\medias\fonts\normal_font.ttf]],
-	["font2"] = [[Interface\Addons\DuffedUI\medias\fonts\normal_font2.ttf]],
-	["dmgfont"] = [[Interface\AddOns\DuffedUI\medias\fonts\combat.ttf]],
-	["pixelfont"] = [[Interface\Addons\DuffedUI\medias\fonts\pixel_font.ttf]],
+	--["font"] = [[Interface\Addons\DuffedUI\medias\fonts\normal_font.ttf]],
+	["font"] = STANDARD_TEXT_FONT,
+	--["font2"] = [[Interface\Addons\DuffedUI\medias\fonts\normal_font2.ttf]],
+	--["dmgfont"] = [[Interface\AddOns\DuffedUI\medias\fonts\combat.ttf]],
+	--["pixelfont"] = [[Interface\Addons\DuffedUI\medias\fonts\pixel_font.ttf]],
+	["pixel_font"] = STANDARD_TEXT_FONT,
 
 	["fr_font"] = [=[Interface\Addons\DuffedUI\medias\fonts\normal_font.ttf]=],
 	["fr_dmgfont"] = [=[Interface\AddOns\DuffedUI\medias\fonts\combat.ttf]=],
@@ -21,10 +23,12 @@ C["media"] = {
 	["cn_font"] = [=[Fonts\ARKai_T.TTF]=],
 	["cn_dmgfont"] = [[Fonts\ARKai_C.TTF]],
 
-	["normTex"] = [[Interface\AddOns\DuffedUI\medias\textures\normTex]],
+	--["normTex"] = [[Interface\AddOns\DuffedUI\medias\textures\normTex]],
+	["normTex"] = [[Interface\CHATFRAME\CHATFRAMEBACKGROUND]],
 	["glowTex"] = [[Interface\AddOns\DuffedUI\medias\textures\glowTex]],
 	["copyicon"] = [[Interface\AddOns\DuffedUI\medias\textures\copy]],
-	["blank"] = [[Interface\AddOns\DuffedUI\medias\textures\blank]],
+	--["blank"] = [[Interface\AddOns\DuffedUI\medias\textures\blank]],
+	["blank"] = [[Interface\CHATFRAME\CHATFRAMEBACKGROUND]],
 	["duffed"] = [[Interface\AddOns\DuffedUI\medias\textures\duffed]],
 	["duffed_logo"] = [[Interface\AddOns\DuffedUI\medias\textures\logo]],
 	["alliance"] = [[Interface\AddOns\DuffedUI\medias\textures\alliance]],

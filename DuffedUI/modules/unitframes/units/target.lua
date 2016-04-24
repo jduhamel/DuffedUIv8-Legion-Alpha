@@ -394,7 +394,7 @@ D["ConstructUFTarget"] = function(self)
 	end
 	
 	--[[ComboPoints]]--
-	local ComboPoints = CreateFrame("Frame", "ComboPoints", UIParent)
+	--[[local ComboPoints = CreateFrame("Frame", "ComboPoints", UIParent)
 	ComboPoints:Size(216, 5)
 	if C["unitframes"]["attached"] then
 		if layout == 1 then
@@ -428,7 +428,7 @@ D["ConstructUFTarget"] = function(self)
 		ComboPoints[i].bg = ComboPoints[i]:CreateTexture(nil, "ARTWORK")
 	end
 	ComboPoints:CreateBackdrop()
-	self.ComboPointsBar = ComboPoints
+	self.ComboPointsBar = ComboPoints]]--
 	--if C["unitframes"]["oocHide"] then D["oocHide"](ComboPoints) end
 
 	if C["unitframes"]["focusbutton"] then

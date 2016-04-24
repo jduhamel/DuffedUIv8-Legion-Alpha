@@ -10,21 +10,6 @@
 	DuffedUIConfigUILocalization.generalcalendarevent = "禁用行事歷事件特殊材質顯示"
 	DuffedUIConfigUILocalization.generalautoaccept = "啟用自動接受邀請(好友或公會成員)"
 
-	--[[Font]]--
-	DuffedUIConfigUILocalization.font = "字體"
-	DuffedUIConfigUILocalization.fontduffeduisize = " DuffedUI字體大小(默認 = 11)"
-	DuffedUIConfigUILocalization.fontduffedui_altsize = "DuffedUI另類字體(Alternativ)大小(默認 = 12)"
-	DuffedUIConfigUILocalization.fontpixelfontsize = "Pixel像素字大小  (默認 = 12)"
-	DuffedUIConfigUILocalization.fontactionbars = "快捷欄文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontauras = "光環文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontclasstimer = "職業計時器文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontses = "自動切換器文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontdatatext = "信息欄文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontunitframes = "頭像單位框體文字(Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontscd = "法術冷卻文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontrcd = "團隊冷卻文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-	DuffedUIConfigUILocalization.fontexperience = "經驗條文字 (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI 另類字體(Alternativ)|r, |cffC41F3BPixel像素字|r)"
-
 	--[[Unit Frames]]--
 	DuffedUIConfigUILocalization.unitframes = "單位框體"
 	DuffedUIConfigUILocalization.unitframesenable = "啟用Duffed Ui頭像框體"

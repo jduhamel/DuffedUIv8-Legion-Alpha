@@ -1,4 +1,4 @@
-local D, C, L = unpack(select(2, ...)) 
+--[[local D, C, L = unpack(select(2, ...)) 
 if IsAddOnLoaded("OmniCC") or IsAddOnLoaded("ncCooldown") or C["cooldown"].enable ~= true then return end
 
 OmniCC = true
@@ -7,7 +7,8 @@ local DAY, HOUR, MINUTE = 86400, 3600, 60
 local DAYISH, HOURISH, MINUTEISH = 3600 * 23.5, 60 * 59.5, 59.5
 local HALFDAYISH, HALFHOURISH, HALFMINUTEISH = DAY / 2 + 0.5, HOUR / 2 + 0.5, MINUTE / 2 + 0.5
 
-D.SetDefaultActionButtonCooldownFont = C["media"].font
+--D.SetDefaultActionButtonCooldownFont = C["media"].font
+D.SetDefaultActionButtonCooldownFont = "GameFontNormal"
 D.SetDefaultActionButtonCooldownFontSize = 20
 D.SetDefaultActionButtonCooldownMinScale = 0.5
 D.SetDefaultActionButtonCooldownMinDuration = 2.5
@@ -158,4 +159,4 @@ end
 if _G["ActionBarButtonEventsFrame"].frames then
 	for i, frame in pairs(_G["ActionBarButtonEventsFrame"].frames) do actionButton_Register(frame) end
 end
-hooksecurefunc("ActionBarButtonEventsFrame_RegisterFrame", actionButton_Register)
+hooksecurefunc("ActionBarButtonEventsFrame_RegisterFrame", actionButton_Register)]]--

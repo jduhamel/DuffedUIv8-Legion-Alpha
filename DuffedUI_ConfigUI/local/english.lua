@@ -11,21 +11,6 @@ DuffedUIConfigUILocalization.generalblizzardreskin = "Reskin Blizzard frames to 
 DuffedUIConfigUILocalization.generalcalendarevent = "Disable calendar event textures"
 DuffedUIConfigUILocalization.generalautoaccept = "Enable Auto-Invite (Friends and Guildmates)"
 
---[[Font]]--
-DuffedUIConfigUILocalization.font = "Fonts"
-DuffedUIConfigUILocalization.fontduffeduisize = "Fontsize DuffedUI (default = 11)"
-DuffedUIConfigUILocalization.fontduffedui_altsize = "Fontsize DuffedUI Alternativ (default = 12)"
-DuffedUIConfigUILocalization.fontpixelfontsize = "Fontsize Pixel Font (default = 12)"
-DuffedUIConfigUILocalization.fontactionbars = "Actionbar-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontauras = "Aura-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontclasstimer = "Classtimer-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontses = "SpecSwitcher-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontdatatext = "Datatext-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontunitframes = "Unit Frames-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontscd = "SpellCooldown-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontrcd = "RaidCooldowns-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-DuffedUIConfigUILocalization.fontexperience = "ExperienceBar-Font (Values: |cffC41F3BDuffedUI|r, |cffC41F3BDuffedUI Alternativ|r, |cffC41F3BPixel Font|r)"
-
 --[[Unit Frames]]--
 DuffedUIConfigUILocalization.unitframes = "Unit Frames"
 DuffedUIConfigUILocalization.unitframesenable = "Enable DuffedUI Unit Frames"
