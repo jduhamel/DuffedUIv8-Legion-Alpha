@@ -9,9 +9,10 @@ if C["datatext"].bags and C["datatext"].bags > 0 then
 	Stat.Color1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 	Stat.Color2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
-	local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
+	--local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
 	local Text  = Stat:CreateFontString("DuffedUIStatBagsText", "OVERLAY")
-	Text:SetFont(f, fs, ff)
+	Text:SetFontObject("GameFontNormal")
+	--Text:SetFont(f, fs, ff)
 	D.DataTextPosition(C["datatext"].bags, Text)
 
 	local function OnEvent(self, event, ...)

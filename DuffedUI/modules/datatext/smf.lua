@@ -11,9 +11,10 @@ if C["datatext"].smf and C["datatext"].smf > 0 then
 	local scolor1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 	local scolor2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
-	local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
+	--local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
 	local Text  = DuffedUIInfoLeft:CreateFontString(nil, "OVERLAY")
-	Text:SetFont(f, fs, ff)
+	Text:SetFontObject("GameFontNormal")
+	--Text:SetFont(f, fs, ff)
 	D.DataTextPosition(C["datatext"].smf, Text)
 
 	--[[Format Memory]]--

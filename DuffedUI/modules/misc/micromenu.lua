@@ -35,10 +35,10 @@ D.MicroMenu = {
 }
 
 -- need to be opened at least one time before logging in, or big chance of taint later ...
-local taint = CreateFrame("Frame")
+--[[local taint = CreateFrame("Frame")
 taint:RegisterEvent("ADDON_LOADED")
 taint:SetScript("OnEvent", function(self, event, addon)
 	if addon ~= "DuffedUI" then return end
 	ToggleFrame(SpellBookFrame)
 	ToggleCollectionsJournal()
-end)
+end)]]--

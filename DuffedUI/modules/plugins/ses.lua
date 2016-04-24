@@ -74,7 +74,8 @@ else
 end
 spec.t = spec:CreateFontString(spec, "OVERLAY")
 spec.t:SetPoint("CENTER")
-spec.t:SetFont(f, fs, ff)
+--spec.t:SetFont(f, fs, ff)
+spec.t:SetFontObject("GameFontNormal")
 
 local int = 1
 local function Update(self, t)
@@ -208,7 +209,8 @@ toggle:EnableMouse(true)
 toggle:RegisterForClicks("AnyUp")
 toggle.t = toggle:CreateFontString(nil, "OVERLAY")
 toggle.t:SetPoint("CENTER", 0, 0)
-toggle.t:SetFont(f, fs, ff)
+--toggle.t:SetFont(f, fs, ff)
+toggle.t:SetFontObject("GameFontNormal")
 toggle.t:SetText(cp .. "+|r")
 toggle:SetScript("OnEnter", function(self) self:SetBackdropBorderColor(unpack(hoverovercolor)) end)
 toggle:SetScript("OnLeave", function(self) self:SetBackdropBorderColor(unpack(C["media"].bordercolor)) end)

@@ -238,7 +238,7 @@ local CreateAuraTimer = function(self, elapsed)
 				self.remaining:SetText(time)
 				if self.timeLeft <= 5 then self.remaining:SetTextColor(.99, .31, .31) else self.remaining:SetTextColor(1, 1, 1) end
 			else
-				self.remaining:Hide()
+				--self.remaining:Hide()
 				self:SetScript("OnUpdate", nil)
 			end
 			self.elapsed = 0
@@ -249,8 +249,8 @@ end
 D.PostCreateAura = function(self, button)
 	button:SetTemplate("Default")
 
-	button.remaining = D.SetFontString(button, C["media"].font, 10, "THINOUTLINE")
-	button.remaining:Point("TOPLEFT", 0, -3)
+	--button.remaining = D.SetFontString(button, C["media"].font, 10, "THINOUTLINE")
+	--button.remaining:Point("TOPLEFT", 0, -3)
 
 	button.cd.noOCC = true
 	button.cd.noCooldownCount = true
@@ -263,7 +263,8 @@ D.PostCreateAura = function(self, button)
 
 	button.count:Point("BOTTOMRIGHT", 1, 1)
 	button.count:SetJustifyH("RIGHT")
-	button.count:SetFont(C["media"].font, 9, "THINOUTLINE")
+	--button.count:SetFont(C["media"].font, 9, "THINOUTLINE")
+	button.count:SetFontObject("GameFontNormal")
 	button.count:SetTextColor(.84, .75, .65)
 
 	button.overlayFrame = CreateFrame("frame", nil, button, nil)
@@ -274,7 +275,7 @@ D.PostCreateAura = function(self, button)
 	button.overlayFrame:SetFrameLevel(button.cd:GetFrameLevel() + 1)
 	button.overlay:SetParent(button.overlayFrame)
 	button.count:SetParent(button.overlayFrame)
-	button.remaining:SetParent(button.overlayFrame)
+	--button.remaining:SetParent(button.overlayFrame)
 
 	button.Glow = CreateFrame("Frame", nil, button)
 	button.Glow:Point("TOPLEFT", button, "TOPLEFT", -3, 3)
@@ -284,7 +285,7 @@ D.PostCreateAura = function(self, button)
 	button.Glow:SetBackdropColor(0, 0, 0, 0)
 	button.Glow:SetBackdropBorderColor(0, 0, 0)
 
-	local Animation = button:CreateAnimationGroup()
+	--[[local Animation = button:CreateAnimationGroup()
 	Animation:SetLooping("BOUNCE")
 
 	local FadeOut = Animation:CreateAnimation("Alpha")
@@ -292,7 +293,7 @@ D.PostCreateAura = function(self, button)
 	FadeOut:SetDuration(.6)
 	FadeOut:SetSmoothing("IN_OUT")
 
-	button.Animation = Animation
+	button.Animation = Animation]]--
 end
 
 D.PostUpdateAura = function(self, unit, icon, index, offset, filter, isDebuff, duration, timeLeft)
@@ -307,15 +308,15 @@ D.PostUpdateAura = function(self, unit, icon, index, offset, filter, isDebuff, d
 				icon.icon:SetDesaturated(false)
 				icon:SetBackdropBorderColor(color.r * .8, color.g * .8, color.b * .8)
 			end
-		else
+		--[[else
 			if isStealable or ((D.Class == "MAGE" or D.Class == "PRIEST" or D.Class == "SHAMAN") and dtype == "Magic") and not UnitIsFriend("player", unit) then
 				if not icon.Animation:IsPlaying() then icon.Animation:Play() end
 			else
 				if icon.Animation:IsPlaying() then icon.Animation:Stop() end
-			end
+			end]]--
 		end
 
-		if duration and duration > 0 then icon.remaining:Show() else icon.remaining:Hide() end
+		--if duration and duration > 0 then icon.remaining:Show() else icon.remaining:Hide() end
 
 		icon.duration = duration
 		icon.timeLeft = expirationTime
@@ -541,7 +542,8 @@ D.createAuraWatch = function(self, unit)
 			if (spell[4]) then tex:SetVertexColor(unpack(spell[4])) else tex:SetVertexColor(.8, .8, .8) end
 
 			local count = icon:CreateFontString(nil, "OVERLAY")
-			count:SetFont(C["media"].font, 8, "THINOUTLINE")
+			--count:SetFont(C["media"].font, 8, "THINOUTLINE")
+			count:SetFontObject("GameFontNormal")
 			count:SetPoint("CENTER", unpack(D.countOffsets[spell[2]]))
 			icon.count = count
 

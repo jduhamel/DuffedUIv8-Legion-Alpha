@@ -76,17 +76,20 @@ Stat.Color1 = D.RGBToHex(unpack(C["media"].datatextcolor1))
 Stat.Color2 = D.RGBToHex(unpack(C["media"].datatextcolor2))
 
 local Text1  = DuffedUIInfoLeftBattleGround:CreateFontString("DuffedUIStatBattleGroundText1", "OVERLAY")
-Text1:SetFont(f, fs, ff)
+--Text1:SetFont(f, fs, ff)
+Text1:SetFontObject("GameFontNormal")
 Text1:SetPoint("LEFT", 30, .5)
 Text1:SetHeight(DuffedUIInfoLeft:GetHeight())
 
 local Text2  = DuffedUIInfoLeftBattleGround:CreateFontString("DuffedUIStatBattleGroundText2", "OVERLAY")
-Text2:SetFont(f, fs, ff)
+--Text2:SetFont(f, fs, ff)
+Text2:SetFontObject("GameFontNormal")
 Text2:SetPoint("CENTER", 0, .5)
 Text2:SetHeight(DuffedUIInfoLeft:GetHeight())
 
 local Text3  = DuffedUIInfoLeftBattleGround:CreateFontString("DuffedUIStatBattleGroundText3", "OVERLAY")
-Text3:SetFont(f, fs, ff)
+--Text3:SetFont(f, fs, ff)
+Text3:SetFontObject("GameFontNormal")
 Text3:SetPoint("RIGHT", -30, .5)
 Text3:SetHeight(DuffedUIInfoLeft:GetHeight())
 
