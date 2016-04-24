@@ -216,6 +216,8 @@ C["misc"] = {
 	["XPBar"] = true,
 	["XPBarWidth"] = 378,
 	["magemenu"] = false,
+	["artifact"] = true,
+	["artifactwidth"] = 378,
 }
 
 C["duffed"] = {
