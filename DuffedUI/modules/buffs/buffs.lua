@@ -159,8 +159,7 @@ local Skin = function(self)
 	self.Icon = Icon
 
 	local Count = self:CreateFontString(nil, "OVERLAY")
-	--Count:SetFont(f, fs, ff)
-	Count:SetFontObject("GameFontNormal")
+	Count:SetFont(f, fs, ff)
 	Count:SetPoint("TOP", self, 1, -4)
 	self.Count = Count
 
@@ -178,8 +177,7 @@ local Skin = function(self)
 		self.Bar = Bar
 
 		local Duration = self:CreateFontString(nil, "OVERLAY")
-		--Duration:SetFont(f, fs, ff)
-		Duration:SetFontObject("GameFontNormal")
+		Duration:SetFont(f, fs, ff)
 		Duration:SetPoint("BOTTOM", 1, -15)
 		self.Duration = Duration
 

@@ -264,7 +264,6 @@ D.PostCreateAura = function(self, button)
 	button.count:Point("BOTTOMRIGHT", 1, 1)
 	button.count:SetJustifyH("RIGHT")
 	button.count:SetFont(C["media"].font, 9, "THINOUTLINE")
-	button.count:SetFontObject("GameFontNormal")
 	button.count:SetTextColor(.84, .75, .65)
 
 	button.overlayFrame = CreateFrame("frame", nil, button, nil)
@@ -542,8 +541,7 @@ D.createAuraWatch = function(self, unit)
 			if (spell[4]) then tex:SetVertexColor(unpack(spell[4])) else tex:SetVertexColor(.8, .8, .8) end
 
 			local count = icon:CreateFontString(nil, "OVERLAY")
-			--count:SetFont(C["media"].font, 8, "THINOUTLINE")
-			count:SetFontObject("GameFontNormal")
+			count:SetFont(C["media"].font, 8, "THINOUTLINE")
 			count:SetPoint("CENTER", unpack(D.countOffsets[spell[2]]))
 			icon.count = count
 

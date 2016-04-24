@@ -6,10 +6,9 @@ Stat:EnableMouse(true)
 Stat:SetFrameStrata("BACKGROUND")
 Stat:SetFrameLevel(3)
 
---local f, fs, ff = "GameFontNormal", 11, "THINOUTLINE"
+local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 local Text  = DuffedUIInfoLeft:CreateFontString(nil, "OVERLAY")
-Text:SetFontObject("GameFontNormal")
---Text:SetFont(f, fs, ff)
+Text:SetFont(f, fs, ff)
 D.DataTextPosition(C["datatext"].wowtime, Text)
 
 local int = 1

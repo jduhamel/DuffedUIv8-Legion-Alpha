@@ -73,18 +73,17 @@ D["ConstructUFPlayer"] = function(self)
 	healthBG:SetAllPoints()
 	healthBG:SetTexture(0, 0, 0)
 
-	--[[if C["unitframes"]["percent"] then
+	if C["unitframes"]["percent"] then
 		local percHP
 		percHP = D.SetFontString(health, C["media"].font, 20, "THINOUTLINE")
 		percHP:SetTextColor(unpack(C["media"].datatextcolor1))
 		percHP:Point("LEFT", health, "RIGHT", 25, -10)
 		self:Tag(percHP, "[DuffedUI:perchp]")
 		self.percHP = percHP
-	end]]
+	end
 
 	health.value = health:CreateFontString(nil, "OVERLAY")
-	--health.value:SetFont(f, fs, ff)
-	health.value:SetFontObject("GameFontNormal")
+	health.value:SetFont(f, fs, ff)
 	if layout == 4 then health.value:Point("RIGHT", health, "RIGHT", -4, 10) else health.value:Point("RIGHT", health, "RIGHT", -4, -1) end
 	health.PostUpdate = D.PostUpdateHealth
 
@@ -142,8 +141,7 @@ D["ConstructUFPlayer"] = function(self)
 	powerBG.multiplier = .3
 
 	power.value = health:CreateFontString(nil, "OVERLAY")
-	--power.value:SetFont(f, fs, ff)
-	power.value:SetFontObject("GameFontNormal")
+	power.value:SetFont(f, fs, ff)
 	if layout == 4 then power.value:Point("RIGHT", health, "RIGHT", -4, -1) else power.value:Point("LEFT", health, "LEFT", 4, -1) end
 
 	power.PostUpdate = D.PostUpdatePower
@@ -227,8 +225,7 @@ D["ConstructUFPlayer"] = function(self)
 	FlashInfo.parent = self
 	FlashInfo:SetAllPoints(health)
 	FlashInfo.ManaLevel = FlashInfo:CreateFontString(nil, "OVERLAY")
-	--FlashInfo.ManaLevel:SetFont(f, fs, ff)
-	FlashInfo.ManaLevel:SetFontObject("GameFontNormal")
+	FlashInfo.ManaLevel:SetFont(f, fs, ff)
 	FlashInfo.ManaLevel:Point("CENTER", health, "CENTER", 0, 1)
 
 	local PVP = health:CreateTexture(nil, "OVERLAY")
@@ -279,19 +276,17 @@ D["ConstructUFPlayer"] = function(self)
 		local Name = health:CreateFontString(nil, "OVERLAY")
 		Name:Point("LEFT", health, "LEFT", 4, 0)
 		Name:SetJustifyH("LEFT")
-		--Name:SetFont(f, fs, ff)
-		Name:SetFontObject("GameFontNormal")
+		Name:SetFont(f, fs, ff)
 		Name:SetShadowOffset(1.25, -1.25)
 		self:Tag(Name, "[DuffedUI:getnamecolor][DuffedUI:namelong] [DuffedUI:diffcolor][level] [shortclassification]")
 		self.Name = Name
 	end
 
 	--[[Combat feedback & Healcom]]
-	--[[if C["unitframes"]["combatfeedback"] then
+	if C["unitframes"]["combatfeedback"] then
 		local CombatFeedbackText
 		CombatFeedbackText = D.SetFontString(health, C["media"].font, 11, "THINOUTLINE")
-		CombatFeedbackText:SetFontObject("GameFontNormal")
-		CombatFeedbackText:Point(health, "CENTER", 0, 1)
+		CombatFeedbackText:Point("CENTER", 0, 1)
 		CombatFeedbackText.colors = {
 			DAMAGE = {.69, .31, .31},
 			CRUSHING = {.69, .31, .31},
@@ -309,7 +304,7 @@ D["ConstructUFPlayer"] = function(self)
 			CRITENERGIZE = {.31, .45, .63},
 		}
 		self.CombatFeedbackText = CombatFeedbackText
-	end]]--
+	end
 
 	if C["unitframes"]["healcomm"] then
 		local mhpb = CreateFrame("StatusBar", nil, health)
@@ -361,15 +356,13 @@ D["ConstructUFPlayer"] = function(self)
 		castbar.PostChannelStart = D["CastBar"]
 
 		castbar.time = castbar:CreateFontString(nil, "OVERLAY")
-		--castbar.time:SetFont(f, fs, ff)
-		castbar.time:SetFontObject("GameFontNormal")
+		castbar.time:SetFont(f, fs, ff)
 		castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
 		castbar.time:SetTextColor(.84, .75, .65)
 		castbar.time:SetJustifyH("RIGHT")
 
 		castbar.Text = castbar:CreateFontString(nil, "OVERLAY")
-		--castbar.Text:SetFont(f, fs, ff)
-		castbar.Text:SetFontObject("GameFontNormal")
+		castbar.Text:SetFont(f, fs, ff)
 		castbar.Text:Point("LEFT", castbar, "LEFT", 6, 0)
 		castbar.Text:SetTextColor(.84, .75, .65)
 		castbar:CreateBackdrop()

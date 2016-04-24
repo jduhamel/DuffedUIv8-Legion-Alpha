@@ -19,7 +19,6 @@ local ALLOWED_GROUPS = {
 	["duffed"] = 1,
 	["classtimer"] = 1,
 	["raid"] = 1,
-	--["font"] = 1,
 	["nameplate"] = 1,
 }
 
@@ -46,8 +45,7 @@ local NewButton = function(text, parent)
 	local result = CreateFrame("Button", nil, parent)
 	local label = result:CreateFontString(nil, "OVERLAY", nil)
 
-	--label:SetFont(C["media"].font, 11, "THINOUTLINE")
-	label:SetFontObject("GameFontNormal")
+	label:SetFont(C["media"].font, 11, "THINOUTLINE")
 	label:SetText(text)
 	result:SetWidth(label:GetWidth())
 	result:SetHeight(label:GetHeight())
@@ -113,7 +111,6 @@ local function ShowGroup(group)
 		local o = "DuffedUIConfigUI"..group
 		local translate = Local(group)
 
-		_G["DuffedUIConfigUITitle"]:SetFontObject("GameFontNormal")
 		_G["DuffedUIConfigUITitle"]:SetText(translate)
 		local height = _G["DuffedUIConfigUI"..group]:GetHeight()
 		_G["DuffedUIConfigUI"..group]:Show()
@@ -353,8 +350,7 @@ function CreateDuffedUIConfigUI()
 				local translate = Local(group..option)
 
 				_G["DuffedUIConfigUI" .. group..option.."Text"]:SetText(translate)
-				--_G["DuffedUIConfigUI" .. group..option.."Text"]:SetFont(C["media"].font, 11, "")
-				_G["DuffedUIConfigUI" .. group..option.."Text"]:SetFontObject("GameFontNormal")
+				_G["DuffedUIConfigUI" .. group..option.."Text"]:SetFont(C["media"].font, 11, "")
 				button:SetChecked(value)
 				button:SkinCheckBox()
 				button.backdrop:SetBackdropColor( 0, 0, 0, 0 )
@@ -364,8 +360,7 @@ function CreateDuffedUIConfigUI()
 				offset = offset + 25
 			elseif type(value) == "number" or type(value) == "string" then
 				local label = frame:CreateFontString(nil, "OVERLAY", nil)
-				--label:SetFont(C["media"].font, 11, "")
-				label:SetFontObject("GameFontNormal")
+				label:SetFont(C["media"].font, 11, "")
 				local o = "DuffedUIConfigUI"..group..option
 				local translate = Local(group..option)
 
@@ -400,8 +395,7 @@ function CreateDuffedUIConfigUI()
 				okbutton:SetPoint("LEFT", editbox, "RIGHT", 3, 0)
 
 				local oktext = okbutton:CreateFontString(nil, "OVERLAY", nil)
-				--oktext:SetFont(C["media"].font, 11, "")
-				oktext:SetFontObject("GameFontNormal")
+				oktext:SetFont(C["media"].font, 11, "")
 				oktext:SetText("OK")
 				oktext:SetPoint("CENTER", D.Scale(1), 0)
 				oktext:SetJustifyH("CENTER")
@@ -449,8 +443,7 @@ function CreateDuffedUIConfigUI()
 				offset = offset + 45
 			elseif type(value) == "table" and not TableFilter[option] then
 				local label = frame:CreateFontString(nil, "OVERLAY", nil)
-				--label:SetFont(C["media"].font, 11, "THINOUTLINE")
-				label:SetFontObject("GameFontNormal")
+				label:SetFont(C["media"].font, 11, "THINOUTLINE")
 				local o = "DuffedUIConfigUI"..group..option
 				local translate = Local(group .. option)
 
@@ -470,8 +463,7 @@ function CreateDuffedUIConfigUI()
 				colorbutton:SetPoint("LEFT", label, "RIGHT", 3, 0)
 
 				local colortext = colorbutton:CreateFontString(nil, "OVERLAY", nil)
-				--colortext:SetFont(C["media"].font, 11, "THINOUTLINE")
-				colortext:SetFontObject("GameFontNormal")
+				colortext:SetFont(C["media"].font, 11, "THINOUTLINE")
 				colortext:SetText("Set Color")
 				colortext:SetPoint("CENTER", 0, -1)
 				colortext:SetJustifyH("CENTER")
@@ -546,8 +538,7 @@ function CreateDuffedUIConfigUI()
 		end)
 		button:SetPoint("RIGHT", DuffedUIConfigUITitleBox, "RIGHT", -3, 0)
 		local label = DuffedUIConfigAllCharacters:CreateFontString(nil, "OVERLAY", nil)
-		--label:SetFont(C["media"].font, 11)
-		label:SetFontObject("GameFontNormal")
+		label:SetFont(C["media"].font, 11)
 		label:SetText(DuffedUIConfigUILocalization.option_setsavedsetttings)
 		label:SetPoint("RIGHT", button, "LEFT")
 		if DuffedUIConfigAll[myPlayerRealm][myPlayerName] == true then button:SetChecked(true) else button:SetChecked(false) end
@@ -577,8 +568,7 @@ function CreateDuffedUIConfigUI()
 	end
 
 	local ct = scroll:CreateFontString(nil, "OVERLAY")
-	--ct:SetFont(C["media"].font, 14)
-	ct:SetFontObject("GameFontNormal")
+	ct:SetFont(C["media"].font, 14)
 	ct:SetText(credit)
 	ct:Point("LEFT", scroll, "RIGHT", 4, 0)
 	scroll:SetAnimation("Move", "Horizontal", -1500, 0.5)
@@ -611,8 +601,7 @@ function CreateDuffedUIConfigUI()
 	end
 
 	local ct2 = scroll2:CreateFontString(nil, "OVERLAY")
-	--ct2:SetFont(C["media"].font, 14)
-	ct2:SetFontObject("GameFontNormal")
+	ct2:SetFont(C["media"].font, 14)
 	ct2:SetText(credit2)
 	ct2:Point("LEFT", scroll2, "RIGHT", 4, 0)
 	scroll2:SetAnimation("Move", "Horizontal", -1500, 0.5)
