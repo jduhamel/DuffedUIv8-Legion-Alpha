@@ -210,7 +210,7 @@ local function LoadGarrisonSkin()
 
 		Enemy.PortraitFrame:StripTextures()
 		Enemy.PortraitFrame:CreateBackdrop()
-		Enemy.PortraitFrame.Portrait:SetTexCoord(unpack(D.IconCoord))
+		--Enemy.PortraitFrame.Portrait:SetTexCoord(unpack(D.IconCoord))
 		Follower:StripTextures()
 	end
 
