@@ -287,7 +287,7 @@ end
 local hex = function(color) return (color.r and format('|cff%02x%02x%02x', color.r * 255, color.g * 255, color.b * 255)) or "|cffFFFFFF" end
 
 local nilcolor = {1, 1, 1}
-local tapped = {.6, .6, .6}
+--local tapped = {.6, .6, .6}
 
 local function unitColor(unit)
 	if (not unit) then unit = "mouseover" end
@@ -296,8 +296,8 @@ local function unitColor(unit)
 	if UnitIsPlayer(unit) then
 		local _, class = UnitClass(unit)
 		color = RAID_CLASS_COLORS[class]
-	elseif (UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit)) and not UnitIsTappedByAllThreatList(Unit) then
-		color = tapped
+	--[[elseif (UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit)) and not UnitIsTappedByAllThreatList(Unit) then
+		color = tapped]]
 	else
 		local reaction = UnitReaction(unit, "player")
 		if reaction then color = FACTION_BAR_COLORS[reaction] end

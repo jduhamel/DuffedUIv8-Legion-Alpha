@@ -3,7 +3,6 @@ if IsAddOnLoaded("AddOnSkins") then return end
 
 local function LoadSkin()
 	CharacterFrameCloseButton:SkinCloseButton()
-	--CharacterStatsPaneScrollBar:SkinScrollBar()
 	ReputationListScrollFrameScrollBar:SkinScrollBar()
 	TokenFrameContainerScrollBar:SkinScrollBar()
 	GearManagerDialogPopupScrollFrameScrollBar:SkinScrollBar()
@@ -175,7 +174,7 @@ local function LoadSkin()
 	end)
 
 	--[[Handle Tabs at bottom of character frame]]--
-	for i = 1, 2 do _G["CharacterFrameTab" .. i]:SkinTab() end
+	for i = 1, 3 do _G["CharacterFrameTab" .. i]:SkinTab() end
 
 	--[[Buttons used to toggle between equipment manager, titles, and character stats]]--
 	local function FixSidebarTabCoords()

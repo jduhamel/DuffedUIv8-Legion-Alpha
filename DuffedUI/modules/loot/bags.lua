@@ -128,7 +128,7 @@ function Bags:CreateReagentContainer()
     local DataTextLeft = DuffedUIInfoLeft
     local Reagent = CreateFrame("Frame", "DuffedUIReagent", UIParent)
     local SwitchBankButton = CreateFrame("Button", nil, Reagent)
-    if C["bags"].SortingButton then local SortButton = CreateFrame("Button", nil, Reagent) end
+    local SortButton = CreateFrame("Button", nil, Reagent)
     local NumButtons = ReagentBankFrame.size
     local NumRows, LastRowButton, NumButtons, LastButton = 0, ReagentBankFrameItem1, 1, ReagentBankFrameItem1
     local Deposit = ReagentBankFrame.DespositButton
@@ -226,7 +226,7 @@ function Bags:CreateReagentContainer()
 
     self.Reagent = Reagent
     self.Reagent.SwitchBankButton = SwitchBankButton
-    if C["bags"].SortingButton then self.Reagent.SortButton = SortButton end
+    self.Reagent.SortButton = SortButton
 end
 
 function Bags:CreateContainer(storagetype, ...)
@@ -241,7 +241,7 @@ function Bags:CreateContainer(storagetype, ...)
     Container:EnableMouse(true)
 
     if (storagetype == "Bag") then
-        if C["bags"].SortingButton then local Sort = BagItemAutoSortButton end
+        local Sort = BagItemAutoSortButton
         local BagsContainer = CreateFrame("Frame", nil, UIParent)
         local ToggleBagsContainer = CreateFrame("Frame")
 
@@ -334,13 +334,13 @@ function Bags:CreateContainer(storagetype, ...)
 
         Container.BagsContainer = BagsContainer
         Container.CloseButton = ToggleBagsContainer
-        if C["bags"].SortingButton then Container.SortButton = Sort end
+        Container.SortButton = Sort
     else
         local PurchaseButton = BankFramePurchaseButton
         local CostText = BankFrameSlotCost
         local TotalCost = BankFrameDetailMoneyFrame
         local Purchase = BankFramePurchaseInfo
-        if C["bags"].SortingButton then local SortButton = CreateFrame("Button", nil, Container) end
+        local SortButton = CreateFrame("Button", nil, Container)
         local BankBagsContainer = CreateFrame("Frame", nil, Container)
 
         CostText:ClearAllPoints()
@@ -415,7 +415,7 @@ function Bags:CreateContainer(storagetype, ...)
 
         Container.BagsContainer = BankBagsContainer
         Container.ReagentButton = SwitchReagentButton
-        if C["bags"].SortingButton then Container.SortButton = SortButton end
+        Container.SortButton = SortButton
     end
 
     self[storagetype] = Container

@@ -185,7 +185,7 @@ local function Vehicle_OnClick(self)
 end
 
 local vehicleflight = CreateFrame("Button", "DuffedUIExitFlightButton", UIParent, "SecureHandlerClickTemplate")
-vehicleflight:SetAllPoints(DuffedUIInfoRight)
+vehicleflight:SetAllPoints(DuffedUIInfoLeft)
 vehicleflight:SetTemplate("Default")
 vehicleflight:SetFrameStrata("LOW")
 vehicleflight:SetFrameLevel(10)
@@ -213,8 +213,6 @@ init:SetScript("OnEvent", function(self, event)
 	local db = DuffedUIDataPerChar
 
 	if db.bar3 then UpdateBar(DuffedUIBar3Button, DuffedUIBar3) end
-
 	if db.bar4 then UpdateBar(DuffedUIBar4Button, DuffedUIBar4) end
-
 	if db.bar5 then UpdateBar(DuffedUIBar5Button, DuffedUIBar5) end
 end)
