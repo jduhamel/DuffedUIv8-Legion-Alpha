@@ -195,7 +195,6 @@
 	DuffedUIConfigUILocalization.bags = "Taschen"
 	DuffedUIConfigUILocalization.bagsenable = "Aktiviere die 'Alles in einer Tasche' Ansicht"
 	DuffedUIConfigUILocalization.bagsbpr = "Taschenplatzanzahl pro Reihe"
-	DuffedUIConfigUILocalization.bagsmovable = "Aktiviere bewegliche Taschen"
 	DuffedUIConfigUILocalization.bagsscale = "Skalierung für Bank und Taschen"
 	DuffedUIConfigUILocalization.bagsspacing = "Zwischenraum zwischen den Taschenslots"
 	DuffedUIConfigUILocalization.bagsbuttonsize = "Größe der Taschenplätze"

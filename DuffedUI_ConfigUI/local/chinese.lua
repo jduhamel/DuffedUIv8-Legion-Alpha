@@ -1,5 +1,4 @@
 ﻿if GetLocale() == "zhCN" then
-
 	--[[General]]--
 	DuffedUIConfigUILocalization.general = "综合"
 	DuffedUIConfigUILocalization.generalautoscale = "UI自动缩放"
@@ -195,7 +194,6 @@
 	DuffedUIConfigUILocalization.bags = "背包"
 	DuffedUIConfigUILocalization.bagsenable = "开启背包整合"
 	DuffedUIConfigUILocalization.bagsbpr = "设定背包每行显示按钮"
-	DuffedUIConfigUILocalization.bagsmovable = "使背包可移动"
 	DuffedUIConfigUILocalization.bagsscale = "设置背包/银行框体缩放大小"
 	DuffedUIConfigUILocalization.bagsspacing = "设置包内物品显示间距"
 	DuffedUIConfigUILocalization.bagsbuttonsize = "设置筛选器(搜索框)大小"

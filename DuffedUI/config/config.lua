@@ -193,7 +193,6 @@ C["auras"] = {
 C["bags"] = {
 	["enable"] = true,
 	["bpr"] = 10,
-	["movable"] = false,
 	["scale"] = 1,
 	["buttonsize"] = 28,
 	["spacing"] = 4,

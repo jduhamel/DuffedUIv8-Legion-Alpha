@@ -202,7 +202,6 @@
 	DuffedUIConfigUILocalization.bags = "背包"
 	DuffedUIConfigUILocalization.bagsenable = "開啟背包整合"
 	DuffedUIConfigUILocalization.bagsbpr = "設定背包每行顯示按鈕"
-	DuffedUIConfigUILocalization.bagsmovable = "使背包可移動"
 	DuffedUIConfigUILocalization.bagsscale = "設置背包/銀行框體縮放大小"
 	DuffedUIConfigUILocalization.bagsspacing = "設置包內物品顯示間距"
 	DuffedUIConfigUILocalization.bagsbuttonsize = "設置篩選器(搜索框)大小"
