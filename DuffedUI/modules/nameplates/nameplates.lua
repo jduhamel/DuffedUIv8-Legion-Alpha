@@ -8,11 +8,11 @@ local select = select
 local colors = D["UnitColor"]
 
 --[[Functions]]--
-function nameplates:customSize()
+--[[function nameplates:customSize()
 	C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight)
-end
+end]]--
 
---[[function nameplates:colorHealth()
+function nameplates:colorHealth()
     if (self:GetName() and string.find(self:GetName(), "NamePlate")) then
         local r, g, b
 
@@ -28,7 +28,7 @@ end
         end
         self.healthBar:SetStatusBarColor(r, g, b)
     end
-end]]--
+end
 
 --[[function nameplates:visualStyle(setupOptions, frameOptions)
 	local highlight = self.selectionHighlight
@@ -44,12 +44,12 @@ end]]--
 end]]--
 
 --[[Events]]--
-function nameplates:registerEvents()
+--[[function nameplates:registerEvents()
 	--self:RegisterEvent("NAME_PLATE_CREATED")
     --self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
     --self:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
     --self:RegisterEvent("PLAYER_TARGET_CHANGED")
-    self:RegisterEvent("DISPLAY_SIZE_CHANGED")
+    --self:RegisterEvent("DISPLAY_SIZE_CHANGED")
     --self:RegisterEvent("UNIT_AURA")
     --self:RegisterEvent("VARIABLES_LOADED")
     --self:RegisterEvent("CVAR_UPDATE") 
@@ -59,18 +59,18 @@ function nameplates:onEvent(event, ...)
     if event == "DISPLAY_SIZE_CHANGED" then
         self:customSize()
     end
-end
+end]]
 
 --[[Enable & Running]]--
 function nameplates:enable()
 	if C["nameplate"]["active"] ~= true then return end
 	
-	self:registerEvents()
-    self:customSize()
+	--self:registerEvents()
+    --self:customSize()
     self:SetScript("OnEvent", self.onEvent)
 	
 	--hooksecurefunc("DefaultCompactNamePlateFrameSetup", self.visualStyle)
-	--hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
+	hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
 end
 
 nameplates:RegisterEvent("ADDON_LOADED")

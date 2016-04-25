@@ -185,9 +185,11 @@ local function Vehicle_OnClick(self)
 end
 
 local vehicleflight = CreateFrame("Button", "DuffedUIExitFlightButton", UIParent, "SecureHandlerClickTemplate")
-vehicleflight:SetAllPoints(DuffedUIInfoLeft)
+vehicleflight:SetPoint("TOP", UIParent, 0, -5)
+vehicleflight:SetWidth(285)
+vehicleflight:SetHeight(15)
 vehicleflight:SetTemplate("Default")
-vehicleflight:SetFrameStrata("LOW")
+vehicleflight:SetFrameStrata("HIGH")
 vehicleflight:SetFrameLevel(10)
 vehicleflight:SetBackdropBorderColor(75/255,  175/255, 76/255)
 vehicleflight:FontString("text", C["media"].font, 11)
@@ -196,12 +198,12 @@ vehicleflight.text:SetText("|cff4BAF4C" .. string.upper(TAXI_CANCEL_DESCRIPTION)
 vehicleflight:SetScript("OnClick", Vehicle_OnClick)
 vehicleflight:SetScript("OnEnter", MainMenuBarVehicleLeaveButton_OnEnter)
 vehicleflight:SetScript("OnLeave", GameTooltip_Hide)
-vehicleflight:RegisterEvent("PLAYER_ENTERING_WORLD");
-vehicleflight:RegisterEvent("UPDATE_BONUS_ACTIONBAR");
-vehicleflight:RegisterEvent("UPDATE_MULTI_CAST_ACTIONBAR");
-vehicleflight:RegisterEvent("UNIT_ENTERED_VEHICLE");
-vehicleflight:RegisterEvent("UNIT_EXITED_VEHICLE");
-vehicleflight:RegisterEvent("VEHICLE_UPDATE");
+vehicleflight:RegisterEvent("PLAYER_ENTERING_WORLD")
+vehicleflight:RegisterEvent("UPDATE_BONUS_ACTIONBAR")
+vehicleflight:RegisterEvent("UPDATE_MULTI_CAST_ACTIONBAR")
+vehicleflight:RegisterEvent("UNIT_ENTERED_VEHICLE")
+vehicleflight:RegisterEvent("UNIT_EXITED_VEHICLE")
+vehicleflight:RegisterEvent("VEHICLE_UPDATE")
 vehicleflight:SetScript("OnEvent", Vehicle_OnEvent)
 
 vehicleflight:Hide()
