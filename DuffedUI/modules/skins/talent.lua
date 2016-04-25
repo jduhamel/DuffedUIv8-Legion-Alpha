@@ -6,10 +6,8 @@ local function LoadSkin()
 		"PlayerTalentFrameSpecializationSpecButton1",
 		"PlayerTalentFrameSpecializationSpecButton2",
 		"PlayerTalentFrameSpecializationSpecButton3",
-		--"PlayerTalentFrameTalentsLearnButton",
-		"PlayerTalentFrameActivateButton",
+		"PlayerTalentFrameSpecializationLearnButton",
 		"PlayerTalentFramePetSpecializationLearnButton"
-		--"PlayerTalentFrameSpecializationLearnButton"
 	}
 
 	for i = 1, #buttons do
@@ -23,6 +21,8 @@ local function LoadSkin()
 	PlayerTalentFrameSpecializationTutorialButton:Point("TOPLEFT", PlayerTalentFrame, "TOPLEFT", -12, 12)
 	PlayerTalentFramePetSpecializationTutorialButton.Ring:Hide()
 	PlayerTalentFramePetSpecializationTutorialButton:Point("TOPLEFT", PlayerTalentFrame, "TOPLEFT", -12, 12)
+	PlayerTalentFramePortrait:Hide()
+	PlayerTalentFramePortraitFrame:Hide()
 
 	PlayerTalentFrame:StripTextures()
 	PlayerTalentFrameInset:StripTextures()
@@ -44,11 +44,6 @@ local function LoadSkin()
 	for i = 1, 5 do
 		select(i, PlayerTalentFrameSpecializationSpellScrollFrameScrollChild:GetRegions()):Hide()
 	end
-
-	--[[PlayerTalentFrameTalentsClearInfoFrame:SetTemplate("Default")
-	PlayerTalentFrameTalentsClearInfoFrameIcon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-	PlayerTalentFrameTalentsClearInfoFrameIcon:Point("TOPLEFT", 2, -2)
-	PlayerTalentFrameTalentsClearInfoFrameIcon:Point("BOTTOMRIGHT", -2, 2)]]
 
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetTexture(1, 1, 1)
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetAlpha(0.2)
@@ -73,7 +68,7 @@ local function LoadSkin()
 
 			bu.ring:Hide()
 			bu.specIcon:SetTexture(icon)
-			bu.specIcon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
+			bu.specIcon:SetTexCoord(D["IconCoord"])
 			bu.specIcon:SetSize(50, 50)
 			bu.specIcon:Point("LEFT", bu, "LEFT", 15, 0)
 		end
@@ -171,8 +166,6 @@ local function LoadSkin()
 			bu.selectedTex:SetAlpha(0)
 
 			bu:CreateBackdrop("Overlay")
-			bu.backdrop:Point("TOPLEFT", 8, 2)
-			bu.backdrop:Point("BOTTOMRIGHT", 10, -2)
 
 			bu.border = CreateFrame("Frame", nil, bu)
 			bu.border:CreateBackdrop("Default")
