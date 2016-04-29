@@ -116,9 +116,9 @@ local function SetChatStyle(frame)
 	_G[format("ChatFrame%sButtonFrameMinimizeButton", id)]:Kill()
 	_G[format("ChatFrame%sButtonFrame", id)]:Kill()
 
-	_G[format("ChatFrame%sEditBoxFocusLeft", id)]:Kill()
-	_G[format("ChatFrame%sEditBoxFocusMid", id)]:Kill()
-	_G[format("ChatFrame%sEditBoxFocusRight", id)]:Kill()
+	_G[format("ChatFrame%sEditBoxLeft", id)]:Kill()
+	_G[format("ChatFrame%sEditBoxMid", id)]:Kill()
+	_G[format("ChatFrame%sEditBoxRight", id)]:Kill()
 
 	local a, b, c = select(6, _G[chat.."EditBox"]:GetRegions()) a:Kill() b:Kill() c:Kill()
 
