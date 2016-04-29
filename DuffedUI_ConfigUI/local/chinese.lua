@@ -136,7 +136,6 @@
 	DuffedUIConfigUILocalization.datatextleech = "吸血(输入0关闭显示)"
 	DuffedUIConfigUILocalization.datatextmastery = "精通(输入0关闭显示)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "微型系统菜单(输入0关闭显示)"
-	DuffedUIConfigUILocalization.datatextmulstistrike = "双击率(输入0关闭显示)"
 	DuffedUIConfigUILocalization.datatextparry = "格挡率(输入0关闭显示)"
 	DuffedUIConfigUILocalization.datatextpower = "能量(输入0关闭显示)"
 	DuffedUIConfigUILocalization.datatextprofession = "专业(输入0关闭显示)"
@@ -185,9 +184,6 @@
 	DuffedUIConfigUILocalization.aurasconsolidate = "启用Buffs强化显示模式"
 	DuffedUIConfigUILocalization.aurasflash = "启用光环持续时间低于30秒闪烁动画"
 	DuffedUIConfigUILocalization.aurasclassictimer = "传统模式显示玩家光环"
-	DuffedUIConfigUILocalization.aurasbuffnotice = "启用光环缺失提示"
-	DuffedUIConfigUILocalization.auraswarning = "启用提示音提醒光环缺失"
-	DuffedUIConfigUILocalization.aurasbufftracker = "启用光环追踪增强插件"
 	DuffedUIConfigUILocalization.auraswrap = "设定(小地图旁)单行Buff显示数量(默认 = 18)"
 
 	--[[Bags]]--

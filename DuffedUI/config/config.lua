@@ -136,7 +136,6 @@ C["datatext"] = {
 	["leech"] = 0,
 	["mastery"] = 0,
 	["micromenu"] = 0,
-	["multistrike"] = 0,
 	["parry"] = 0,
 	["power"] = 7,
 	["profession"] = 0,
@@ -184,9 +183,6 @@ C["auras"] = {
 	["consolidate"] = false,
 	["flash"] = false,
 	["classictimer"] = true,
-	["bufftracker"] = true,
-	["buffnotice"] = true,
-	["warning"] = true,
 	["wrap"] = 18,
 }
 

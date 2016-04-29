@@ -139,7 +139,6 @@
 	DuffedUIConfigUILocalization.datatextguild = "公會信息(輸入0關閉顯示)"
 	DuffedUIConfigUILocalization.datatexthaste = "急速(輸入0關閉顯示)"
 	DuffedUIConfigUILocalization.datatexthonor = "榮譽(輸入0關閉顯示)"
-	DuffedUIConfigUILocalization.datatexthonorablekills = "榮譽擊殺(輸入0關閉顯示)"
 	DuffedUIConfigUILocalization.datatextleech = "吸血(輸入0關閉顯示)"
 	DuffedUIConfigUILocalization.datatextmastery = "精通(輸入0關閉顯示)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "微型系統菜單(輸入0關閉顯示)"
@@ -192,9 +191,6 @@
 	DuffedUIConfigUILocalization.aurasconsolidate = "啟用Buffs強化顯示模式"
 	DuffedUIConfigUILocalization.aurasflash = "啟用光環持續時間低於30秒閃爍動畫"
 	DuffedUIConfigUILocalization.aurasclassictimer = "傳統模式顯示玩家光環"
-	DuffedUIConfigUILocalization.aurasbuffnotice = "啟用光環缺失提示"
-	DuffedUIConfigUILocalization.auraswarning = "啟用提示音提醒光環缺失"
-	DuffedUIConfigUILocalization.aurasbufftracker = "啟用光環追踪增強插件"
 	DuffedUIConfigUILocalization.auraswrap = "設定(小地圖旁)單行Buff顯示數量(默認 = 18)"
 	DuffedUIConfigUILocalization.aurasInside = "設定持續時間在光環內顯示"
 

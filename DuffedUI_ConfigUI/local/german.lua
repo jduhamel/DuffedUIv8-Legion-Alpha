@@ -136,7 +136,6 @@
 	DuffedUIConfigUILocalization.datatextleech = "Position der 'Lebensraubanzeige' (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextmastery = "Position der 'Meisterschaftsanzeige' (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "Position der 'Mikromenüanzeige' (0 zum deaktivieren)"
-	DuffedUIConfigUILocalization.datatextmultistrike = "Position der 'Mehrfachschlaganzeige' (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextparry = "Position der 'Parrierenanzeige' (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextpower = "Position der 'Kraftanzeige' (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextprofession = "Position der 'Berufsanzeige' position (0 zum deaktivieren)"
@@ -185,9 +184,6 @@
 	DuffedUIConfigUILocalization.aurasconsolidate = "Aktiviere zusammengelegte Buffs"
 	DuffedUIConfigUILocalization.aurasflash = "Aktiviere das Aufblitzen der Auren bei weniger als 30 Sekunden"
 	DuffedUIConfigUILocalization.aurasclassictimer = "Zeige den klassischen Timer auf den Spieler Auren"
-	DuffedUIConfigUILocalization.aurasbuffnotice = "Aktiviere die Bufferinnerung"
-	DuffedUIConfigUILocalization.auraswarning = "Aktiviere einen Warnton für die Bufferinnerung"
-	DuffedUIConfigUILocalization.aurasbufftracker = "Aktiviere das Bufftracker-Plugin"
 	DuffedUIConfigUILocalization.auraswrap = "Wähle Umbruch der Stärkungszauberleiste (Standard = 18)"
 	DuffedUIConfigUILocalization.aurasInside = "Verschiebe den Timer nach innen"
 

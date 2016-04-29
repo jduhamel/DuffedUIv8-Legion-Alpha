@@ -136,7 +136,6 @@
 	DuffedUIConfigUILocalization.datatextleech = "Leech position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextmastery = "Mastery position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "Micro Menu position (0 for disabled)"
-	DuffedUIConfigUILocalization.datatextmulstistrike = "Multistrike position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextparry = "Parry position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextpower = "Power position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextprofession = "Profession position (0 for disabled)"
@@ -185,9 +184,6 @@
 	DuffedUIConfigUILocalization.aurasconsolidate = "Enable Consolidate Buffs"
 	DuffedUIConfigUILocalization.aurasflash = "Enable flashing animation on aura less than 30 seconds"
 	DuffedUIConfigUILocalization.aurasclassictimer = "Display classic timer on player auras"
-	DuffedUIConfigUILocalization.aurasbuffnotice = "Enable BuffNotice"
-	DuffedUIConfigUILocalization.auraswarning = "Enable warningsound for BuffNotice"
-	DuffedUIConfigUILocalization.aurasbufftracker = "Enable Bufftrackerplugin"
 	DuffedUIConfigUILocalization.auraswrap = "Set wrap for buffs (default = 18)"
 
 	--[[Bags]]--
