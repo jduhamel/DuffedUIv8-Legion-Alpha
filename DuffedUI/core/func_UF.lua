@@ -563,7 +563,6 @@ if C["raid"].raidunitdebuffwatch == true then
 			},
 			DRUID = {
 				{774, "TOPLEFT", {0, 0}, {.8, .4, .8}}, -- Rejuvenation
-				{162359, "TOPLEFT", {0, 0}, {.1, .3, .8}}, -- Genesis
 				{155777, "TOPLEFT", {0, -8}, {.3, .3, .8}}, -- Germination
 				{8936, "TOPRIGHT", {0, 0}, {.2, .8, .2}}, -- Regrowth
 				{33763, "BOTTOMLEFT", {0, 0}, {.4, .8, .2}}, -- Lifebloom
