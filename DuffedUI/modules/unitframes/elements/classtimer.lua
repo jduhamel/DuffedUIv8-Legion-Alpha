@@ -175,6 +175,21 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(164047), -- Shadow of Death
 		}
 	},
+	DEMONHUNTER = {
+		target = {
+			CreateSpellEntry(179057), -- Chaos Nova
+			CreateSpellEntry(211881), -- Fel Eruption
+		},
+		player = {
+			CreateSpellEntry(162264), -- Metamorphosis
+			CreateSpellEntry(188501), -- Spectral Sight
+			CreateSpellEntry(209426), -- Darkness
+			CreateSpellEntry(212800), -- Blur
+		},
+		procs = {
+			
+		}
+	},
 	DRUID = {
 		target = {
 			CreateSpellEntry(339), -- Entangling Roots

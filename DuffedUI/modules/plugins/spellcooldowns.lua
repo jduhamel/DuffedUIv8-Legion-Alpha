@@ -50,6 +50,22 @@ spellCooldowns = {
 		152279, -- Breath of Sindragosa
 		152280, -- Defile
 	},
+	["DEMONHUNTER"] = {
+		179057, -- Chaos Nova
+		183752, -- Consume Magic
+		185123, -- Throw Glaive
+		188409, -- Blade Dance
+		188501, -- Spectral Sight
+		191427, -- Metamorphosis
+		195072, -- Fel Rush
+		196718, -- Darkness
+		198013, -- Eye Beam
+		198589, -- Blur
+		198793, -- Vengeful Retreat
+		201467, -- Fury of the Illidary (Artifact)
+		211881, -- Fel Eruption
+		217832, -- Imprison
+	},
 	["DRUID"] = {
 		740, -- Tranquility
 		1850, -- Dash

@@ -282,7 +282,7 @@ D["ConstructUFPlayer"] = function(self)
 		self.Name = Name
 	end
 
-	--[[Combat feedback & Healcom]]
+	--[[Combat feedback & Healcom]]--
 	if C["unitframes"]["combatfeedback"] then
 		local CombatFeedbackText
 		CombatFeedbackText = D.SetFontString(health, C["media"].font, 11, "THINOUTLINE")
