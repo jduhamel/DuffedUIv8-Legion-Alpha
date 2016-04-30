@@ -50,7 +50,11 @@ local function LoadSkin()
 	AchievementFrameAchievementsContainer.backdrop:Point("BOTTOMRIGHT", -3, -3)
 	AchievementFrameCloseButton:SkinCloseButton(AchievementFrame.backdrop)
 	AchievementFrameFilterDropDown:SkinDropDownBox()
-	AchievementFrameFilterDropDown:Point("TOPRIGHT", AchievementFrame, "TOPRIGHT", -44, 5)
+	AchievementFrameFilterDropDown:ClearAllPoints()
+	AchievementFrameFilterDropDown:Point("LEFT", AchievementFrameHeaderPoints, "RIGHT", 5, -2)
+	AchievementFrame.searchBox:SkinEditBox()
+	AchievementFrame.searchBox:ClearAllPoints()
+	AchievementFrame.searchBox:Point("TOPRIGHT", AchievementFrame, "TOPRIGHT", -40, 0)
 
 	-- ScrollBars
 	AchievementFrameCategoriesContainerScrollBar:SkinScrollBar()
