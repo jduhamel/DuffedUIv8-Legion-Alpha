@@ -281,7 +281,7 @@ function SetBlockHeader_hook()
 end
 hooksecurefunc(QUEST_TRACKER_MODULE, "Update", SetBlockHeader_hook)
 
-function QuestLogQuests_hook(self, poiTable)
+--[[function QuestLogQuests_hook(self, poiTable)
 	local numEntries, numQuests = GetNumQuestLogEntries()
 	local headerIndex = 0
 	for questLogIndex = 1, numEntries do
@@ -294,7 +294,7 @@ function QuestLogQuests_hook(self, poiTable)
 		end
 	end
 end
-hooksecurefunc("QuestLogQuests_Update", QuestLogQuests_hook)
+hooksecurefunc("QuestLogQuests_Update", QuestLogQuests_hook)]]--
 
 --[[Execution]]--
 local ObjFhandler = CreateFrame("Frame")

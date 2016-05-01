@@ -345,7 +345,7 @@ D["ConstructUFTarget"] = function(self)
 	if C["castbar"]["enable"] then
 		local tcb = CreateFrame("Frame", "TargetCastBarMover", UIParent)
 		tcb:Size(225, 18)
-		if C["raid"].center then tcb:Point("BOTTOM", UIParent, "BOTTOM", 340, 130) else tcb:Point("BOTTOM", UIParent, "BOTTOM", 0, 395) end
+		tcb:Point("BOTTOM", UIParent, "BOTTOM", 0, 275)
 		move:RegisterFrame(tcb)
 
 		local castbar = CreateFrame("StatusBar", self:GetName() .. "CastBar", self)
@@ -375,12 +375,12 @@ D["ConstructUFTarget"] = function(self)
 			castbar.button = CreateFrame("Frame", nil, castbar)
 			castbar.button:SetTemplate("Default")
 
-			castbar.button:Size(25)
-			castbar.button:Point("BOTTOM", castbar, "TOP", 0, 5)
+			castbar.button:Size(22)
+			castbar.button:Point("LEFT", castbar, "RIGHT", 3, 0)
 			castbar.icon = castbar.button:CreateTexture(nil, "ARTWORK")
 			castbar.icon:Point("TOPLEFT", castbar.button, 2, -2)
 			castbar.icon:Point("BOTTOMRIGHT", castbar.button, -2, 2)
-			castbar.icon:SetTexCoord(.08, .92, .08, .92)
+			castbar.icon:SetTexCoord(unpack(D["IconCoord"]))
 		end
 
 		self.Castbar = castbar

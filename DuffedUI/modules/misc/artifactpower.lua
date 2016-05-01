@@ -26,6 +26,7 @@ ArtifactmouseFrame:SetAllPoints(backdrop)
 ArtifactmouseFrame:EnableMouse(true)
 
 backdrop:SetFrameLevel(0)
+backdrop:SetFrameStrata("LOW")
 artifactBar:SetFrameLevel(2)
 ArtifactmouseFrame:SetFrameLevel(3)
 
