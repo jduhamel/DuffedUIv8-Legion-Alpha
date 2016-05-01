@@ -98,12 +98,6 @@ function FlightPointsTaxiChoiceContainer_Update()
 	HybridScrollFrame_Update(scrollFrame, totalHeight, displayedHeight)
 end
 
-function FlightPointsTaxiChoiceButton_OnEnter(self)
-	if not self.isHeader then TaxiNodeOnButtonEnter(_G["TaxiButton" .. self.flightpath]) end
-end
-
-function FlightPointsTaxiChoiceButton_OnLeave(self) GameTooltip:Hide() end
-
 function FlightPointsTaxiChoiceButton_OnClick(self, button, down)
 	if self.isHeader then
 		FlightPoints_CreateFlyPathTable()
