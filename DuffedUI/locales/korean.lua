@@ -27,6 +27,7 @@ if D.Client == "koKR" then
 		["rcd"] = "이동 RaidCD",
 		["spell"] = "이동 SpellCooldowns",
 		["xp-bar"] = "이동 XP-Bar",
+		["artifact-bar"] = "Move Artifact-XP-Bar",
 	}
 
 	L["symbol"] = {
@@ -251,3 +252,9 @@ if D.Client == "koKR" then
 		["exalted"] = "Exalted",
 	}
 end
+
+L["artifactBar"] = {
+	["xptitle"] = "Artifact Experience",
+	["xp"] = "Experience: %s",
+	["traits"] = "Traits avaiable: %s",
+}

@@ -27,6 +27,7 @@ if D.Client == "deDE" then
 		["rcd"] = "Bewege RaidCD",
 		["spell"] = "Bewege SpellCooldowns",
 		["xp-bar"] = "Bewege XP-Leiste",
+		["artifact-bar"] = "Bewege Artefakt-XP-Leiste",
 	}
 
 	L["symbol"] = {
@@ -252,3 +253,9 @@ if D.Client == "deDE" then
 		["exalted"] = "Ehrfürchtig",
 	}
 end
+
+L["artifactBar"] = {
+	["xptitle"] = "Artefakt Erfahrung",
+	["xp"] = "Erfahrung: %s",
+	["traits"] = "Traits verfügbar: %s",
+}

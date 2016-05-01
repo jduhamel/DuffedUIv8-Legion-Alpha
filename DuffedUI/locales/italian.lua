@@ -27,6 +27,7 @@ if D.Client == "itIT" then
 		["rcd"] = "Move RaidCD",
 		["spell"] = "Move SpellCooldowns",
 		["xp-bar"] = "Move XP-Bar",
+		["artifact-bar"] = "Move Artifact-XP-Bar",
 	}
 
 	L["symbol"] = {
@@ -251,3 +252,9 @@ if D.Client == "itIT" then
 		["exalted"] = "Exalted",
 	}
 end
+
+L["artifactBar"] = {
+	["xptitle"] = "Artifact Experience",
+	["xp"] = "Experience: %s",
+	["traits"] = "Traits avaiable: %s",
+}

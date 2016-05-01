@@ -27,6 +27,7 @@ if D.Client == "zhCN" then
 		["rcd"] = "移動 RaidCD",
 		["spell"] = "移動 SpellCooldowns",
 		["xp-bar"] = "移動 XP-Bar",
+		["artifact-bar"] = "Move Artifact-XP-Bar",
 	}
 
 	L["symbol"] = {
@@ -251,3 +252,9 @@ if D.Client == "zhCN" then
 		["exalted"] = "Exalted",
 	}
 end
+
+L["artifactBar"] = {
+	["xptitle"] = "Artifact Experience",
+	["xp"] = "Experience: %s",
+	["traits"] = "Traits avaiable: %s",
+}

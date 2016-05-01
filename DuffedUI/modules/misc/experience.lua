@@ -22,17 +22,13 @@ local function IsMaxLevel()
 	if UnitLevel("player") == MAX_PLAYER_LEVEL then return true end
 end
 
-xpMover = CreateFrame("Frame", "XPBarMover", UIParent)
-xpMover:SetSize(barWidth, barHeight)
-xpMover:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 7, 178)
-xpMover:SetFrameLevel(6)
-move:RegisterFrame(xpMover)
-
 local backdrop = CreateFrame("Frame", "Experience_Backdrop", UIParent)
-backdrop:SetAllPoints(xpMover)
+backdrop:SetSize(barWidth, barHeight)
+backdrop:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 7, 178)
 backdrop:SetBackdropColor(C["general"].backdropcolor)
 backdrop:SetBackdropBorderColor(C["general"].backdropcolor)
 backdrop:CreateBackdrop("Transparent")
+move:RegisterFrame(backdrop)
 
 local xpBar = CreateFrame("StatusBar",  "Experience_xpBar", backdrop, "TextStatusBar")
 xpBar:SetWidth(barWidth)

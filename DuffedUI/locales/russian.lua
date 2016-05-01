@@ -27,6 +27,7 @@ if D.Client == "ruRU" then
 		["rcd"] = "Переместить RaidCD",
 		["spell"] = "Переместить SpellCooldowns",
 		["xp-bar"] = "Переместить XP-Bar",
+		["artifact-bar"] = "Move Artifact-XP-Bar",
 	}
 
 	L["symbol"] = {
@@ -251,3 +252,9 @@ if D.Client == "ruRU" then
 		["exalted"] = "Exalted",
 	}
 end
+
+L["artifactBar"] = {
+	["xptitle"] = "Artifact Experience",
+	["xp"] = "Experience: %s",
+	["traits"] = "Traits avaiable: %s",
+}

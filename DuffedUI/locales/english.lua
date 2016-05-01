@@ -26,6 +26,7 @@ L["move"] = {
 	["rcd"] = "Move RaidCD",
 	["spell"] = "Move SpellCooldowns",
 	["xp-bar"] = "Move XP-Bar",
+	["artifact-bar"] = "Move Artifact-XP-Bar",
 }
 
 L["symbol"] = {
@@ -248,4 +249,10 @@ L["xpbar"] = {
 	["honored"] = "Honored",
 	["revered"] = "Revered",
 	["exalted"] = "Exalted",
+}
+
+L["artifactBar"] = {
+	["xptitle"] = "Artifact Experience",
+	["xp"] = "Experience: %s",
+	["traits"] = "Traits avaiable: %s",
 }
