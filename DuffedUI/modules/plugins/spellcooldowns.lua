@@ -13,44 +13,53 @@ if D["Class"] == "WARRIOR" or D["Class"] == "HUNTER" or D["Class"] == "DEATHKNIG
 
 spellCooldowns = {
 	["DEATHKNIGHT"] = {
-		42650, -- Army of the Dead
-		43265, -- Death and Decay
-		45529, -- Blood Tap
-		46584, -- Raise Dead
-		47476, -- Strangulate
+		-- Global
 		47528, -- Mind Freeze
-		47568, -- Empower Rune Weapon
-		48707, -- Anti-magic shield
-		48743, -- Death Pact
-		48792, -- Icebound Fortitude
-		48982, -- Rune Tap
-		49016, -- Hysteria
-		49028, -- Dancing Runic Blade
-		49039, -- Lichborne
-		49203, -- Hungering Cold
-		49206, -- Summon Gargoyle
-		49222, -- Bone Shield
+		48707, -- Anti Magic Shell
 		49576, -- Death Grip
-		49796, -- Deathchill
-		51052, -- Anti-magic zone
-		51271, -- Unbreakable Armor
+		50977, -- Death Gate
+		61999, -- Raise Ally
+		212552, -- Wraith Walk
+		-- Shared
+		43265, -- Death & Decay
+		48792, -- Icebound Fortitude
+		-- Blood
+		49028, -- Dancing Rune Weapon
 		55233, -- Vampiric Blood
-		56222, -- Dark Command
-		57330, -- Horn of Winter
-		77575, -- Outbreak
-		77606, -- Dark Simulacrum
-		96268, -- Death's Advance
-		108194, -- Asphyxiate
 		108199, -- Gorefiend's Grasp
-		108201, -- Desecreated Ground
-		108200, -- Remorseless Winter
-		108911, -- Gorefiends Grip
-		115989, -- Unholy Blight
-		123693, -- Plague Leech
+		194679, -- Rune Tap
+		194844, -- Bonestorm
+		206931, -- Exsanguinate
+		206977, -- Blood Mirror
+		219809, -- Tombstone
+		221562, -- Asphyxiate
+		221699, -- Blood Tap
+		-- Frost
+		47568, -- Empower Rune Weapon
+		51271, -- Pillar of Frost
+		57330, -- Horn of Winter
 		152279, -- Breath of Sindragosa
+		194913, -- Glacial Advance
+		196770, -- Remorseless Winter
+		207127, -- Hungering Rune Weapon
+		207167, -- Blinding Sleet
+		207256, -- Obliteration
+		-- Unholy
+		42650, -- Army of the Dead
+		46584, -- Raise Dead
+		49206, -- Summon Gargoyle
+		63560, -- Dark Transformation
+		108194, -- Asphyxiate
+		130736, -- Soul Reaper
 		152280, -- Defile
+		194918, -- Blighted Rune Weapon
+		207317, -- Epidemic
+		207319, -- Corpse Shield
+		207349, -- Dark Arbiter
 	},
 	["DEMONHUNTER"] = {
+		-- Global
+		-- Havoc
 		179057, -- Chaos Nova
 		183752, -- Consume Magic
 		185123, -- Throw Glaive
@@ -65,6 +74,7 @@ spellCooldowns = {
 		201467, -- Fury of the Illidary (Artifact)
 		211881, -- Fel Eruption
 		217832, -- Imprison
+		-- Vengeance
 	},
 	["DRUID"] = {
 		740, -- Tranquility
