@@ -572,12 +572,9 @@ if C["raid"].raidunitdebuffwatch == true then
 				{53563, "TOPRIGHT", {0, 0}, {.7, .3, .7}}, -- Beacon of Light
 				{1022, "BOTTOMRIGHT", {0, 0}, {.2, .2, 1}, true}, -- Hand of Protection
 				{1044, "BOTTOMRIGHT", {0, 0}, {.89, .45, 0}, true}, -- Hand of Freedom
-				{1038, "BOTTOMRIGHT", {0, 0}, {.93, .75, 0}, true}, -- Hand of Salvation
 				{6940, "BOTTOMRIGHT", {0, 0}, {.89, .1, .1}, true}, -- Hand of Sacrifice
 				{114163, "BOTTOMLEFT", {0, 0}, {.89, .1, .1}, true}, -- Eternal Flame
-				{20925, "TOPLEFT", {0, 0}, {.81, .85, .1}, true}, -- Sacred Shield
 				{156910, "TOPRIGHT", {0, 0},{.7, .3, .7}}, -- Beacon of Faith
-				{157007, "TOPRIGHT", {0, 0},{.7, .3, .7}}, -- Beacon of Insight
 			},
 			SHAMAN = {
 				{61295, "TOPLEFT", {0, 0}, {.7, .3, .7}}, -- Riptide 
