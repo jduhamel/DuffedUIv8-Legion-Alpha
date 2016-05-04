@@ -5,6 +5,9 @@ local barHeight, barWidth = 5, C["misc"].artifactwidth
 local barTex, flatTex = C["media"].normTex
 local color = RAID_CLASS_COLORS[D.Class]
 local move = D["move"]
+local hAE = HasArtifactEquipped()
+
+if not hAE then return end
 
 local backdrop = CreateFrame("Frame", "Artifact_Backdrop", UIParent)
 backdrop:SetSize(barWidth, barHeight)
@@ -31,7 +34,6 @@ artifactBar:SetFrameLevel(2)
 ArtifactmouseFrame:SetFrameLevel(3)
 
 local function updateStatus()
-	local hAE = HasArtifactEquipped()
 	local _, _, _, _, xp, pointsSpent, _, _, _, _, _, _ = C_ArtifactUI.GetEquippedArtifactInfo()
 	local aPT = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, xp)
 
