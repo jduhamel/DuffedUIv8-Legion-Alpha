@@ -56,395 +56,351 @@ spellCooldowns = {
 		207317, -- Epidemic
 		207319, -- Corpse Shield
 		207349, -- Dark Arbiter
+		-- PvP
+		47476, -- Strangulate
+		51052, -- Anti-Magic-Zone
+		77606, -- Dark Simulacrum
+		203173, -- Death Chain
+		204143, -- Killing Machine
+		204160, -- Chill Streak
+		208683, -- Gladiators Medallion
 	},
 	["DEMONHUNTER"] = {
 		-- Global
-		-- Havoc
-		179057, -- Chaos Nova
 		183752, -- Consume Magic
-		185123, -- Throw Glaive
-		188409, -- Blade Dance
 		188501, -- Spectral Sight
 		191427, -- Metamorphosis
-		195072, -- Fel Rush
 		196718, -- Darkness
+		211881, -- Fel Eruption
+		213241, -- Felblade
+		217832, -- Imprison
+		-- Havoc
+		179057, -- Chaos Nova
+		185123, -- Throw Glaive
+		188409, -- Blade Dance
+		195072, -- Fel Rush
+		196555, -- Netherwalk
 		198013, -- Eye Beam
 		198589, -- Blur
 		198793, -- Vengeful Retreat
 		201467, -- Fury of the Illidary (Artifact)
-		211881, -- Fel Eruption
-		217832, -- Imprison
+		206491, -- Nemesis
+		211048, -- Chaos Blades
+		211053, -- Fel Barrage
 		-- Vengeance
+		178740, -- Immolation Aura
+		189110, -- Infernal Strike
+		202137, -- Sigil of Silence
+		202138, -- Sigil of Chains
+		203720, -- Demon Spikes
+		204021, -- Fiery Brand
+		204596, -- Sigil of Flame
+		207684, -- Sigil of Misery
+		207810, -- Nether Bond
+		212084, -- Fel Devastation
+		218256, -- Empower Wards
+		218640, -- Brand of the Hunt
+		-- PvP
+		203704, -- Mana Break
+		205604, -- Reverse Magic
+		205629, -- Demonic Trample
+		205630, -- Illidan's Grasp
+		206649, -- Eye of Leotheras
+		206803, -- Rain from Above
+		208683, -- Gladiators Medallion
 	},
 	["DRUID"] = {
-		740, -- Tranquility
-		1850, -- Dash
-		5209, -- Challenging Roar
-		5211, -- Mighty Bash
-		5217, -- Tiger's Fury
-		16689, -- Nature's Grasp
-		16979, -- Feral Charge - Bear
-		17116, -- Nature's Swiftness
-		20484, -- Rebirth
-		22812, -- Barksin
-		22842, -- Frenzied Regeneration
-		29166, -- Innervate
-		33831, -- Force of Nature
-		33891, -- Incarnation: Tree of Life
-		48505, -- Starfall
-		49376, -- Feral Charge - Cat
-		50334, -- Berserk
-		50516, -- Typhoon
-		61336, -- Survival Instincts
-		77764, -- Stampeding Roar
-		102543, -- Incarnation: King of the Jungle
-		102558, -- Incarnation: Son of Ursoc
-		102560, -- Incarnation: Chosen of Elune
-		106952, -- Berserk
-		108238, -- Renewal
-		110621, -- Mirror Images
-		112071, -- Celestial Alignment
-		124974, -- Nature's Vigil
-		132158, -- Nature's Swiftness
-		155835, -- Bristling Fur
+		-- Global
+		-- Shared
+		-- Balance
+		-- Guardian
+		-- Feral
+		-- Restoration
 	},
 	["HUNTER"] = {
-		781,    -- Disengage
-		1499,   -- Freezing Trap
-		1543,   -- Flare
-		3045,   -- Rapid Fire
-		3674,   -- Black Arrow
-		5384,   -- Feign Death
-		13795,  -- Immolation Trap
-		13809,  -- Ice Trap
-		13813,  -- Explosive Trap
-		19263,  -- Deterrence
-		19386,  -- Wyvern Sting
-		19503,  -- Scatter Shot
-		19574,  -- Bestial Wrath
-		19577,  -- Intimidation
-		23989,  -- Readiness
-		34026,  -- Kill Command
-		34477,  -- Misdirection
-		34490,  -- Silencing Shot
-		34600,  -- Snake Trap
-		51753,  -- Camouflage
-		53209,  -- Chimera Shot
-		53271,  -- Master's Call
-		53301,  -- Explosive Shot
-		60192,  -- Freezing Trap Launcher
-		77769,  -- Trap Launcher
-		82726,  -- Fervor
-		82939,  -- Explosive Trap Launcher
-		82941,  -- Ice Trap Launcher
-		82945,  -- Immolation Trap Launcher
-		82948,  -- Snake Trap Launcher
-		109248, -- Binding Shot
-		109259, -- Powershot
+		-- Global
+		1543, -- Flare
+		5384, -- Feign Death
 		109304, -- Exhilaration
-		117050, -- Glaive Toss
-		120360, -- Barrage
-		120679, -- Dire Beast
-		120697, -- Lynx Rush
-		121818, -- Stampede
-		130392, -- Blink Strike
 		131894, -- A Murder of Crows
+		186257, -- Aspect of the Cheetah
+		186265, -- Aspect of the Turtle
+		-- Shared
+		781, -- Disengage
+		19386, -- Wyvern Sting
+		34477, -- Misdirection
+		109248, -- Binding Shot
+		120360, -- Barrage
+		147362, -- Counter Shot
+		198783, -- Camouflage
+		-- Beastmaster
+		19574, -- Bestial Wrath
+		19577, -- Intimidation	
+		120679, -- Dire Beast
+		193530, -- Aspect of the Wild
+		201430, -- Stampede
+		217200, -- Dire Frenzy
+		-- Marksmanship
+		193526, -- Trueshot
+		194599, -- Black Arrow
+		198760, -- Headshot
+		206817, -- Heightend Vulnerability
+		212431, -- Explosive Shot
+		214579, -- Sidewinders
+		-- Survival
+		162488, -- Lacerate
+		185855, -- Lacerate
+		186289, -- Aspect of the Eagle
+		187650, -- Freezing Trap
+		187698, -- Tar Trap
+		187707, -- Muzzle
+		190925, -- Harpoon
+		191241, -- Sticky Bomb
+		191433, -- Explosive Trap
+		194277, -- Caltrops
+		194407, -- Spitting Cobra
+		194855, -- Dragonsfire Grenade
+		200163, -- Throwing Axes
+		201078, -- Snake Hunter
+		212436, -- Butchery
+		-- PvP
+		53271, -- Master's Call
+		202914, -- Spider Sting
+		205691, -- Dire Beast: Basilisk
+		208652, -- Dire Beast: Hawk
+		208683, -- Gladiators Medallion
+		209789, -- Freezing Armor
+		212638, -- Tracker's Net
+		212640, -- Mending Bandage
+		213691, -- Scatter Shot
 	},
 	["MAGE"] = {
-		66,    -- Invisibility
-		120,   -- Cone of Cold
-		122,   -- Frost Nova
-		543,   -- Magic Protection (Fire/Frost Ward)
-		1463,  -- Mana Shield
-		1953,  -- Blink
-		2139,  -- Counterspell
-		11113, -- Blast Wave
-		11129, -- Combustion
-		11426, -- Ice Barrier
-		11958, -- Cold Snap
-		12042, -- Arcane Power
-		12043, -- Presense of Mind
-		12051, -- Evocation
-		12472, -- Icy Veins
-		31661, -- Dragon Breath
-		31687, -- Water Elemental
-		33395, -- Freeze (Water Elemental)
-		44572, -- Deep Freeze
+		-- Global
+		122, -- Frost Nova
+		1953, -- Blink
+		2139, -- Counterspell
+		11246, -- Ice Barrier
 		45438, -- Ice Block
-		55342, -- Mirror Images
+		55342, -- Mirror Image
 		80353, -- Time Warp
-		82676, -- Ring of Frost
-		82731, -- Flame Orb
-		84714, -- Frozen Orb
-		108978, -- Alter Time
-		110959, -- Greater Invisibility
-		115610, -- Temporal Shield
-		116257, -- Invoker's Energy
+		108839, -- Ice Floes
 		113724, -- Ring of Frost
-		131078, -- Icy Veins
-		152087, -- Prismatic Crystal
-		157913, -- Evanesce
-		157980, -- Super Nova
+		116011, -- Rune of Power
+		212653, -- Shimmer
+		-- Shared
+		66, -- Invisibility
+		-- Arcane
+		12042, -- Arcane Power
+		12051, -- Evocation
+		110959, -- Greater Invisibility
+		114923, -- Nether Tempest
+		153626, -- Arcane Orb
+		157980, -- Supernova
+		195676, -- Displacement
+		205022, -- Arcane Familiar
+		205025, -- Presence of Mind
+		205032, -- Charged Up
+		-- Fire
+		31661, -- Dragon's Breath
+		44457, -- Living Bomb
+		108853, -- Inferno Blast
+		153561, -- Meteor
+		157981, -- Blast Wave
+		190319, -- Combustion
+		205029, -- Flame On
+		-- Frost
+		120, -- Cone of Cold
+		12472, -- Icy Veins
+		31687, -- Summon Water Elemental
+		84714, -- Frozen Orb
+		112948, -- Frost Bomb
+		153595, -- Comet Storm
+		157997, -- Ice Nova
+		205021, -- Ray of Frost
+		205030, -- Frozen Touch
+		-- PvP
+		30449, -- Spellsteal
+		198111, -- Temporal Shield
+		198144, -- Ice Form
+		198158, -- Mass Invisibility
+		208683, -- Gladiators Medallion
 	},
 	["MONK"] = {
-		101545, -- Flying Serpent Kick
+		-- Global
 		101643, -- Transcendence
-		107428, -- Rising Sun Kick
-		112783, -- Diffuse Magic
-		113656, -- Fists of Fury
-		115072, -- Expel Harm
+		109132, -- Roll
 		115078, -- Paralysis
-		115080, -- Touch of Death
+		116841, -- Tiger's Lust
+		116844, -- Ring of Peace
+		119381, -- Leg Sweep
+		119996, -- Transcendence: Transfer
+		122278, -- Dampen Harm
+		122281, -- Healing Elixir
+		122783, -- Diffuse Magic
+		123986, -- Chi Burst
+		-- Shared
 		115098, -- Chi Wave
-		115151, -- Renewing Mist
+		116705, -- Spear Hand Strike
+		-- Brewmaster
 		115176, -- Zen Meditation
+		115181, -- Breath of Fire
 		115203, -- Fortifying Brew
-		115213, -- Avert Harm
-		115288, -- Energizing Brew
-		115295, -- Guard
-		115308, -- Elusive Brew
+		115308, -- Ironskin Brew
+		115315, -- Summon Black Ox Statue
+		115399, -- Black Ox Brew
+		119582, -- Purifying Brew
+		132758, -- Niuzao
+		-- Mistweaver
 		115310, -- Revival
 		115313, -- Summon Jade Serpent Statue
-		115315, -- Summon Black Ox Statue
-		115450, -- Detox
-		115546, -- Provoke
 		116680, -- Thunder Focus Tea
-		116705, -- Spear Hand Strike
-		116740, -- Tigereye Brew
-		116847, -- Rushing Jade Wind
 		116849, -- Life Cocoon
-		117368, -- Grapple Weapon
-		119381, -- Leg Sweep
-		119392, -- Charging Ox Wave
-		119996, -- Transcendence: Transfer
-		121253, -- Keg Smash
-		122057, -- Clash
-		122278, -- Dampen Harm
+		124081, -- Zen Pulse
+		197908, -- Mana Tea
+		197945, -- Zen Walk
+		198664, -- Chi-ji
+		198898, -- Song of Chi-ji
+		-- Windwalker
+		101545, -- Flying Serpent Kick
+		113656, -- Fists of Fury
+		115080, -- Touch of Death
+		115288, -- Energizing Elixir
 		122470, -- Touch of Karma
-		123761, -- Mana Tea (Glyphed)
-		122783, -- Diffuse Magic
-		123904, -- Invoke Xuen, the White Tiger	
+		123904, -- Xuen
+		137639, -- Storm, Earth and Fire
+		152173, -- Serenity
+		152175, -- Whirling Dragon Punch
+		-- PvP
+		201318, -- Fortifying Elixir
+		201325, -- Zen Meditation
+		202162, -- Guard
+		202272, -- Incendiary Brew
+		202335, -- Double Barrel
+		202370, -- Mighty Ox Kick
+		208683, -- Gladiators Medallion
+		213658, -- Craft: Nimble Brew
+		216113, -- Way of the Crane
 	},
 	["PALADIN"] = {
-		498,   -- Divine Protection
-		633,   -- Lay on Hands
-		642,   -- Divine Shield
-		853,   -- Hammer of Justice
-		1022,  -- Hand of Protection
-		1038,  -- Hand of Salvation
-		1044,  -- Hand of Freedom
-		2812,  -- Holy Wrath
-		6940,  -- Hand of Sacrifice
+		-- Global
+		498, -- Devine Protection
+		633, -- Lay on Hands
+		642, -- Divine Shield
+		853, -- Hammer of Justice
+		1022, -- Blessing of Protection
+		1044, -- Blessing of Freedom
+		6940, -- Blessing of Scrifice
 		20066, -- Repentance
-		20216, -- Divine Favor
-		20473, -- Holy Shock
-		26573, -- Consecration
+		20271, -- Judgement
 		31821, -- Aura Mastery
-		31842, -- Divine Favor
-		31850, -- Ardent Defender
+		115750, -- Blinding Light
+		-- Shared
 		31884, -- Avenging Wrath
-		54428, -- Divine Plea /wo Glyph
-		82327, -- Holy Radiance
-		85222, -- Light of Dawn
-		85285, -- Rebuke
-		85696, -- Zealotry
-		86698, -- Guardian of Ancient Kings
+		96231, -- Rebuke
+		190784, -- Devine Steed
+		-- Holy
+		31842, -- Avenging Wrath (Holy)
 		105809, -- Holy Avenger
-		114157, -- Execution Sentence
 		114158, -- Light's Hammer
-		118730, -- Divine Plea /w Glyph
+		114165, -- Holy Prism
+		183415, -- Aura of Mercy
+		197446, -- Beacon of Lightbringer
+		214202, -- Rule of Law
+		223306, -- Bestow Faith
+		-- Protection
+		31850, -- Ardent Defender
+		31935, -- Avenger's Shield
+		53600, -- Shield of Righteous
+		86659, -- Guardian of Acient Kings
+		184092, -- Light of the Protector
+		204013, -- Blessing of Salvation
+		204018, -- Blessing of Spellwarding
+		204035, -- Bastion of Light
+		204150, -- Aegis of Light
+		213652, -- Hand of Protector
+		-- Retribution
+		183218, -- Hand of Hindrance
+		184575, -- Blade of Justice
+		184662, -- Shield of Vengeance
+		205191, -- Eye for an Eye
+		205656, -- Devine Steed (Retribution)
+		210191, -- Word of Glory
+		213757, -- Execution Sentence
+		215647, -- Holy Wrath
+		210220, -- Equality
+		-- PvP
+		204939, -- Hammer of Reckoning
+		208683, -- Gladiators Medallion
+		210256, -- Blessing of Sanctuary
+		215652, -- Shield of Virtue
+		216331, -- Avenging Crusader
 	},
 	["PRIEST"] = {
-		17,     -- Power Word: Shield
-		527,    -- Purify
-		586,    -- Fade
-		724,    -- Lightwell
-		6346,   -- Fear Ward
-		8092,   -- Mind Blast
-		8122,   -- Psychic Scream
-		10060,  -- Power Infusion
-		14914,  -- Holy Fire
-		15286,  -- Vampiric Embrace
-		15487,  -- Silence
-		19236,  -- Desperate Prayer
-		32375,  -- Mass Dispel
-		32379,  -- Shdow Word: Death
-		33076,  -- Prayer of Mending
-		33206,  -- Pain Suppression
-		34861,  -- Circle of Healing
-		47540,  -- Penance
-		47585,  -- Dispersion
-		47788,  -- Guardian Spirit
-		62618,  -- Power Word: Barrier
-		64901,  -- Hymm of Hope
-		64044,  -- Psychic Horror
-		64843,  -- Divine Hymm
-		73325,  -- Leap of Faith
-		81206,  -- Chakra: Sanctuary
-		81209,  -- Chakra: Chastise
-		81208,  -- Chakra: Serenity
-		81700,  -- Archangel
-		88625,  -- Holy Word: Chastise
-		89485,  -- Inner Focus
-		108920, -- Void Tendrils
-		108921, -- Psyfiend
-		108968, -- Void Shift
-		109964, -- Spirit Shell
-		110744, -- Divine Star
-		120517, -- Halo
-		121135, -- Cascade
-		121536, -- Angelic Feather
-		129250, -- Power Word: Solace
-		132603, -- Shadowfiend
-		132604, -- Mindbender
+		-- Global
+		-- Shared
+		-- Discipline
+		-- Holy
+		-- Shadow
 	},
 	["ROGUE"] = {
-		408,    -- Kidney Shot
-		1725,   -- Distract
-		1766,   -- Kick
-		1776,   -- Gouge
-		1784,   -- Stealth
-		1856,   -- Vanish
-		2094,   -- Blind
-		2983,   -- Sprint
-		5277,   -- Evasion
-		5938,   -- Shiv
-		13750,  -- Adrenaline Rush
-		13877,  -- Blade Flurry
-		14177,  -- Cold Blood
-		14183,  -- Premeditation
-		14185,  -- Preparation
-		31224,  -- Cloak of Shadows
-		36554,  -- Shadowstep
-		51690,  -- Killing Spree
-		51713,  -- Shadow Dance
-		51722,  -- Dismantle
-		57934,  -- Tricks
-		73981,  -- Redirect
-		74001,  -- Combat Readiness
-		76577,  -- Smoke Bomb
-		79140,  -- Vendetta
-		114842, -- Shadow Walk
-		114018, -- Shroud of Concealment
-		121471, -- Shadow Blades
-		137619, -- Marked for Death
-		152150, -- Death from Above
-		152151, -- Shadow Reflection
+		-- Global
+		-- Shared
+		-- Assassination
+		-- Combat
+		-- Subtlety
 	},
 	["SHAMAN"] = {
-		421,    -- Chain Lightning
-		2825,   -- Bloodlust
-		5394,	-- Healing Stream Totem
-		8042,   -- Earth Shock
-		8050,   -- Flame Shock
-		8056,   -- Frost Shock
-		8177,   -- Grounding Totem
-		16166,  -- Elemental Mastery
-		16188,  -- Ancestral Swiftness
-		16190,  -- Mana Tide Totem
-		30823,  -- Shamanistic Rage
-		32182,  -- Heroism
-		51485,  -- Earthgrab Totem
-		51490,  -- Thunderstorm
-		51505,  -- Lava Burst
-		51514,  -- Hex
-		51533,  -- Feral Spirit
-		55198,  -- Tidal Force
-		57994,  -- Wind Shear
-		58875,	-- Spirit Walk
-		60103,  -- Lava Lash
-		61295,  -- Riptide
-		73680,  -- Unleash Elements
-		73899,  -- Primal Strike
-		73920,  -- Healing Rain
-		77130,  -- Purify Spirit
-		79206,  -- Spiritwalker's Grace
-		98008,  -- Spirit Link Totem
-		108270, -- Stone Bulwark Totem
-		108271, -- Astral Shift
-		108273, -- Windwalk Totem
-		108280, -- Healing Tide Totem
-		108281, -- Ancestral Guidance
-		108285, -- Call of Elements
-		114050, -- Ascendance
-		117014, -- Elemental Blast
-		152255, -- Liquid Magma
-		165462, -- Unleash Flame
+		-- Global
+		-- Shared
+		-- Elemental
+		-- Enhancement
+		-- Restoration
 	},
 	["WARLOCK"] = {
-		5484, -- Howl of Terror
-		6229, -- Zwielichtzauberschutz
-		6789, -- Death Coil
-		17962, -- Conflagrate
-		18540, -- Summon Doomguard / Infernal
-		18708, -- Fel Domination
-		20707, -- Seelenstein
-		29858, -- Soulshatter
-		30283, -- Shadowfury
-		47241, -- Metamorphosis
-		47897, -- Shadowflame
-		48020, -- Demonic Circle: Teleport
-		74434, -- Soul Burn
-		77801, -- Demon Soul
-		79268, -- Soul Harvest
-		80240, -- Havoc
-		86121, -- Soul Swap
-		104316, -- Wild Imp
-		104773, -- Erbarmungslose Entschlossenheit
-		108359, -- Finstere Regeneration
-		108416, -- Sacrificial Pact
-		108482, -- Entfesselter Wille
-		108505, -- Archimondes Rache
-		113858, -- Dark Soul: Instability
-		113860, -- Dark Soul: Misery
-		113861, -- Dark Soul: Knowledge
-		111397, -- Blutschrecken
-		120451, -- Flames of Xoroth
-		132409, -- Spell Lock
+		-- Global
+		-- Shared
+		-- Affliction
+		-- Demonology
+		-- Destruction
 	},
 	["WARRIOR"] = {
-		100, -- Charge
-		355, -- Taunt
-		676, -- Disarm
-		871, -- Shield Wall
-		1160, -- Demoralisierender Ruf
-		1161, -- Challenging Shout
-		1719, -- Recklessness
-		2565, -- Shield Block
-		3411, -- Intervene
-		5246, -- Intimidating Shout
-		6343, -- Donnerknall
+		-- Global
+		1719, -- Battle Cry
+		6552, -- Pummel
 		6544, -- Heroic Leap
-		6552, -- Zuschlagen
-		12292, -- Death Wish
-		12328, -- Sweeping Strikes
-		12809, -- Concussion Blow
-		12975, -- Last Stand
 		18499, -- Berserker Rage
-		20252, -- Intercept
-		20230, -- Retaliation
-		46924, -- Bladestorm
 		46968, -- Shockwave
-		55694,	-- Wütende Regeneration
-		57755, -- Heroic Throw
-		60970, -- Heroic Fury
-		64382, -- Shattering Throw
-		85388, -- Throwdown
-		86346, -- Colossus Smash
-		97462, -- Anspornender Schrei
-		102060, -- Unterbrechender Ruf
-		103840,	-- Bevorstehender Sieg
-		107566, -- Erschütternder Ruf
-		107570,	-- Sturmblitz
+		107570, -- Storm Bolt
 		107574, -- Avatar
-		114028, -- Mass Spell Reflect
-		114029, -- Sicherung
-		114030, -- Wachsamkeit
-		114192, -- Spottendes banner
-		114203, -- Demoralisierendes Banner
-		114207, -- Schädelbanner
-		118000, -- Drachengebrüll
-		118038, -- Durch das Schwert umkommen
+		-- Shared
+		5246, -- Intimidating Shout
+		46924, -- Bladestorm
+		97462, -- Commanding Shout
+		152277, -- Ravager
+		-- Arms
+		118038, -- Die by the Sword
+		167105, -- Colossus Smash
+		-- Fury
+		100, -- Charge
+		118000, -- Dragon Roar
+		184364, -- Frenzied Regeneration
+		-- Protection
+		871, -- Shield Wall
+		1160, -- Demoralizing Shout
+		2565, -- Shield Block
+		13975, -- Last Stand
+		23920, -- Spell Reflection
+		198304, -- Intercept
+		202168, -- Impending Victory
+		-- PvP
+		198758, -- Intercept
+		198817, -- Sharpen Blade
+		198912, -- Shield Bash
+		206572, -- Dragon Charge
+		208683, -- Gladiators Medallion
+		213871, -- Bodyguard
+		213915, -- Mass Spell Reflection
+		216890, -- Spell Reflection
 	},
 	["RACE"] = {
 		["Orc"] = {
@@ -512,10 +468,6 @@ spellCooldowns = {
 	},
 }
 
-trinketCooldowns = {
-	81268 -- testtrinket
-}
-
 -- Timer update throttle (in seconds). The lower, the more precise. Set it to a really low value and don't blame me for low fps
 local throttle = 0.3
 local spells = {}
@@ -531,14 +483,14 @@ local move = D["move"]
 
 local scfa = CreateFrame("Frame", "SpellCooldownsMover", UIParent)
 scfa:Size(120, 17)
-scfa:SetPoint("BOTTOM", UIParent, "BOTTOM", 0, 350)
+scfa:SetPoint("BOTTOM", UIParent, "BOTTOM", 0, 335)
 move:RegisterFrame(scfa)
 
 local SpellCooldownFrame = CreateFrame("Frame", "DuffedUISpellCooldowns", UIParent)
 SpellCooldownFrame:SetFrameStrata("BACKGROUND")
 SpellCooldownFrame:SetHeight(height)
 SpellCooldownFrame:SetWidth(width)
-SpellCooldownFrame:SetPoint("BOTTOM", scfa, 0, 0)
+SpellCooldownFrame:SetPoint("CENTER", scfa, 0, 0)
 
 local function enableCooldown(self)
 	self.enabled = true
