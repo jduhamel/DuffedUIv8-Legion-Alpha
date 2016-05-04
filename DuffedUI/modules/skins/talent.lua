@@ -68,7 +68,7 @@ local function LoadSkin()
 
 			bu.ring:Hide()
 			bu.specIcon:SetTexture(icon)
-			bu.specIcon:SetTexCoord(D["IconCoord"])
+			bu.specIcon:SetTexCoord(unpack(D["IconCoord"]))
 			bu.specIcon:SetSize(50, 50)
 			bu.specIcon:Point("LEFT", bu, "LEFT", 15, 0)
 		end
