@@ -429,10 +429,59 @@ spellCooldowns = {
 	},
 	["SHAMAN"] = {
 		-- Global
+		556, -- Astral Recall
+		32182, -- Heroism
+		51514, -- Hex
+		51485, -- Earthgrab Totem
+		57994, -- Wind Shear
+		108271, -- Astral Shift
+		114050, -- Ascendance
+		192058, -- Lightning Surge Totem
+		192077, -- Wind Rush Totem
+		196932, -- Vodoo Totem
 		-- Shared
+		108281, -- Ancestral Guidance
+		192063, -- Gust of Wind
 		-- Elemental
+		51490, -- Thunderstorm
+		117014, -- Elemental Blast
+		192222, -- Liquid Magma Totem
+		192249, -- Storm Elemental
+		198103, -- Earth Elemental
+		198607, -- Fire Elemental
+		210643, -- Totem Mastery
+		210714, -- Ice Fury
 		-- Enhancement
+		17364, -- Stormstrike
+		51533, -- Feral Spirit
+		58875, -- Spirit Walk
+		188089, -- Earthen Spike
+		193796, -- Flametongue
+		196884, -- Feral Lunge
+		197214, -- Sundering
+		201898, -- Windsong
+		215864, -- Rainfall
 		-- Restoration
+		5394, -- Healing Stream Totem
+		73920, -- Healing Rain
+		79206, -- Spiritwalker's Grace
+		98008, -- Spirit Link Totem
+		108280, -- Healing Tide Totem
+		157153, -- Cloudburst Totem
+		197995, -- Wellspring
+		198838, -- Earthen Shield Totem
+		207399, -- Ancestral Protection Totem
+		-- PvP
+		204288, -- Earth Shield
+		204293, -- Spirit Link
+		204330, -- Skyfury Totem
+		204331, -- Counterstrike Totem
+		204332, -- Windfury Totem
+		204336, -- Grounding Totem
+		204366, -- Thundercharge
+		204437, -- Lightning Lasso
+		208683, -- Gladiators Medallion
+		210918, -- Ethereal Form
 	},
 	["WARLOCK"] = {
 		-- Global
