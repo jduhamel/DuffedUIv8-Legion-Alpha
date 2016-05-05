@@ -578,7 +578,6 @@ if C["raid"].raidunitdebuffwatch == true then
 			},
 			SHAMAN = {
 				{61295, "TOPLEFT", {0, 0}, {.7, .3, .7}}, -- Riptide 
-				{974, "BOTTOMRIGHT", {0, 0}, {.7, .4, 0}}, -- Earth Shield
 			},
 			MONK = {
 				{119611, "TOPLEFT", {0, 0}, {.8, .4, .8}}, --Renewing Mist
