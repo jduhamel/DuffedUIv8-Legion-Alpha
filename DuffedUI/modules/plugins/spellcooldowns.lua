@@ -390,10 +390,42 @@ spellCooldowns = {
 	},
 	["ROGUE"] = {
 		-- Global
+		1725, -- Distract
+		1766, -- Kick
+		1856, -- Vanish
+		2983, -- Sprint
+		31224, -- Cloak of Shadows
+		57934, -- Tricks of the Trade
+		137619, -- Marked for Death
+		152150, -- Death from Above
+		185311, -- Crimson Vial
 		-- Shared
+		408, -- Kidney Shot
+		2094, -- Blind
+		5277, -- Evasion
+		36554, -- Shadowstep
 		-- Assassination
-		-- Combat
+		703, -- Garrot
+		79140, -- Vendetta
+		-- Outlaw
+		1776, -- Gouge
+		13750, -- Adrenaline Rush
+		13877, -- Blade Flurry
+		51690, -- Killing Spree
+		185767, -- Cannonball Barrage
+		195457, -- Grappling Hook
+		199740, -- Bribe
+		199743, -- Parley
+		199754, -- Riposte
+		199804, -- Between the Eyes
 		-- Subtlety
+		121471, -- Shadow Blades
+		185313, -- Shadow Dance
+		-- PvP
+		198529, -- Plunder Armor
+		206238, -- Shiv
+		207777, -- Dismantle
+		208683, -- Gladiators Medallion
 	},
 	["SHAMAN"] = {
 		-- Global
