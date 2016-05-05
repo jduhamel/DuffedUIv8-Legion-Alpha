@@ -337,10 +337,56 @@ spellCooldowns = {
 	},
 	["PRIEST"] = {
 		-- Global
+		586, -- Fade
+		32375, -- Mass Dispel
 		-- Shared
+		8122, --Psychic Scream
+		10060, -- Power Infusion
+		34433, -- Shadowfiend
+		73325, -- Leap of Faith
+		110744, -- Devine Star
+		120517, -- Halo
+		121536, -- Angelic Feather
+		204263, -- Shining Force
 		-- Discipline
+		33206, -- Pain Supression
+		47536, -- Rapture
+		47540, -- Penance
+		62618, -- Power Word: Barrier
+		123040, -- Mindbender (Discipline)
+		204197, -- Purge the Wicked
 		-- Holy
+		2050, -- Holy Word: Serenity
+		14914, -- Holy Fire
+		19236, -- Desperate Prayer
+		34861, -- Holy Word: Sanctify
+		47788, -- Guardian Spirit
+		64843, -- Devine Hymn
+		64901, -- Symbol of Hope
+		88625, -- Holy Word: Chastise
+		200183, -- Apothesis
+		204883, -- Circle of Healing
+		214121, -- Body and Mind
 		-- Shadow
+		15286, -- Vampiric Embrace
+		15487, -- Silence
+		47585, -- Dispersion
+		193223, -- Surrender to Madness
+		200174, -- Mindbender (Shadow)
+		205351, -- Shadow Word: Void
+		205369, -- Mind Bomb
+		205385, -- Shadow Crash
+		-- PvP
+		108968, -- Void Shift
+		197268, -- Ray of Hope
+		196762, -- Inner Focus
+		197862, -- Archangel
+		197871, -- Dark Archangel
+		208683, -- Gladiators Medallion
+		209780, -- Premonition
+		211522, -- Psyfiend
+		213602, -- Greater Fade
+		213610, -- Holy Ward
 	},
 	["ROGUE"] = {
 		-- Global
