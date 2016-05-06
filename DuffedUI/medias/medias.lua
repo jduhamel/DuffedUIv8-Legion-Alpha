@@ -21,11 +21,9 @@ C["media"] = {
 	["cn_dmgfont"] = [[Fonts\ARKai_C.TTF]],
 
 	["normTex"] = [[Interface\AddOns\DuffedUI\medias\textures\normTex]],
-	--["normTex"] = [[Interface\CHATFRAME\CHATFRAMEBACKGROUND]],
 	["glowTex"] = [[Interface\AddOns\DuffedUI\medias\textures\glowTex]],
 	["copyicon"] = [[Interface\AddOns\DuffedUI\medias\textures\copy]],
 	["blank"] = [[Interface\AddOns\DuffedUI\medias\textures\blank]],
-	--["blank"] = [[Interface\CHATFRAME\CHATFRAMEBACKGROUND]],
 	["duffed"] = [[Interface\AddOns\DuffedUI\medias\textures\duffed]],
 	["duffed_logo"] = [[Interface\AddOns\DuffedUI\medias\textures\logo]],
 	["alliance"] = [[Interface\AddOns\DuffedUI\medias\textures\alliance]],
