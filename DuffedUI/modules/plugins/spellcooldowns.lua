@@ -552,7 +552,7 @@ spellCooldowns = {
 			69070, -- Rocket Jump and Rocket Barrage
 		},
 		["Draenei"] = {
-			59545, -- Gift of the Naaru DK
+			59545, -- GotN DK
 			59543, -- GotN Hunter
 			59548, -- GotN Mage
 			59542, -- GotN Paladin
@@ -591,7 +591,6 @@ spellCooldowns = {
 		30151, -- Felguard Pursuit
 		115770, -- Shivarra Teufelspeitsche
 		115781, -- Beobachter Augenstrahl
-		-- Hunter
 	},
 }
 
@@ -663,7 +662,7 @@ local function positionHide()
 			frame.start = start
 			frame.duration = duration
 			if duration and duration > 1.5 then
-				if D["Class"] == "PRIEST" and frame.spell == 88682 or frame.spell == 88684 or frame.spell == 88685 then 
+				if D["Class"] == "PRIEST" and frame.spell == 2050 or frame.spell == 34861 or frame.spell == 88625 then 
 					frame.Icon:SetTexture(GetSpellTexture(GetSpellInfo(88625)))
 				else
 					frame.Icon:SetTexture(GetSpellTexture(GetSpellInfo(frame.spell)))
@@ -692,7 +691,7 @@ local function positionDim()
 			frame.start = start
 			frame.duration = duration
 			if duration and duration > 1.5 then
-				if D["Class"] == "PRIEST" and frame.spell == 88682 or frame.spell == 88684 or frame.spell == 88685 then
+				if D["Class"] == "PRIEST" and frame.spell == 2050 or frame.spell == 34861 or frame.spell == 88625 then 
 					frame.Icon:SetTexture(GetSpellTexture(GetSpellInfo(88625)))
 				else
 					frame.Icon:SetTexture(GetSpellTexture(GetSpellInfo(frame.spell)))
@@ -727,10 +726,10 @@ local function createCooldownFrame(spell)
 	if not spellInfo then return nil end
 	local texture = GetSpellTexture(spellInfo)
 	icon:SetAllPoints(frame)
-	if D["Class"] == "PRIEST" and spell == 88682 or spell == 88684 or spell == 88685 then texture = GetSpellTexture(GetSpellInfo(88625)) end
+	if D["Class"] == "PRIEST" and spell == 2050 or spell == 34861 or spell == 88625 then texture = GetSpellTexture(GetSpellInfo(88625)) end
 	if not texture then return nil end
 	icon:SetTexture(texture)
-	icon:SetTexCoord(.08, .92, .08, .92)
+	icon:SetTexCoord(unpack(D["IconCoord"]))
 	frame.Icon = icon
 
 	local durationText = frame:CreateFontString(nil, "OVERLAY")
