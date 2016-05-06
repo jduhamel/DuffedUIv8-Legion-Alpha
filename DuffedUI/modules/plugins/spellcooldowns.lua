@@ -15,13 +15,13 @@ spellCooldowns = {
 	["DEATHKNIGHT"] = {
 		-- Global
 		47528, -- Mind Freeze
-		48707, -- Anti Magic Shell
+		48707, -- Anti-Magic Shell
 		49576, -- Death Grip
 		50977, -- Death Gate
 		61999, -- Raise Ally
 		212552, -- Wraith Walk
 		-- Shared
-		43265, -- Death & Decay
+		43265, -- Death and Decay
 		48792, -- Icebound Fortitude
 		-- Blood
 		49028, -- Dancing Rune Weapon
@@ -29,6 +29,7 @@ spellCooldowns = {
 		108199, -- Gorefiend's Grasp
 		194679, -- Rune Tap
 		194844, -- Bonestorm
+		205223, -- Consumption (Artifact)
 		206931, -- Exsanguinate
 		206977, -- Blood Mirror
 		219809, -- Tombstone
@@ -41,6 +42,7 @@ spellCooldowns = {
 		152279, -- Breath of Sindragosa
 		194913, -- Glacial Advance
 		196770, -- Remorseless Winter
+		190778, -- Sindragosa's Fury (Artifact)
 		207127, -- Hungering Rune Weapon
 		207167, -- Blinding Sleet
 		207256, -- Obliteration
@@ -56,6 +58,7 @@ spellCooldowns = {
 		207317, -- Epidemic
 		207319, -- Corpse Shield
 		207349, -- Dark Arbiter
+		220143, -- Apocalypse (Artifact)
 		-- PvP
 		47476, -- Strangulate
 		51052, -- Anti-Magic-Zone
@@ -69,7 +72,6 @@ spellCooldowns = {
 		-- Global
 		183752, -- Consume Magic
 		188501, -- Spectral Sight
-		191427, -- Metamorphosis
 		196718, -- Darkness
 		211881, -- Fel Eruption
 		213241, -- Felblade
@@ -78,23 +80,26 @@ spellCooldowns = {
 		179057, -- Chaos Nova
 		185123, -- Throw Glaive
 		188409, -- Blade Dance
+		191427, -- Metamorphosis (Havoc)
 		195072, -- Fel Rush
 		196555, -- Netherwalk
 		198013, -- Eye Beam
 		198589, -- Blur
 		198793, -- Vengeful Retreat
-		201467, -- Fury of the Illidary (Artifact)
+		201467, -- Fury of the Illidari (Artifact)
 		206491, -- Nemesis
 		211048, -- Chaos Blades
 		211053, -- Fel Barrage
 		-- Vengeance
 		178740, -- Immolation Aura
+		187827, -- Metamorphosis (Vengeance)
 		189110, -- Infernal Strike
 		202137, -- Sigil of Silence
 		202138, -- Sigil of Chains
 		203720, -- Demon Spikes
 		204021, -- Fiery Brand
 		204596, -- Sigil of Flame
+		207407, -- Soul Carver (Artifact)
 		207684, -- Sigil of Misery
 		207810, -- Nether Bond
 		212084, -- Fel Devastation
@@ -111,16 +116,74 @@ spellCooldowns = {
 	},
 	["DRUID"] = {
 		-- Global
+		1850, -- Dash
+		5211, -- Mighty Bash
+		5215, -- Prowl
+		18562, -- Swiftmend
+		22842, -- Frenzied Regeneration
+		102280, -- Displacer Beast
+		102359, -- Mass Entanglement
+		102401, -- Wild Charge
+		132469, -- Typhoon
+		193753, -- Dreamwalk
 		-- Shared
+		22812, -- Barkskin
+		29166, -- Innervate
+		61336, -- Survival Instincts
+		106839, -- Skull Bash
+		108238, -- Renewal
 		-- Balance
-		-- Guardian
+		78675, -- Solar Beam
+		102560, -- Incarnation: Chosen of Elune
+		194223, -- Celestial Alignment
+		202359, -- Astral Communion
+		202425, -- Warrior of Elune
+		202770, -- Fury of Elune
+		202767, -- New Moon (Artifact)
+		202768, -- Half Moon (Artifact)
+		202771, -- Full Moon (Artifact)
+		205636, -- Force of Nature
 		-- Feral
+		5217, -- Tiger's Fury
+		22570, -- Maim
+		77764, -- Stampeding Roar
+		102543, -- Incarnation: King of the Jungle
+		106951, -- Berserk
+		197625, -- Moonkin Form
+		202038, -- Brutal Slash
+		202060, -- Elune's Guidance
+		210722, -- Ashamane's Frenzy (Artifact)
+		-- Guardian
+		99, -- Incapacitating Roar
+		102558, -- Incarnation: Guardian of Ursoc
+		106898, -- Stampeding Roar
+		155835, -- Bristling Fur
+		200851, -- Rage of the Sleeper (Artifact)
+		204066, -- Lunar Beam
 		-- Restoration
-	},
+		740, -- Tranquility
+		16914, -- Hurricane
+		33891, -- Incarnation: Tree of Life
+		48438, -- Wild Growth
+		102342, -- Ironbark
+		102351, -- Cenarion Ward
+		102793, -- Ursol's Vortex
+		197721, -- Flourish
+		208253, -- Essence of G'Hanir (Artifact)
+		-- PvP
+		201664, -- Demoralizing Roar
+		202246, -- Overrun
+		203242, -- Rip and Tear
+		203651, -- Overgrowth
+		203727, -- Thorns
+		208683, -- Gladiators Medallion
+		209749, -- Faerie Swarm
+  	},
 	["HUNTER"] = {
 		-- Global
 		1543, -- Flare
 		5384, -- Feign Death
+		34477, -- Misdirection
 		109304, -- Exhilaration
 		131894, -- A Murder of Crows
 		186257, -- Aspect of the Cheetah
@@ -128,27 +191,29 @@ spellCooldowns = {
 		-- Shared
 		781, -- Disengage
 		19386, -- Wyvern Sting
-		34477, -- Misdirection
 		109248, -- Binding Shot
 		120360, -- Barrage
 		147362, -- Counter Shot
 		198783, -- Camouflage
-		-- Beastmaster
+		-- Beast Mastery
 		19574, -- Bestial Wrath
-		19577, -- Intimidation	
+		19577, -- Intimidation
 		120679, -- Dire Beast
 		193530, -- Aspect of the Wild
 		201430, -- Stampede
+		207068, -- Titan's Thunder (Artifact)
 		217200, -- Dire Frenzy
 		-- Marksmanship
+		186387, -- Bursting Shot
 		193526, -- Trueshot
 		194599, -- Black Arrow
-		198760, -- Headshot
-		206817, -- Heightend Vulnerability
+		198670, -- Head Shot
+		204147, -- Windburst (Artifact)
+		206817, -- Heightened Vulnerability
 		212431, -- Explosive Shot
 		214579, -- Sidewinders
 		-- Survival
-		162488, -- Lacerate
+		162488, -- Steel Trap
 		185855, -- Lacerate
 		186289, -- Aspect of the Eagle
 		187650, -- Freezing Trap
@@ -162,6 +227,7 @@ spellCooldowns = {
 		194855, -- Dragonsfire Grenade
 		200163, -- Throwing Axes
 		201078, -- Snake Hunter
+		203415, -- Fury of the Eagle (Artifact)
 		212436, -- Butchery
 		-- PvP
 		53271, -- Master's Call
@@ -179,7 +245,7 @@ spellCooldowns = {
 		122, -- Frost Nova
 		1953, -- Blink
 		2139, -- Counterspell
-		11246, -- Ice Barrier
+		11426, -- Ice Barrier
 		45438, -- Ice Block
 		55342, -- Mirror Image
 		80353, -- Time Warp
@@ -200,6 +266,7 @@ spellCooldowns = {
 		205022, -- Arcane Familiar
 		205025, -- Presence of Mind
 		205032, -- Charged Up
+		210726, -- Mark of Aluneth (Artifact)
 		-- Fire
 		31661, -- Dragon's Breath
 		44457, -- Living Bomb
@@ -207,6 +274,7 @@ spellCooldowns = {
 		153561, -- Meteor
 		157981, -- Blast Wave
 		190319, -- Combustion
+		194466, -- Phoenix's Flames (Artifact)
 		205029, -- Flame On
 		-- Frost
 		120, -- Cone of Cold
@@ -218,6 +286,7 @@ spellCooldowns = {
 		157997, -- Ice Nova
 		205021, -- Ray of Frost
 		205030, -- Frozen Touch
+		214634, -- Ebonbolt (Artifact)
 		-- PvP
 		30449, -- Spellsteal
 		198111, -- Temporal Shield
@@ -249,7 +318,8 @@ spellCooldowns = {
 		115315, -- Summon Black Ox Statue
 		115399, -- Black Ox Brew
 		119582, -- Purifying Brew
-		132758, -- Niuzao
+		132578, -- Invoke Niuzao, the Black Ox
+		214326, -- Flaming Keg (Artifact)
 		-- Mistweaver
 		115310, -- Revival
 		115313, -- Summon Jade Serpent Statue
@@ -257,8 +327,8 @@ spellCooldowns = {
 		116849, -- Life Cocoon
 		124081, -- Zen Pulse
 		197908, -- Mana Tea
-		197945, -- Zen Walk
-		198664, -- Chi-ji
+		197945, -- Mistwalk
+		198664, -- Invoke Chi-ji, the Red Crane
 		198898, -- Song of Chi-ji
 		-- Windwalker
 		101545, -- Flying Serpent Kick
@@ -266,10 +336,11 @@ spellCooldowns = {
 		115080, -- Touch of Death
 		115288, -- Energizing Elixir
 		122470, -- Touch of Karma
-		123904, -- Xuen
-		137639, -- Storm, Earth and Fire
+		123904, -- Invoke Xuen, the White Tiger
+		137639, -- Storm, Earth, and Fire
 		152173, -- Serenity
 		152175, -- Whirling Dragon Punch
+		205320, -- Strike of the Windlord (Artifact)
 		-- PvP
 		201318, -- Fortifying Elixir
 		201325, -- Zen Meditation
@@ -283,55 +354,57 @@ spellCooldowns = {
 	},
 	["PALADIN"] = {
 		-- Global
-		498, -- Devine Protection
 		633, -- Lay on Hands
 		642, -- Divine Shield
 		853, -- Hammer of Justice
 		1022, -- Blessing of Protection
 		1044, -- Blessing of Freedom
-		6940, -- Blessing of Scrifice
 		20066, -- Repentance
-		20271, -- Judgement
-		31821, -- Aura Mastery
+		20271, -- Judgment
 		115750, -- Blinding Light
 		-- Shared
 		31884, -- Avenging Wrath
 		96231, -- Rebuke
-		190784, -- Devine Steed
+		205656, -- Divine Steed
 		-- Holy
+		498, -- Divine Protection
+		6940, -- Blessing of Sacrifice
+		31821, -- Aura Mastery
 		31842, -- Avenging Wrath (Holy)
 		105809, -- Holy Avenger
 		114158, -- Light's Hammer
 		114165, -- Holy Prism
-		183415, -- Aura of Mercy
-		197446, -- Beacon of Lightbringer
+		200652, -- Tyr's Deliverance (Artifact)
 		214202, -- Rule of Law
 		223306, -- Bestow Faith
 		-- Protection
 		31850, -- Ardent Defender
 		31935, -- Avenger's Shield
-		53600, -- Shield of Righteous
-		86659, -- Guardian of Acient Kings
+		53600, -- Shield of the Righteous
+		86659, -- Guardian of Ancient Kings
 		184092, -- Light of the Protector
+		190784, -- Divine Steed (Protection)
 		204013, -- Blessing of Salvation
 		204018, -- Blessing of Spellwarding
 		204035, -- Bastion of Light
 		204150, -- Aegis of Light
-		213652, -- Hand of Protector
+		209202, -- Eye of Tyr (Artifact)
+		213652, -- Hand of the Protector
 		-- Retribution
 		183218, -- Hand of Hindrance
 		184575, -- Blade of Justice
 		184662, -- Shield of Vengeance
 		205191, -- Eye for an Eye
-		205656, -- Devine Steed (Retribution)
+		205273, -- Wake of Ashes (Artifact)
 		210191, -- Word of Glory
-		213757, -- Execution Sentence
-		215647, -- Holy Wrath
 		210220, -- Equality
+		213757, -- Execution Sentence
+		224668, -- Sanctified Wrath
 		-- PvP
 		204939, -- Hammer of Reckoning
 		208683, -- Gladiators Medallion
 		210256, -- Blessing of Sanctuary
+		210294, -- Divine Favor
 		215652, -- Shield of Virtue
 		216331, -- Avenging Crusader
 	},
@@ -340,32 +413,34 @@ spellCooldowns = {
 		586, -- Fade
 		32375, -- Mass Dispel
 		-- Shared
-		8122, --Psychic Scream
+		8122, -- Psychic Scream
 		10060, -- Power Infusion
 		34433, -- Shadowfiend
 		73325, -- Leap of Faith
-		110744, -- Devine Star
+		110744, -- Divine Star
 		120517, -- Halo
 		121536, -- Angelic Feather
 		204263, -- Shining Force
 		-- Discipline
-		33206, -- Pain Supression
+		33206, -- Pain Suppression
 		47536, -- Rapture
 		47540, -- Penance
 		62618, -- Power Word: Barrier
 		123040, -- Mindbender (Discipline)
 		204197, -- Purge the Wicked
+		207946, -- Light's Wrath (Artifact)
 		-- Holy
 		2050, -- Holy Word: Serenity
 		14914, -- Holy Fire
 		19236, -- Desperate Prayer
 		34861, -- Holy Word: Sanctify
 		47788, -- Guardian Spirit
-		64843, -- Devine Hymn
+		64843, -- Divine Hymn
 		64901, -- Symbol of Hope
 		88625, -- Holy Word: Chastise
-		200183, -- Apothesis
+		200183, -- Apotheosis
 		204883, -- Circle of Healing
+		208065, -- Light of T'uure (Artifact)
 		214121, -- Body and Mind
 		-- Shadow
 		15286, -- Vampiric Embrace
@@ -373,6 +448,7 @@ spellCooldowns = {
 		47585, -- Dispersion
 		193223, -- Surrender to Madness
 		200174, -- Mindbender (Shadow)
+		205065, -- Void Torrent (Artifact)
 		205351, -- Shadow Word: Void
 		205369, -- Mind Bomb
 		205385, -- Shadow Crash
@@ -405,8 +481,9 @@ spellCooldowns = {
 		5277, -- Evasion
 		36554, -- Shadowstep
 		-- Assassination
-		703, -- Garrot
+		703, -- Garrote
 		79140, -- Vendetta
+		192759, -- Kingsbane (Artifact)
 		-- Outlaw
 		1776, -- Gouge
 		13750, -- Adrenaline Rush
@@ -418,48 +495,56 @@ spellCooldowns = {
 		199743, -- Parley
 		199754, -- Riposte
 		199804, -- Between the Eyes
+		202665, -- Curse of the Dreadblades (Artifact)
 		-- Subtlety
 		121471, -- Shadow Blades
 		185313, -- Shadow Dance
+		209782, -- Goremaw's Bite (Artifact)
 		-- PvP
 		198529, -- Plunder Armor
 		206238, -- Shiv
+		207736, -- Shadowy Duel
 		207777, -- Dismantle
 		208683, -- Gladiators Medallion
+		212182, -- Smoke Bomb
+		213981, -- Cold Blood
 	},
 	["SHAMAN"] = {
 		-- Global
 		556, -- Astral Recall
 		32182, -- Heroism
-		51514, -- Hex
 		51485, -- Earthgrab Totem
+		51514, -- Hex
 		57994, -- Wind Shear
 		108271, -- Astral Shift
-		114050, -- Ascendance
 		192058, -- Lightning Surge Totem
 		192077, -- Wind Rush Totem
-		196932, -- Vodoo Totem
+		196932, -- Voodoo Totem
 		-- Shared
 		108281, -- Ancestral Guidance
 		192063, -- Gust of Wind
 		-- Elemental
 		51490, -- Thunderstorm
+		114050, -- Ascendance (Elemental)
 		117014, -- Elemental Blast
 		192222, -- Liquid Magma Totem
 		192249, -- Storm Elemental
+		198067, -- Fire Elemental
 		198103, -- Earth Elemental
-		198607, -- Fire Elemental
+		205495, -- Stormkeeper (Artifact)
 		210643, -- Totem Mastery
-		210714, -- Ice Fury
+		210714, -- Icefury
 		-- Enhancement
 		17364, -- Stormstrike
 		51533, -- Feral Spirit
 		58875, -- Spirit Walk
+		114051, -- Ascendance (Enhancement)
 		188089, -- Earthen Spike
 		193796, -- Flametongue
 		196884, -- Feral Lunge
 		197214, -- Sundering
 		201898, -- Windsong
+		204945, -- Doom Winds (Artifact)
 		215864, -- Rainfall
 		-- Restoration
 		5394, -- Healing Stream Totem
@@ -467,10 +552,12 @@ spellCooldowns = {
 		79206, -- Spiritwalker's Grace
 		98008, -- Spirit Link Totem
 		108280, -- Healing Tide Totem
+		114052, -- Ascendance (Restoration)
 		157153, -- Cloudburst Totem
 		197995, -- Wellspring
 		198838, -- Earthen Shield Totem
 		207399, -- Ancestral Protection Totem
+		207778, -- Gift of the Queen (Artifact)
 		-- PvP
 		204288, -- Earth Shield
 		204293, -- Spirit Link
@@ -485,21 +572,53 @@ spellCooldowns = {
 	},
 	["WARLOCK"] = {
 		-- Global
+		698, -- Ritual of Summoning
+		1122, -- Summon Infernal & Summon Doomguard
+		6789, -- Mortal Coil
+		20707, -- Soulstone
+		29893, -- Create Soulwell
+		104773, -- Unending Resolve
+		108416, -- Dark Pact
+		111771, -- Demonic Gateway
+		119898, -- Command Demon
+		196098, -- Soul Harvest
 		-- Shared
+		30283, -- Shadowfury
+		108503, -- Grimoire of Sacrifice
+		152108, -- Cataclysm
 		-- Affliction
+		5484, -- Howl of Terror
+		86121, -- Soul Swap
+		111859, -- Grimoire: Imp & Other Pets)
+		205179, -- Phantom Singularity
 		-- Demonology
+		201996, -- Call Observer
+		205180, -- Summon Darkglare
+		211714, -- Thal'kiel's Comsumption (Artifact)
+		212459, -- Call Fel Lord
+		212619, -- Call Felhunter
 		-- Destruction
+		80240, -- Havoc
+		196586, -- Dimensional Rift (Artifact)
+		-- PvP
+		199890, -- Curse of Tongues
+		199892, -- Curse of Weakness
+		199954, -- Curse of Fragility
+		221703, -- Casting Circle
+		212284, -- Firestone
+		212295, -- Nether Ward
 	},
 	["WARRIOR"] = {
 		-- Global
 		1719, -- Battle Cry
-		6552, -- Pummel
 		6544, -- Heroic Leap
+		6552, -- Pummel
 		18499, -- Berserker Rage
 		46968, -- Shockwave
 		107570, -- Storm Bolt
 		107574, -- Avatar
 		-- Shared
+		100, -- Charge
 		5246, -- Intimidating Shout
 		46924, -- Bladestorm
 		97462, -- Commanding Shout
@@ -507,18 +626,20 @@ spellCooldowns = {
 		-- Arms
 		118038, -- Die by the Sword
 		167105, -- Colossus Smash
+		209577, -- Warbreaker (Artifact)
 		-- Fury
-		100, -- Charge
 		118000, -- Dragon Roar
-		184364, -- Frenzied Regeneration
+		184364, -- Enraged Regeneration
+		205545, -- Odyn's Fury (Artifact)
 		-- Protection
 		871, -- Shield Wall
 		1160, -- Demoralizing Shout
 		2565, -- Shield Block
-		13975, -- Last Stand
+		12975, -- Last Stand
 		23920, -- Spell Reflection
 		198304, -- Intercept
 		202168, -- Impending Victory
+		203524, -- Neltharion's Fury (Artifact)
 		-- PvP
 		198758, -- Intercept
 		198817, -- Sharpen Blade
@@ -531,16 +652,22 @@ spellCooldowns = {
 	},
 	["RACE"] = {
 		["Orc"] = {
-			33697, -- Orc Blood Fury Shaman
-			33702, -- Orc Blood Fury Warlock
-			20572, -- Orc Blood Fury AP
+			33697, -- Blood Fury (Monk, Shaman)
+			33702, -- Blood Fury (Mage, Warlock)
+			20572, -- Blood Fury (Death Knight, Hunter, Rogue, Warrior)
 		},
 		["BloodElf"] = {
-			25046, -- Blood Elf Arcane Torrent Rogue
+			25046, -- Arcane Torrent (Rogue)
+			28730, -- Arcane Torrent (Mage, Paladin, Priest, Warlock)
+			50163, -- Arcane Torrent (Death Knight)
+			69179, -- Arcane Torrent (Warrior)
+			80483, -- Arcane Torrent (Hunter)
+			129597, -- Arcane Torrent (Monk)
+			202719, -- Arcane Torrent (Demon Hunter)
 		},
 		["Scourge"] = {		
 			20577, -- Cannibalize
-			7744,   -- Will of the Forsaken
+			7744, -- Will of the Forsaken
 		},
 		["Tauren"] = {
 			20549, -- War Stomp
@@ -549,17 +676,17 @@ spellCooldowns = {
 			26297, -- Berserking
 		},
 		["Goblin"] = {
-			69070, -- Rocket Jump and Rocket Barrage
+			69070, -- Rocket Jump & Rocket Barrage
 		},
 		["Draenei"] = {
-			59545, -- GotN DK
-			59543, -- GotN Hunter
-			59548, -- GotN Mage
-			59542, -- GotN Paladin
-			59544, -- GotN Priest
-			59547, -- GotN Shaman
-			28880, -- GotN Warrior
-			121093, -- GotN Monk
+			28880, -- Gift of the Naaru (Warrior)
+			59542, -- Gift of the Naaru (Paladin)
+			59543, -- Gift of the Naaru (Hunter)
+			59544, -- Gift of the Naaru (Priest)
+			59545, -- Gift of the Naaru (Death Knight)
+			59547, -- Gift of the Naaru (Shaman)
+			59548, -- Gift of the Naaru (Mage)
+			121093, -- Gift of the Naaru (Monk)
 		},
 		["Dwarf"] = {
 			20594, -- Stoneform
@@ -575,22 +702,40 @@ spellCooldowns = {
 		},		
 		["Worgen"] = {
 			68992, -- Darkflight
-			68996, -- Two Forms
 		},
 		["Pandaren"] = {
 			107079, -- Quaking Palm
 		}
 	},
 	["PET"] = {
-		-- Warlock
-		6360, -- Succubus Whiplash
-		7812, -- Voidwalker Sacrifice
-		19647, -- Felhunter Spell Lock
-		89766, -- Felguard Axe Toss
-		89751, -- Felguard Felstorm
-		30151, -- Felguard Pursuit
-		115770, -- Shivarra Teufelspeitsche
-		115781, -- Beobachter Augenstrahl
+		-- Warlock: Succubus
+		6358, -- Seduction
+		6360, -- Whisplash
+		-- Warlock: Felhunter
+		19467, -- Spell Lock
+		-- Warlock: Voidwalker
+		17767, -- Shadow Bulwark
+		-- Warlock: Imp
+		119899, -- Cauterize Master
+		-- Warlock: Felguard
+		89766, -- Axe Toss
+		89751, -- Felstorm
+		30151, -- Pursuit
+		-- Warlock: Doomguard
+		170995, -- Cripple
+		171138, -- Shadow Lock
+		-- Warlock: Infernal
+		171017, -- Meteor Strike
+		-- Hunter: Cunning
+		53480, -- Roar of Sacrifice
+		53490, -- Bullheaded
+		-- Hunter: Ferocity
+		55709, -- Heart of the Phoenix
+		-- Hunter: Tenacity
+		53547, -- Last Stand
+		61685, -- Charge
+		-- Hunter: Cunning & Ferocity
+		61684, -- Dash
 	},
 }
 
