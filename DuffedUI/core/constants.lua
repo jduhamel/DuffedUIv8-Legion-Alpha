@@ -44,23 +44,8 @@ D["Credits"] = {
 }
 
 D["DuffedCredits"] = {
-	"Shaney",
-	"Juhawny",
-	"Rav",
-	"loki",
-	"Shariza",
-	"Dahgoth",
-	"Sandoras",
-	"Sinaris",
-	"Digawen",
-	"Zenglao",
-	"devel1988",
-	"Grimbeorn",
-	"Ginji",
-	"Floppiflappsi",
-	"Slideroh",
-	"McTrap",
-	"HackManiac",
-	"Yascha",
-	"DarKleFou",
+	"Darryn/Nyle",
+	"Chrisey",
+	"Niraya",
+	"Roflman",
 }
