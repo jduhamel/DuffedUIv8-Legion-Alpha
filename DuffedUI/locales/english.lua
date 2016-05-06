@@ -253,6 +253,7 @@ L["xpbar"] = {
 
 L["artifactBar"] = {
 	["xptitle"] = "Artifact Experience",
-	["xp"] = "Experience: %s",
+	["xp"] = "Experience: %s/%s (%d%%)",
+	["xpremaining"] = "Remaining: %s",
 	["traits"] = "Traits avaiable: %s",
 }

@@ -252,10 +252,11 @@ if D.Client == "deDE" then
 		["revered"] = "Respektvoll",
 		["exalted"] = "Ehrfürchtig",
 	}
+	
+	L["artifactBar"] = {
+		["xptitle"] = "Artefakt Erfahrung",
+		["xp"] = "Erfahrung: %s/%s (%d%%)",
+		["xpremaining"] = "Verbleibend: %s",
+		["traits"] = "Traits verfügbar: %s",
+	}
 end
-
-L["artifactBar"] = {
-	["xptitle"] = "Artefakt Erfahrung",
-	["xp"] = "Erfahrung: %s",
-	["traits"] = "Traits verfügbar: %s",
-}

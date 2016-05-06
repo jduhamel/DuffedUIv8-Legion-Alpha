@@ -251,10 +251,11 @@ if D.Client == "ptBR" then
 		["revered"] = "Revered",
 		["exalted"] = "Exalted",
 	}
+	
+	L["artifactBar"] = {
+		["xptitle"] = "Artifact Experience",
+		["xp"] = "Experience: %s/%s (%d%%)",
+		["xpremaining"] = "Remaining: %s",
+		["traits"] = "Traits avaiable: %s",
+	}
 end
-
-L["artifactBar"] = {
-	["xptitle"] = "Artifact Experience",
-	["xp"] = "Experience: %s",
-	["traits"] = "Traits avaiable: %s",
-}

@@ -5,9 +5,6 @@ local barHeight, barWidth = 5, C["misc"].artifactwidth
 local barTex, flatTex = C["media"].normTex
 local color = RAID_CLASS_COLORS[D.Class]
 local move = D["move"]
-local hAE = HasArtifactEquipped()
-
-if not hAE then return end
 
 local backdrop = CreateFrame("Frame", "Artifact_Backdrop", UIParent)
 backdrop:SetSize(barWidth, barHeight)
@@ -34,18 +31,28 @@ artifactBar:SetFrameLevel(2)
 ArtifactmouseFrame:SetFrameLevel(3)
 
 local function updateStatus()
-	local _, _, _, _, xp, pointsSpent, _, _, _, _, _, _ = C_ArtifactUI.GetEquippedArtifactInfo()
-	local aPT = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, xp)
+	local hAE = HasArtifactEquipped()
+	local _, _, _, _, totalxp, pointsSpent, _, _, _, _, _, _ = C_ArtifactUI.GetEquippedArtifactInfo()
 
-	if (not hAE) then artifactBar:Hide() else artifactBar:SetValue(xp) end
+	if hAE then
+		local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
+
+		artifactBar:SetMinMaxValues(min(0, xp), xpForNextPoint)
+		artifactBar:SetValue(xp)
+	else
+		backdrop:Hide()
+	end
 
 	ArtifactmouseFrame:SetScript("OnEnter", function()
 		GameTooltip:SetOwner(ArtifactmouseFrame, "ANCHOR_TOPRIGHT", 2, 5)
 		GameTooltip:ClearLines()
 		if hAE then
+			local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
+
 			GameTooltip:AddLine(L["artifactBar"]["xptitle"])
-			GameTooltip:AddLine(string.format(L["artifactBar"]["xp"], xp))
-			GameTooltip:AddLine(string.format(L["artifactBar"]["traits"], aPT))
+			GameTooltip:AddLine(string.format(L["artifactBar"]["xp"], xp, xpForNextPoint, (xp / xpForNextPoint) * 100))
+			GameTooltip:AddLine(string.format(L["artifactBar"]["xpremaining"], xpForNextPoint - xp))
+			GameTooltip:AddLine(string.format(L["artifactBar"]["traits"], numPointsAvailableToSpend))
 		end
 		GameTooltip:Show()
 	end)
