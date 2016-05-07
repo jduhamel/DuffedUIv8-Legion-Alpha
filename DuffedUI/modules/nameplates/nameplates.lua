@@ -6,6 +6,9 @@ local _G = _G
 local unpack = unpack
 local select = select
 local colors = D["UnitColor"]
+local goodR, goodG, goodB = unpack(C["nameplate"]["threat_goodcolor"])
+local badR, badG, badB = unpack(C["nameplate"]["threat_badcolor"])
+local transitionR, transitionG, transitionB = unpack(C["nameplate"]["threat_transitioncolor"])
 
 --[[Functions]]--
 function nameplates:customSize() C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight) end
@@ -53,13 +56,28 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	local health = self.healthBar
 	local name = self.name
 	local castbar = self.castBar
-	
+	local cicon = self.castBar.Icon
+	local buffframe = self.BuffFrame
+
 	health:SetHeight(C["nameplate"].plateheight)
 	health:SetStatusBarTexture(C["media"].normTex)
-	
+
+	ClassNameplateManaBarFrame:SetStatusBarTexture(C["media"].normTex)
+
 	castbar:SetSize(C["nameplate"].platewidth, 5)
 	castbar:SetStatusBarTexture(C["media"].normTex)
 	castbar:GetStatusBarTexture():SetHorizTile(true)
+	castbar.background:ClearAllPoints()
+	castbar.background:SetOutside()
+	castbar.Text:SetFont(C["media"].font, 9, "THINOUTLINE")
+
+	cicon:SetTexCoord(unpack(D["IconCoord"]))
+	cicon:Size(health:GetHeight() + castbar:GetHeight() + 3)
+	cicon:ClearAllPoints()
+	cicon:SetPoint("TOPRIGHT", health, "TOPLEFT", -3, 0)
+
+	buffframe:ClearAllPoints()
+	buffframe:SetPoint("TOPLEFT", name, "TOPLEFT", 0, 20)
 
 	name:SetFont(C["media"].font, 9, "THINOUTLINE")
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
@@ -73,7 +91,7 @@ function nameplates:registerEvents()
     --self:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
     --self:RegisterEvent("PLAYER_TARGET_CHANGED")
     self:RegisterEvent("DISPLAY_SIZE_CHANGED")
-    --self:RegisterEvent("UNIT_AURA")
+    self:RegisterEvent("UNIT_AURA")
     --self:RegisterEvent("VARIABLES_LOADED")
     --self:RegisterEvent("CVAR_UPDATE") 
 end
