@@ -8,48 +8,71 @@ local select = select
 local colors = D["UnitColor"]
 
 --[[Functions]]--
---[[function nameplates:customSize()
-	C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight)
-end]]--
+function nameplates:customSize() C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight) end
 
 function nameplates:colorHealth()
     if (self:GetName() and string.find(self:GetName(), "NamePlate")) then
-        local r, g, b
+        local r, g, b = self.healthBar:GetStatusBarColor()
 
-        if not UnitIsConnected(self.unit) then
-            r, g, b = unpack(colors.disconnected)
-        else
-            if UnitIsPlayer(self.unit) then
-                local Class = select(2, UnitClass(self.unit))
-                r, g, b = unpack(colors.class[Class])
-            else
-                if (UnitIsFriend("player", self.unit)) then r, g, b = unpack(colors.reaction[5]) else r, g, b = unpack(colors.reaction[1]) end
-            end
-        end
+        for class, color in pairs(RAID_CLASS_COLORS) do
+			local r, g, b = floor(r * 100 + .5) / 100, floor(g * 100 + .5) / 100, floor(b * 100 + .5) / 100
+			if RAID_CLASS_COLORS[class].r == r and RAID_CLASS_COLORS[class].g == g and RAID_CLASS_COLORS[class].b == b then
+				self.hasClass = true
+				self.isFriendly = false
+				self.health:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
+				return
+			end
+		end
+
+		if g + b == 0 then
+			r, g, b = .87, .37, .37
+			self.isFriendly = false
+		elseif r + b == 0 then
+			r, g, b = .31, .45, .63
+			self.isFriendly = true
+		elseif r + g > 1.95 then
+			r, g, b = .86, .77, .36
+			self.isFriendly = false
+		elseif r + g == 0 then
+			r, g, b = .29,  .69, .3
+			self.isFriendly = true
+		else
+			self.isFriendly = false
+		end
+
+		if UnitIsPlayer(self.unit) then
+			local Class = select(2, UnitClass(self.unit))
+			r, g, b = unpack(colors.class[Class])
+		end
         self.healthBar:SetStatusBarColor(r, g, b)
     end
 end
 
---[[function nameplates:visualStyle(setupOptions, frameOptions)
+function nameplates:visualStyle(setupOptions, frameOptions)
 	local highlight = self.selectionHighlight
 	local health = self.healthBar
 	local name = self.name
+	local castbar = self.castBar
 	
 	health:SetHeight(C["nameplate"].plateheight)
-	health:SetTexture(C["media"].normTex)
-	--health:SetTemplate()
+	health:SetStatusBarTexture(C["media"].normTex)
+	
+	castbar:SetSize(C["nameplate"].platewidth, 5)
+	castbar:SetStatusBarTexture(C["media"].normTex)
+	castbar:GetStatusBarTexture():SetHorizTile(true)
 
 	name:SetFont(C["media"].font, 9, "THINOUTLINE")
+	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
 	highlight:Kill()
-end]]--
+end
 
 --[[Events]]--
---[[function nameplates:registerEvents()
+function nameplates:registerEvents()
 	--self:RegisterEvent("NAME_PLATE_CREATED")
     --self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
     --self:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
     --self:RegisterEvent("PLAYER_TARGET_CHANGED")
-    --self:RegisterEvent("DISPLAY_SIZE_CHANGED")
+    self:RegisterEvent("DISPLAY_SIZE_CHANGED")
     --self:RegisterEvent("UNIT_AURA")
     --self:RegisterEvent("VARIABLES_LOADED")
     --self:RegisterEvent("CVAR_UPDATE") 
@@ -59,17 +82,17 @@ function nameplates:onEvent(event, ...)
     if event == "DISPLAY_SIZE_CHANGED" then
         self:customSize()
     end
-end]]
+end
 
 --[[Enable & Running]]--
 function nameplates:enable()
 	if C["nameplate"]["active"] ~= true then return end
 	
-	--self:registerEvents()
-    --self:customSize()
+	self:registerEvents()
+    self:customSize()
     self:SetScript("OnEvent", self.onEvent)
 	
-	--hooksecurefunc("DefaultCompactNamePlateFrameSetup", self.visualStyle)
+	hooksecurefunc("DefaultCompactNamePlateFrameSetup", self.visualStyle)
 	hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
 end
 

@@ -65,17 +65,11 @@
 	--[[Nameplate]]--
 	DuffedUIConfigUILocalization.nameplate = "Nameplates"
 	DuffedUIConfigUILocalization.nameplateactive = "Enable Nameplates"
-	DuffedUIConfigUILocalization.nameplatedebuffs = "Enable debuff display"
 	DuffedUIConfigUILocalization.nameplateplatewidth = "Set width of nameplates (default = 110)"
 	DuffedUIConfigUILocalization.nameplateplateheight = "Set height of nameplates (default = 7)"
-	DuffedUIConfigUILocalization.nameplateauraswidth = "Set width of Debufficon"
-	DuffedUIConfigUILocalization.nameplateaurasheight = "Set height of Debufficon"
-	DuffedUIConfigUILocalization.nameplateMaxDebuffs = "Set max debuffs to display (default = 5)"
 	DuffedUIConfigUILocalization.nameplatethreat_badcolor = "Bad threat color, varies depending if your a tank or dps/heal"
 	DuffedUIConfigUILocalization.nameplatethreat_goodcolor = "Good threat color, varies depending if your a tank or dps/heal"
 	DuffedUIConfigUILocalization.nameplatethreat_transitioncolor = "Losing/Gaining threat color"
-	DuffedUIConfigUILocalization.nameplatePercent = "Enable Percent-Display on Nameplates"
-	DuffedUIConfigUILocalization.nameplateNTA = "Set Non Target Alpha"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "Action Bars"

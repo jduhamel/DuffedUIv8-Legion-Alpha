@@ -65,17 +65,11 @@
 	--[[Nameplate]]--
  	DuffedUIConfigUILocalization.nameplate = "姓名版"
  	DuffedUIConfigUILocalization.nameplateactive = "啟用姓名版"
- 	DuffedUIConfigUILocalization.nameplatedebuffs = "啟用姓名板debuff顯示"
  	DuffedUIConfigUILocalization.nameplateplatewidth = "設置姓名板寬度 (默認 = 110)"
  	DuffedUIConfigUILocalization.nameplateplateheight = "設置姓名板高度 (默認 = 7)"
- 	DuffedUIConfigUILocalization.nameplateauraswidth = "設置Debuff圖標寬度"
- 	DuffedUIConfigUILocalization.nameplateaurasheight = "設置Debuff圖標高度"
- 	DuffedUIConfigUILocalization.nameplateMaxDebuffs = "設置最大Debuff顯示數量 (默認 = 5)"
  	DuffedUIConfigUILocalization.nameplatethreat_badcolor = "高仇恨著色,根據你的職業Tank or dps/heal而改變"
  	DuffedUIConfigUILocalization.nameplatethreat_goodcolor = "低仇恨著色,根據你的職業Tank or dps/heal而改變"
  	DuffedUIConfigUILocalization.nameplatethreat_transitioncolor = "失去/獲得仇恨顏色"
- 	DuffedUIConfigUILocalization.nameplatePercent = "啟用數字百分比顯示"
-	DuffedUIConfigUILocalization.nameplateNTA = "Set Non Target Alpha"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "快捷欄"

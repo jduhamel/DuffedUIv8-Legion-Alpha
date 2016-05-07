@@ -65,18 +65,13 @@ C["castbar"] = {
 
 C["nameplate"] = {
  	["active"] = true,
- 	["auraswidth"] = 20,
- 	["aurasheight"] = 15,
  	["debuffs"] = true,
  	["platewidth"] = 110,
  	["plateheight"] = 7,
  	["threat_goodcolor"] = {.29,  .69, .3},
  	["threat_badcolor"] = {.78, .25, .25},
  	["threat_transitioncolor"] = {.86, .77, .36},
- 	["Percent"] = false,
- 	["MaxDebuffs"] = 5,
-	["NTA"] = .35,
- }
+}
 
 C["actionbar"] = {
 	["enable"] = true,
