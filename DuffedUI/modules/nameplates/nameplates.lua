@@ -6,9 +6,6 @@ local _G = _G
 local unpack = unpack
 local select = select
 local colors = D["UnitColor"]
-local goodR, goodG, goodB = unpack(C["nameplate"]["threat_goodcolor"])
-local badR, badG, badB = unpack(C["nameplate"]["threat_badcolor"])
-local transitionR, transitionG, transitionB = unpack(C["nameplate"]["threat_transitioncolor"])
 
 --[[Functions]]--
 function nameplates:customSize() C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight) end
@@ -77,7 +74,7 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	cicon:SetPoint("TOPRIGHT", health, "TOPLEFT", -3, 0)
 
 	buffframe:ClearAllPoints()
-	buffframe:SetPoint("TOPLEFT", name, "TOPLEFT", 0, 20)
+	buffframe:SetPoint("TOPLEFT", health, "TOPLEFT", 0, 30)
 
 	name:SetFont(C["media"].font, 9, "THINOUTLINE")
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
