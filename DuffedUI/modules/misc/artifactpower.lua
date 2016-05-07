@@ -35,9 +35,9 @@ local function updateStatus()
 	local _, _, _, _, totalxp, pointsSpent, _, _, _, _, _, _ = C_ArtifactUI.GetEquippedArtifactInfo()
 
 	if hAE then
-		local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
+		local _, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
 
-		artifactBar:SetMinMaxValues(min(0, xp), xpForNextPoint)
+		artifactBar:SetMinMaxValues(min(0, xp), (pointsSpent + xp))
 		artifactBar:SetValue(xp)
 	else
 		backdrop:Hide()

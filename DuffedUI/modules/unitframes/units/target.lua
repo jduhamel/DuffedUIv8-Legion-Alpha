@@ -287,7 +287,7 @@ D["ConstructUFTarget"] = function(self)
 	end
 
 	--[[Combat feedback & Healcom]]--
-	--[[if C["unitframes"]["combatfeedback"] then
+	if C["unitframes"]["combatfeedback"] then
 		local CombatFeedbackText 
 		CombatFeedbackText = D.SetFontString(health, C["media"].font, 11, "THINOUTLINE")
 		CombatFeedbackText:Point("CENTER", 0, 1)
@@ -308,9 +308,9 @@ D["ConstructUFTarget"] = function(self)
 			CRITENERGIZE = {.31, .45, .63},
 		}
 		self.CombatFeedbackText = CombatFeedbackText
-	end]]
+	end
 
-	if C["unitframes"]["healcomm"] then
+	--[[if C["unitframes"]["healcomm"] then
 		local mhpb = CreateFrame("StatusBar", nil, health)
 		mhpb:Point("LEFT", health:GetStatusBarTexture(), "RIGHT", 0, 0)
 		mhpb:SetHeight(health:GetHeight())
@@ -339,7 +339,7 @@ D["ConstructUFTarget"] = function(self)
 			absorbBar = absb,
 			maxOverflow = 1,
 		}
-	end
+	end]]--
 
 	--[[Castbar]]--
 	if C["castbar"]["enable"] then

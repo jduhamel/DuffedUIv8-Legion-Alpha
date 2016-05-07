@@ -306,7 +306,7 @@ D["ConstructUFPlayer"] = function(self)
 		self.CombatFeedbackText = CombatFeedbackText
 	end
 
-	if C["unitframes"]["healcomm"] then
+	--[[if C["unitframes"]["healcomm"] then
 		local mhpb = CreateFrame("StatusBar", nil, health)
 		mhpb:Point("LEFT", health:GetStatusBarTexture(), "RIGHT", 0, 0)
 		mhpb:SetHeight(health:GetHeight())
@@ -335,7 +335,7 @@ D["ConstructUFPlayer"] = function(self)
 			absorbBar = absb,
 			maxOverflow = 1,
 		}
-	end
+	end]]--
 
 	--[[Castbar]]--
 	if C["castbar"]["enable"] then

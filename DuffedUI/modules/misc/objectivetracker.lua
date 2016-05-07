@@ -259,9 +259,9 @@ function GossipFrameUpdate_hook()
 	local numActiveQuests = table.getn(activeQuests)
 	for i = 1, numActiveQuests, 5 do
 		local titleButton = _G["GossipTitleButton" .. buttonIndex]
-		local title = "[" .. activeQuests[i + 1] .. "] " .. activeQuests[i]
+		--local title = "[" .. activeQuests[i + 1] .. "] " .. activeQuests[i]
 		local isTrivial = activeQuests[i + 2]
-		if isTrivial then titleButton:SetFormattedText(TRIVIAL_QUEST_DISPLAY, title) else titleButton:SetFormattedText(NORMAL_QUEST_DISPLAY, title) end
+		if isTrivial then titleButton:SetFormattedText(TRIVIAL_QUEST_DISPLAY) else titleButton:SetFormattedText(NORMAL_QUEST_DISPLAY) end
 		GossipResize(titleButton)
 		buttonIndex = buttonIndex + 1
 	end
