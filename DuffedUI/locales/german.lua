@@ -255,6 +255,7 @@ if D.Client == "deDE" then
 	
 	L["artifactBar"] = {
 		["xptitle"] = "Artefakt Erfahrung",
+		["currentxp"] = "Aktuelle Erfahrung: %s",
 		["xp"] = "Erfahrung: %s/%s (%d%%)",
 		["xpremaining"] = "Verbleibend: %s",
 		["traits"] = "Traits verfügbar: %s",
