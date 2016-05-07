@@ -90,6 +90,9 @@ function WorldMap:Skin()
 
 	QuestMapFrame.DetailsFrame:StripTextures()
 	QuestMapFrame.DetailsFrame.RewardsFrame:StripTextures()
+	QuestMapFrame.DetailsFrame.CompleteQuestFrame:StripTextures()
+	QuestMapFrame.DetailsFrame.CompleteQuestFrame.CompleteButton:StripTextures()
+	QuestMapFrame.DetailsFrame.CompleteQuestFrame.CompleteButton:SkinButton()
 	QuestScrollFrame.Contents.StoryHeader:StripTextures()
 	QuestMapFrame:StripTextures()
 
