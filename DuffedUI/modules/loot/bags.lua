@@ -6,7 +6,6 @@ local Noop = function() end
 local Font
 local ReplaceBags = 0
 local LastButtonBag, LastButtonBank, LastButtonReagent
-local Token1, Token2, Token3 = BackpackTokenFrameToken1, BackpackTokenFrameToken2, BackpackTokenFrameToken3
 local NUM_CONTAINER_FRAMES = NUM_CONTAINER_FRAMES
 local NUM_BAG_FRAMES = NUM_BAG_FRAMES
 local ContainerFrame_GetOpenFrame = ContainerFrame_GetOpenFrame
@@ -71,7 +70,7 @@ function Bags:SkinBagButton()
 
     self:SetNormalTexture("")
     self:SetPushedTexture("")
-    self:SetTemplate()
+    self:SetTemplate("Transparent")
     self:StyleButton()
 
     self.IsSkinned = true
@@ -136,16 +135,17 @@ function Bags:CreateReagentContainer()
 
     Reagent:SetWidth(((ButtonSize + ButtonSpacing) * ItemsPerRow) + 22 - ButtonSpacing)
     Reagent:SetPoint("BOTTOMLEFT", DataTextLeft, "TOPLEFT", 0, 6)
-    Reagent:SetTemplate()
+    Reagent:SetTemplate("Transparent")
     Reagent:SetFrameStrata(self.Bank:GetFrameStrata())
     Reagent:SetFrameLevel(self.Bank:GetFrameLevel())
 
-    SwitchBankButton:Size((Reagent:GetWidth() / 2) - 1, 23)
+    SwitchBankButton:Size(125, 20)
     SwitchBankButton:SkinButton()
-    SwitchBankButton:Point("BOTTOMLEFT", Reagent, "TOPLEFT", 0, 2)
+	SwitchBankButton:SetTemplate()
+    SwitchBankButton:Point("TOPLEFT", Reagent, "TOPRIGHT", 5, 0)
     SwitchBankButton:FontString(Text, C["media"].font, 11, "THINOUTLINE")
     SwitchBankButton.Text:SetPoint("CENTER")
-    SwitchBankButton.Text:SetText("Switch to: "..BANK)
+    SwitchBankButton.Text:SetText(BANK)
     SwitchBankButton:SetScript("OnClick", function()
         Reagent:Hide()
         self.Bank:Show()
@@ -158,14 +158,16 @@ function Bags:CreateReagentContainer()
 
     Deposit:SetParent(Reagent)
     Deposit:ClearAllPoints()
-    Deposit:Size(Reagent:GetWidth(), 23)
-    Deposit:Point("BOTTOMLEFT", SwitchBankButton, "TOPLEFT", 0, 2)
+    Deposit:Size(125, 20)
+    Deposit:Point("TOPLEFT", Reagent, "TOPRIGHT", 5, -25)
     Deposit:SkinButton()
+	Deposit:SetTemplate("Transparent")
 
 	if C["bags"].SortingButton then
-		SortButton:Size((Reagent:GetWidth() / 2) - 1, 23)
-		SortButton:SetPoint("LEFT", SwitchBankButton, "RIGHT", 2, 0)
+		SortButton:Size(125, 20)
+		SortButton:SetPoint("TOPLEFT", Reagent, "TOPRIGHT", 5, -50)
 		SortButton:SkinButton()
+		SortButton:SetTemplate("Transparent")
 		SortButton:FontString(Text, C["media"].font, 11, "THINOUTLINE")
 		SortButton.Text:SetPoint("CENTER")
 		SortButton.Text:SetText(BAG_FILTER_CLEANUP)
@@ -220,7 +222,7 @@ function Bags:CreateReagentContainer()
 
     Unlock:StripTextures()
     Unlock:SetAllPoints(Reagent)
-    Unlock:SetTemplate()
+    Unlock:SetTemplate("Transparent")
     UnlockButton:SkinButton()
     Move:RegisterFrame(Reagent)
 
@@ -237,7 +239,7 @@ function Bags:CreateContainer(storagetype, ...)
     Container:SetFrameStrata("MEDIUM")
     Container:SetFrameLevel(1)
     Container:Hide()
-    Container:SetTemplate()
+    Container:SetTemplate("Transparent")
     Container:EnableMouse(true)
 
     if (storagetype == "Bag") then
@@ -248,18 +250,19 @@ function Bags:CreateContainer(storagetype, ...)
         BagsContainer:SetParent(Container)
         BagsContainer:SetWidth(10)
         BagsContainer:SetHeight(10)
-        BagsContainer:SetPoint("BOTTOMRIGHT", Container, "TOPRIGHT", 0, 27)
+        BagsContainer:SetPoint("BOTTOMRIGHT", Container, "TOPRIGHT", 0, 2)
         BagsContainer:Hide()
-        BagsContainer:SetTemplate()
+        BagsContainer:SetTemplate("Transparent")
 
 		if C["bags"].SortingButton then
-			Sort:Size(Container:GetWidth(), 23)
+			Sort:Size(125, 20)
 			Sort:ClearAllPoints()
-			Sort:SetPoint("BOTTOMLEFT", Container, "TOPLEFT", 0, 2)
+			Sort:SetPoint("TOPRIGHT", Container, "TOPLEFT", -5, -25)
 			Sort:SetFrameLevel(Container:GetFrameLevel())
 			Sort:SetFrameStrata(Container:GetFrameStrata())
 			Sort:StripTextures()
 			Sort:SkinButton()
+			Sort:SetTemplate("Transparent")
 			Sort:FontString(Text, C["media"].font, 11, "THINOUTLINE")
 			Sort.Text:SetPoint("CENTER")
 			Sort.Text:SetText(BAG_FILTER_CLEANUP)
@@ -267,16 +270,17 @@ function Bags:CreateContainer(storagetype, ...)
 			Sort.SetPoint = Noop
 		end
 
-        ToggleBagsContainer:SetHeight(20)
-        ToggleBagsContainer:SetWidth(20)
-        ToggleBagsContainer:SetPoint("TOPRIGHT", Container, "TOPRIGHT", -6, -6)
+        ToggleBagsContainer:Size(125, 20)
+		ToggleBagsContainer:SetTemplate("Transparent")
+		ToggleBagsContainer:SkinButton()
+        ToggleBagsContainer:SetPoint("TOPRIGHT", Container, "TOPLEFT", -5, 0)
         ToggleBagsContainer:SetParent(Container)
         ToggleBagsContainer:EnableMouse(true)
         ToggleBagsContainer.Text = ToggleBagsContainer:CreateFontString("button")
         ToggleBagsContainer.Text:SetPoint("CENTER", ToggleBagsContainer, "CENTER")
         ToggleBagsContainer.Text:SetFont(C["media"].font, 11, "THINOUTLINE")
-        ToggleBagsContainer.Text:SetText("X")
-        ToggleBagsContainer.Text:SetTextColor(.5, .5, .5)
+        ToggleBagsContainer.Text:SetText("Toggle Bags")
+        ToggleBagsContainer.Text:SetTextColor(1, 1, 1)
         ToggleBagsContainer:SetScript("OnMouseUp", function(self, button)
             local Purchase = BankFramePurchaseInfo
 
@@ -291,12 +295,12 @@ function Bags:CreateContainer(storagetype, ...)
                     BanksContainer:Show()
                     BanksContainer:ClearAllPoints()
                     ToggleBagsContainer.Text:SetTextColor(1, 1, 1)
-                    if Purchase:IsShown() then BanksContainer:SetPoint("BOTTOMLEFT", Purchase, "TOPLEFT", 50, 2) else BanksContainer:SetPoint("BOTTOMLEFT", ReagentButton, "TOPLEFT", 0, 2) end
+                    if Purchase:IsShown() then BanksContainer:SetPoint("BOTTOMLEFT", Purchase, "TOPLEFT", 50, 2) else BanksContainer:SetPoint("BOTTOMLEFT", DuffedUIBank, "TOPLEFT", 0, 2) end
                 else
                     ReplaceBags = 0
                     BagsContainer:Hide()
                     BanksContainer:Hide()
-                    ToggleBagsContainer.Text:SetTextColor(.4, .4, .4)
+                    ToggleBagsContainer.Text:SetTextColor(1, 1, 1)
                 end
             else
                 CloseAllBags()
@@ -353,12 +357,12 @@ function Bags:CreateContainer(storagetype, ...)
         BankItemAutoSortButton:Hide()
 
         local SwitchReagentButton = CreateFrame("Button", nil, Container)
-        SwitchReagentButton:Size((Container:GetWidth() / 2) - 1, 23)
+        SwitchReagentButton:Size(125, 20)
         SwitchReagentButton:SkinButton()
-        SwitchReagentButton:Point("BOTTOMLEFT", Container, "TOPLEFT", 0, 2)
+        SwitchReagentButton:Point("TOPLEFT", Container, "TOPRIGHT", 5, 0)
         SwitchReagentButton:FontString(Text, C["media"].font, 11, "THINOUTLINE")
         SwitchReagentButton.Text:SetPoint("CENTER")
-        SwitchReagentButton.Text:SetText("Switch to: "..REAGENT_BANK)
+        SwitchReagentButton.Text:SetText(REAGENT_BANK)
         SwitchReagentButton:SetScript("OnClick", function()
             BankFrame_ShowPanel(BANK_PANELS[2].name)
 
@@ -372,8 +376,8 @@ function Bags:CreateContainer(storagetype, ...)
         end)
 
         if C["bags"].SortingButton then
-			SortButton:Size((Container:GetWidth() / 2) - 1, 23)
-			SortButton:SetPoint("LEFT", SwitchReagentButton, "RIGHT", 2, 0)
+			SortButton:Size(125, 20)
+			SortButton:SetPoint("TOPLEFT", Container, "TOPRIGHT", 5, -25)
 			SortButton:SkinButton()
 			SortButton:FontString(Text, C["media"].font, 11, "THINOUTLINE")
 			SortButton.Text:SetPoint("CENTER")
@@ -388,8 +392,8 @@ function Bags:CreateContainer(storagetype, ...)
         Purchase:CreateBackdrop()
 
         BankBagsContainer:Size(Container:GetWidth(), BankSlotsFrame.Bag1:GetHeight() + ButtonSpacing + ButtonSpacing)
-        BankBagsContainer:SetTemplate()
-        BankBagsContainer:SetPoint("BOTTOMLEFT", SwitchReagentButton, "TOPLEFT", 0, 2)
+        BankBagsContainer:SetTemplate("Transparent")
+        BankBagsContainer:SetPoint("BOTTOMRIGHT", Container, "TOPRIGHT", 0, 2)
         BankBagsContainer:SetFrameLevel(Container:GetFrameLevel())
         BankBagsContainer:SetFrameStrata(Container:GetFrameStrata())
 
@@ -426,9 +430,9 @@ function Bags:SetBagsSearchPosition()
     local BankItemSearchBox = BankItemSearchBox
 
     BagItemSearchBox:SetParent(self.Bag)
-    BagItemSearchBox:SetWidth(self.Bag:GetWidth() - (ButtonSpacing + ButtonSpacing + ButtonSpacing + ButtonSpacing))
+    BagItemSearchBox:SetWidth(150)
     BagItemSearchBox:ClearAllPoints()
-    BagItemSearchBox:SetPoint("BOTTOMLEFT", self.Bag, "BOTTOMLEFT", ButtonSpacing - 1, ButtonSpacing * 3)
+    BagItemSearchBox:SetPoint("TOPRIGHT", self.Bag, "TOPRIGHT", -14, -(ButtonSpacing*3))
     BagItemSearchBox:StripTextures()
     BagItemSearchBox.SetParent = Noop
     BagItemSearchBox.ClearAllPoints = Noop
@@ -439,36 +443,6 @@ function Bags:SetBagsSearchPosition()
     BagItemSearchBox.Backdrop:SetTemplate()
     BagItemSearchBox.Backdrop:SetFrameLevel(BagItemSearchBox:GetFrameLevel() - 1)
     BankItemSearchBox:Hide()
-end
-
-function Bags:SetTokensPosition()
-    local Money = ContainerFrame1MoneyFrame
-
-    Token3:ClearAllPoints()
-    Token3:SetPoint("LEFT", Money, "RIGHT", 2, -2)
-    Token2:ClearAllPoints()
-    Token2:SetPoint("LEFT", Token3, "RIGHT", 10, 0)
-    Token1:ClearAllPoints()
-    Token1:SetPoint("LEFT", Token2, "RIGHT", 10, 0)
-end
-
-function Bags:SkinTokens()
-    for i = 1, 3 do
-        local Token = _G["BackpackTokenFrameToken"..i]
-        local Icon = _G["BackpackTokenFrameToken"..i.."Icon"]
-        local Count = _G["BackpackTokenFrameToken"..i.."Count"]
-        local PreviousToken = _G["BackpackTokenFrameToken"..(i - 1)]
-
-        Token:SetFrameStrata("HIGH")
-        Token:SetFrameLevel(5)
-        Token:SetScale(1)
-        Token:CreateBackdrop()
-
-        Icon:SetSize(12,12)
-        Icon:SetTexCoord(unpack(D["IconCoord"]))
-        Icon:SetPoint("LEFT", Token, "RIGHT", -8, 2)
-        Count:SetFont(C["media"].font, 11, "THINOUTLINE")
-    end
 end
 
 function Bags:SlotUpdate(id, button)
@@ -831,8 +805,6 @@ function Bags:Enable()
     self:CreateContainer("Bank", "BOTTOMLEFT", DataTextLeft, "TOPLEFT", 0, 6)
     self:HideBlizzard()
     self:SetBagsSearchPosition()
-    self:SetTokensPosition()
-    self:SkinTokens()
 
     Bag:SetScript("OnHide", function()
         self.Bag:Hide()

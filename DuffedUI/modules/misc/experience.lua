@@ -61,6 +61,7 @@ mouseFrame:SetAllPoints(backdrop)
 mouseFrame:EnableMouse(true)
 
 backdrop:SetFrameLevel(0)
+backdrop:SetFrameStrata("LOW")
 restedxpBar:SetFrameLevel(1)
 repBar:SetFrameLevel(2)
 xpBar:SetFrameLevel(2)
