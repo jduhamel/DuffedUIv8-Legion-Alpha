@@ -233,7 +233,7 @@ end
 
 function Bags:CreateContainer(storagetype, ...)
     local Container = CreateFrame("Frame", "DuffedUI".. storagetype, UIParent)
-    Container:SetScale(1)
+    Container:SetScale(C["bags"].scale)
     Container:SetWidth(((ButtonSize + ButtonSpacing) * ItemsPerRow) + 22 - ButtonSpacing)
     Container:SetPoint(...)
     Container:SetFrameStrata("MEDIUM")
@@ -271,8 +271,8 @@ function Bags:CreateContainer(storagetype, ...)
 		end
 
         ToggleBagsContainer:Size(125, 20)
-		ToggleBagsContainer:SetTemplate("Transparent")
 		ToggleBagsContainer:SkinButton()
+		ToggleBagsContainer:SetTemplate("Transparent")
         ToggleBagsContainer:SetPoint("TOPRIGHT", Container, "TOPLEFT", -5, 0)
         ToggleBagsContainer:SetParent(Container)
         ToggleBagsContainer:EnableMouse(true)
@@ -325,7 +325,7 @@ function Bags:CreateContainer(storagetype, ...)
             Button:SetTemplate()
             Button.IconBorder:SetAlpha(0)
             Button:SkinButton()
-            if LastButtonBag then Button:SetPoint("LEFT", LastButtonBag, "RIGHT", ButtonSpacing, 0) else Button:SetPoint("TOPLEFT", BagsContainer, "TOPLEFT", ButtonSpacing, -ButtonSpacing) end
+            if LastButtonBag then Button:SetPoint("LEFT", LastButtonBag, "RIGHT", 4, 0) else Button:SetPoint("TOPLEFT", BagsContainer, "TOPLEFT", 4, -4) end
 
             Count.Show = Noop
             Count:Hide()
