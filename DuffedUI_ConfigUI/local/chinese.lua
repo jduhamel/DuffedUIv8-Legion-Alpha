@@ -67,9 +67,6 @@
  	DuffedUIConfigUILocalization.nameplateactive = "启用姓名版"
  	DuffedUIConfigUILocalization.nameplateplatewidth = "设置姓名板宽度 (默认 = 110)"
  	DuffedUIConfigUILocalization.nameplateplateheight = "设置姓名板高度 (默认 = 7)"
- 	DuffedUIConfigUILocalization.nameplatethreat_badcolor = "高仇恨着色,根据你的职业Tank or dps/heal而改变"
- 	DuffedUIConfigUILocalization.nameplatethreat_goodcolor = "低仇恨着色,根据你的职业Tank or dps/heal而改变"
- 	DuffedUIConfigUILocalization.nameplatethreat_transitioncolor = "失去/获得仇恨颜色"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "快捷栏"

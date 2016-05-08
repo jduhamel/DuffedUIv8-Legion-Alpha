@@ -67,9 +67,6 @@
 	DuffedUIConfigUILocalization.nameplateactive = "Enable Nameplates"
 	DuffedUIConfigUILocalization.nameplateplatewidth = "Set width of nameplates (default = 110)"
 	DuffedUIConfigUILocalization.nameplateplateheight = "Set height of nameplates (default = 7)"
-	DuffedUIConfigUILocalization.nameplatethreat_badcolor = "Bad threat color, varies depending if your a tank or dps/heal"
-	DuffedUIConfigUILocalization.nameplatethreat_goodcolor = "Good threat color, varies depending if your a tank or dps/heal"
-	DuffedUIConfigUILocalization.nameplatethreat_transitioncolor = "Losing/Gaining threat color"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "Aktionsleisten"
