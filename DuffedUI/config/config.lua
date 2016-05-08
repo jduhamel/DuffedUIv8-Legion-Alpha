@@ -65,7 +65,6 @@ C["castbar"] = {
 
 C["nameplate"] = {
  	["active"] = true,
- 	["debuffs"] = true,
  	["platewidth"] = 110,
  	["plateheight"] = 7,
 }
