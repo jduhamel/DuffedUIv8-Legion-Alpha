@@ -217,11 +217,6 @@ local function LoadSkin()
 					bu.bg.backdrop:SetBackdropColor(unpack(C["media"].backdropcolor))
 					bu.bg.backdrop:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 				end
-				--[[if bu.learnSelection:IsShown() then
-					bu.backdrop:SetBackdropBorderColor(1, 0.82, 0, 1)
-					bu.bg.backdrop:SetBackdropColor(.2, .2, 0, 1)
-					bu.bg.backdrop:SetBackdropBorderColor(1, 0.82, 0, 1)
-				end]]
 			end
 		end
 	end)
@@ -256,7 +251,7 @@ local function LoadSkin()
 	TalentMicroButtonAlert.CloseButton.t:SetTextColor(1, 1, 0)
 	TalentMicroButtonAlert.Text:SetTextColor(1, 1, 0)
 	TalentMicroButtonAlert:ClearAllPoints()
-	if DuffedUIPlayer then
+	if oUF_Player then
 		TalentMicroButtonAlert:SetPoint("BOTTOM", DuffedUIPlayer, "TOP", 0, -2)
 	else
 		TalentMicroButtonAlert:SetPoint("BOTTOM", UIPARENT, "BOTTOM", 0, -6)
