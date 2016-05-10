@@ -218,8 +218,6 @@ if not IsAddOnLoaded("AddOnSkins") then
 		PetJournalPetCardInset:StripTextures()
 
 		PetJournalTutorialButton.Ring:SetAlpha(0)
-		PetJournalTutorialButton:ClearAllPoints()
-		PetJournalTutorialButton:SetPoint("TOPLEFT", CollectionsJournal, 0, 0)
 
 		PetJournalPetCardPetInfo.levelBG:SetTexture(nil)
 		PetJournalPetCardPetInfoIcon:SetTexCoord(.1, .9, .1, .9)

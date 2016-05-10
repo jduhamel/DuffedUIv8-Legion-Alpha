@@ -3,6 +3,7 @@ if IsAddOnLoaded("AddOnSkins") then return end
 
 local function LoadSkin()
 	EncounterJournal:StripTextures(true)
+	EncounterJournal:SetTemplate("Transparent")
 
 	EncounterJournal.backdrop = EncounterJournal:CreateTexture(nil, "BACKGROUND")
 	EncounterJournal.backdrop:SetDrawLayer("BACKGROUND", -7)
@@ -97,16 +98,16 @@ local function LoadSkin()
 	EncounterJournalEncounterFrameInfoModelTab:GetHighlightTexture():SetTexture(nil)
 
 	EncounterJournalInstanceSelect:StripTextures()
+	EncounterJournalInstanceSelectSuggestTab:SkinTab()
+	EncounterJournalSuggestFramePrevButton:SkinNextPrevButton()
+	EncounterJournalSuggestFrameNextButton:SkinNextPrevButton()
 	EncounterJournalInstanceSelectDungeonTab:SkinTab()
 	EncounterJournalInstanceSelectRaidTab.grayBox:StripTextures()
 	EncounterJournalInstanceSelectRaidTab:SkinTab()
 	EncounterJournalInstanceSelectRaidTab:Enable()
+	EncounterJournalInstanceSelectLootJournalTab:SkinTab()
 	EncounterJournal.instanceSelect.bg:SetAlpha(0)
-	EncounterJournalInstanceSelectScrollDownButton:SkinCloseButton()
-	EncounterJournalInstanceSelectScrollDownButton.t:SetText(" V")
-	EncounterJournalInstanceSelectScrollDownButton.t:SetPoint("CENTER")
-	EncounterJournalInstanceSelectScrollDownButton:SetTemplate()
-	EncounterJournalInstanceSelectScrollDownButton:Size(18, 21)
+	EncounterJournalInstanceSelectTierDropDown:SkinDropDownBox()
 
 	local function SkinDungeons()
 		local b1 = EncounterJournalInstanceSelectScrollFrameScrollChildInstanceButton1

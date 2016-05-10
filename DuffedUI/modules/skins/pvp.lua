@@ -1,3 +1,4 @@
+--[[NEEDS ATTENTION]]--
 local D, C, L = unpack(select(2, ...))
 if IsAddOnLoaded("AddOnSkins") then return end
 
@@ -23,15 +24,26 @@ local function LoadSkin()
 	HonorFrameTypeDropDown:SkinDropDownBox()
 	HonorFrame.Inset:StripTextures()
 	HonorFrameSpecificFrameScrollBar:SkinScrollBar()
-	HonorFrameSoloQueueButton:SkinButton(true)
-	HonorFrameGroupQueueButton:SkinButton(true)
+	HonorFrameQueueButton:SkinButton(true)
 	HonorFrame.BonusFrame:StripTextures()
+	HonorFrame.BonusFrame:SetFrameLevel(5)
+	HonorFrame.BonusFrame:SetFrameStrata("HIGH")
 	HonorFrame.BonusFrame.ShadowOverlay:StripTextures()
 	HonorFrame.BonusFrame.RandomBGButton:StripTextures()
 	HonorFrame.BonusFrame.RandomBGButton:SkinButton()
 	HonorFrame.BonusFrame.RandomBGButton.SelectedTexture:ClearAllPoints()
 	HonorFrame.BonusFrame.RandomBGButton.SelectedTexture:SetAllPoints()
 	HonorFrame.BonusFrame.RandomBGButton.SelectedTexture:SetTexture(0, 1, 0, .1)
+	HonorFrame.BonusFrame.Arena1Button:StripTextures()
+	HonorFrame.BonusFrame.Arena1Button:SkinButton()
+	HonorFrame.BonusFrame.Arena1Button.SelectedTexture:ClearAllPoints()
+	HonorFrame.BonusFrame.Arena1Button.SelectedTexture:SetAllPoints()
+	HonorFrame.BonusFrame.Arena1Button.SelectedTexture:SetTexture(0, 1, 0, .1)
+	HonorFrame.BonusFrame.AshranButton:StripTextures()
+	HonorFrame.BonusFrame.AshranButton:SkinButton()
+	HonorFrame.BonusFrame.AshranButton.SelectedTexture:ClearAllPoints()
+	HonorFrame.BonusFrame.AshranButton.SelectedTexture:SetAllPoints()
+	HonorFrame.BonusFrame.AshranButton.SelectedTexture:SetTexture(0, 1, 0, .1)
 	HonorFrame.BonusFrame.DiceButton:SkinButton()
 
 	HonorFrame.RoleInset:StripTextures()
@@ -42,26 +54,11 @@ local function LoadSkin()
 	HonorFrame.RoleInset.HealerIcon.checkButton:SkinCheckBox()
 	HonorFrame.RoleInset.HealerIcon.checkButton:SetFrameLevel(HonorFrame.RoleInset.HealerIcon:GetFrameLevel() + 2)
 
-	for i = 1, 2 do
-		local b = HonorFrame.BonusFrame["Arena" .. i.. "Button"]
-		b:StripTextures()
-		b:SkinButton()
-		b.SelectedTexture:ClearAllPoints()
-		b.SelectedTexture:SetAllPoints()
-		b.SelectedTexture:SetTexture(0, 1, 0, .1)
-	end
-
 	-- CONQUEST FRAME
 	ConquestFrame.Inset:StripTextures()
-	ConquestPointsBarLeft:Kill()
-	ConquestPointsBarRight:Kill()
-	ConquestPointsBarMiddle:Kill()
-	ConquestPointsBarBG:Kill()
-	ConquestPointsBarShadow:Kill()
-	ConquestPointsBar.progress:SetTexture(C["media"].normTex)
-	ConquestPointsBar:CreateBackdrop("Default")
-	ConquestPointsBar.backdrop:SetOutside(ConquestPointsBar, nil, -D.mult)
 	ConquestFrame:StripTextures()
+	ConquestFrame:SetFrameLevel(5)
+	ConquestFrame:SetFrameStrata("HIGH")
 	ConquestFrame.ShadowOverlay:StripTextures()
 
 	local function SkinRated(button)
@@ -74,7 +71,6 @@ local function LoadSkin()
 	SkinRated(ConquestFrame.RatedBG)
 	SkinRated(ConquestFrame.Arena2v2)
 	SkinRated(ConquestFrame.Arena3v3)
-	SkinRated(ConquestFrame.Arena5v5)
 	ConquestJoinButton:SkinButton(true)
 
 	-- PvP Ready Dialog
