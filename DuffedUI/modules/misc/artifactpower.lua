@@ -12,6 +12,7 @@ backdrop:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -7, 178)
 backdrop:SetBackdropColor(C["general"].backdropcolor)
 backdrop:SetBackdropBorderColor(C["general"].backdropcolor)
 backdrop:CreateBackdrop("Transparent")
+backdrop:SetFrameStrata("LOW")
 move:RegisterFrame(backdrop)
 
 local artifactBar = CreateFrame("StatusBar",  "Experience_artifactBar", backdrop, "TextStatusBar")
@@ -24,10 +25,6 @@ artifactBar:SetStatusBarColor(157/255, 138/255, 108/255)
 local ArtifactmouseFrame = CreateFrame("Frame", "Artifact_mouseFrame", backdrop)
 ArtifactmouseFrame:SetAllPoints(backdrop)
 ArtifactmouseFrame:EnableMouse(true)
-
-backdrop:SetFrameLevel(0)
-backdrop:SetFrameStrata("LOW")
-artifactBar:SetFrameLevel(2)
 ArtifactmouseFrame:SetFrameLevel(3)
 
 local function updateStatus()

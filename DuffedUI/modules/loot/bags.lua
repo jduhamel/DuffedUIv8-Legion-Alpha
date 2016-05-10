@@ -102,19 +102,16 @@ function Bags:HideBlizzard()
         end
     end
 
-    -- Hide Bank Frame Textures
     for i = 1, BankFrame:GetNumRegions() do
         local Region = select(i, BankFrame:GetRegions())
         Region:SetAlpha(0)
     end
 
-    -- Hide BankSlotsFrame Textures and Fonts
     for i = 1, BankSlotsFrame:GetNumRegions() do
         local Region = select(i, BankSlotsFrame:GetRegions())
         Region:SetAlpha(0)
     end
 
-    -- Hide Tabs, we will create our tabs
     for i = 1, 2 do
         local Tab = _G["BankFrameTab"..i]
         Tab:Hide()
