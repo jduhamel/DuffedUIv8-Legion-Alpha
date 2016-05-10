@@ -12,9 +12,9 @@ local Autogearswap = C["misc"].sesgearswap
 local set1 = C["misc"].sesset1
 local set2 = C["misc"].sesset2
 
-local function HasDualSpec() if GetNumSpecGroups() > 1 then return true end end
+local function HasDualSpec() if GetNumSpecGroups() > 1 then return true end end --removed?
 
-local function GetSecondaryTalentIndex()
+local function GetSecondaryTalentIndex() -- removed
 	local secondary
 	if GetActiveSpecGroup() == 1 then secondary = 2 else secondary = 1 end
 	return secondary
