@@ -172,7 +172,6 @@
 	--[[Buffs]]--
 	DuffedUIConfigUILocalization.auras = "光环"
 	DuffedUIConfigUILocalization.aurasplayer = "启用DuffedUI Buff/Debuff 光环框体"
-	DuffedUIConfigUILocalization.aurasconsolidate = "启用Buffs强化显示模式"
 	DuffedUIConfigUILocalization.aurasflash = "启用光环持续时间低于30秒闪烁动画"
 	DuffedUIConfigUILocalization.aurasclassictimer = "传统模式显示玩家光环"
 	DuffedUIConfigUILocalization.auraswrap = "设定(小地图旁)单行Buff显示数量(默认 = 18)"

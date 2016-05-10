@@ -172,7 +172,6 @@
 	--[[Buffs]]--
 	DuffedUIConfigUILocalization.auras = "Auren"
 	DuffedUIConfigUILocalization.aurasplayer = "Aktiviere die DuffedUI Buff- und Debufffenster"
-	DuffedUIConfigUILocalization.aurasconsolidate = "Aktiviere zusammengelegte Buffs"
 	DuffedUIConfigUILocalization.aurasflash = "Aktiviere das Aufblitzen der Auren bei weniger als 30 Sekunden"
 	DuffedUIConfigUILocalization.aurasclassictimer = "Zeige den klassischen Timer auf den Spieler Auren"
 	DuffedUIConfigUILocalization.auraswrap = "Wähle Umbruch der Stärkungszauberleiste (Standard = 18)"

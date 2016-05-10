@@ -56,6 +56,6 @@ local function updateStatus()
 end
 
 local frame = CreateFrame("Frame",nil,UIParent)
-frame:RegisterEvent("ARTIFACT_XP_UPDATE")
+--frame:RegisterEvent("ARTIFACT_XP_UPDATE")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:SetScript("OnEvent", updateStatus)

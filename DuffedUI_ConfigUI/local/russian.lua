@@ -172,7 +172,6 @@
 	--[[Buffs]]--
 	DuffedUIConfigUILocalization.auras = "Auras"
 	DuffedUIConfigUILocalization.aurasplayer = "Enable DuffedUI Buff/Debuff Frames"
-	DuffedUIConfigUILocalization.aurasconsolidate = "Enable Consolidate Buffs"
 	DuffedUIConfigUILocalization.aurasflash = "Enable flashing animation on aura less than 30 seconds"
 	DuffedUIConfigUILocalization.aurasclassictimer = "Display classic timer on player auras"
 	DuffedUIConfigUILocalization.auraswrap = "Set wrap for buffs (default = 18)"

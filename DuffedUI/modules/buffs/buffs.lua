@@ -7,7 +7,6 @@ frame.content = {}
 local icon
 local faction = UnitFactionGroup("player")
 local flash = C["auras"].flash
-local filter = C["auras"].consolidate
 local sexID = UnitSex("player")
 local sex = "male"
 local race = D.MyRace
@@ -135,14 +134,9 @@ local UpdateTempEnchant = function(self, slot)
 end
 
 local OnAttributeChanged = function(self, attribute, value)
-	local consolidate = self:GetName():match("Consolidate")
-
-	if consolidate or C["auras"].classictimer then self.Holder:Hide() else self.Duration:Hide() end
+	if C["auras"].classictimer then self.Holder:Hide() else self.Duration:Hide() end
 
 	if attribute == "index" then
-		if filter then
-			if consolidate then self.consolidate = true end
-		end
 		return UpdateAura(self, value)
 	elseif attribute == "target-slot" then
 		self.Bar:SetMinMaxValues(0, 3600)

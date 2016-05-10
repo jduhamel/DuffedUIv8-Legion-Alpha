@@ -171,7 +171,6 @@ C["classtimer"] = {
 
 C["auras"] = {
 	["player"] = true,
-	["consolidate"] = false,
 	["flash"] = false,
 	["classictimer"] = true,
 	["wrap"] = 18,
