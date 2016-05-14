@@ -131,7 +131,7 @@ function Bags:CreateReagentContainer()
     local Move = D["move"]
 
     Reagent:SetWidth(((ButtonSize + ButtonSpacing) * ItemsPerRow) + 22 - ButtonSpacing)
-    Reagent:SetPoint("BOTTOMLEFT", DataTextLeft, "TOPLEFT", 0, 6)
+    if C["chat"].lbackground then Reagent:SetPoint("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "TOPLEFT", 0, 6) else Reagent:SetPoint("BOTTOMLEFT", DataTextLeft, "TOPLEFT", 0, 6) end
     Reagent:SetTemplate("Transparent")
     Reagent:SetFrameStrata(self.Bank:GetFrameStrata())
     Reagent:SetFrameLevel(self.Bank:GetFrameLevel())
@@ -798,8 +798,8 @@ function Bags:Enable()
     local DataTextLeft = DuffedUIInfoLeft
     local DataTextRight = DuffedUIInfoRight
 
-    self:CreateContainer("Bag", "BOTTOMRIGHT", DataTextRight, "TOPRIGHT", 0, 6)
-    self:CreateContainer("Bank", "BOTTOMLEFT", DataTextLeft, "TOPLEFT", 0, 6)
+    if C["chat"].rbackground then self:CreateContainer("Bag", "BOTTOMRIGHT", DuffedUIChatBackgroundRight, "TOPRIGHT", 0, 6) else self:CreateContainer("Bag", "BOTTOMRIGHT", DataTextRight, "TOPRIGHT", 0, 6) end
+    if C["chat"].lbackground then self:CreateContainer("Bank", "BOTTOMRIGHT", DuffedUIChatBackgroundLeft, "TOPRIGHT", 0, 6) else self:CreateContainer("Bank", "BOTTOMRIGHT", DataTextLeft, "TOPRIGHT", 0, 6) end
     self:HideBlizzard()
     self:SetBagsSearchPosition()
 

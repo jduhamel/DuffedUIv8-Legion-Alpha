@@ -19,7 +19,8 @@ function nameplates:colorHealth()
 			if RAID_CLASS_COLORS[class].r == r and RAID_CLASS_COLORS[class].g == g and RAID_CLASS_COLORS[class].b == b then
 				self.hasClass = true
 				self.isFriendly = false
-				self.health:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
+				--self.health:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
+				self.health:SetStatusBarColor(unpack(D["UnitColor"].class[class]))
 				return
 			end
 		end
@@ -48,9 +49,23 @@ function nameplates:colorHealth()
     end
 end
 
+function nameplates:SetName()
+    local text = self:GetText()
+
+    if text then
+        local class = select(2, UnitClass(self:GetParent().unit))
+		if self.unit == "target" then
+			self:SetText("|cffffff00".. text .."|r")
+		else
+			self:SetText("|cffffffff".. text .."|r")
+		end
+    end
+end
+
 function nameplates:visualStyle(setupOptions, frameOptions)
 	local highlight = self.selectionHighlight
 	local health = self.healthBar
+	local aggro = self.aggroHighlight
 	local name = self.name
 	local castbar = self.castBar
 	local cicon = self.castBar.Icon
@@ -77,33 +92,16 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	buffframe:SetPoint("TOPLEFT", health, "TOPLEFT", 0, 30)
 
 	name:SetFont(C["media"].font, 9, "THINOUTLINE")
+	hooksecurefunc(name, "Show", nameplates.SetName)
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
 	highlight:Kill()
-end
-
---[[Events]]--
-function nameplates:registerEvents()
-	--self:RegisterEvent("NAME_PLATE_CREATED")
-    --self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
-    --self:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
-    --self:RegisterEvent("PLAYER_TARGET_CHANGED")
-    self:RegisterEvent("DISPLAY_SIZE_CHANGED")
-    self:RegisterEvent("UNIT_AURA")
-    --self:RegisterEvent("VARIABLES_LOADED")
-    --self:RegisterEvent("CVAR_UPDATE") 
-end
-
-function nameplates:onEvent(event, ...)
-    if event == "DISPLAY_SIZE_CHANGED" then
-        self:customSize()
-    end
+	aggro:Kill()
 end
 
 --[[Enable & Running]]--
 function nameplates:enable()
 	if C["nameplate"]["active"] ~= true then return end
 	
-	self:registerEvents()
     self:customSize()
     self:SetScript("OnEvent", self.onEvent)
 	

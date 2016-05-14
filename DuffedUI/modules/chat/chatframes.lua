@@ -122,8 +122,6 @@ local function SetChatStyle(frame)
 
 	local a, b, c = select(6, _G[chat.."EditBox"]:GetRegions()) a:Kill() b:Kill() c:Kill()
 
-	if tab.conversationIcon then tab.conversationIcon:Kill() end
-
 	_G[chat.."EditBox"]:SetAltArrowKeyMode(false)
 
 	_G[chat.."EditBox"]:Hide()
