@@ -7,7 +7,7 @@ local PClass = UnitClass("player")
 local PRace = UnitRace("player")
 local PFaction = UnitFactionGroup("player")
 local color = RAID_CLASS_COLORS[D.Class]
---local Version = tonumber(GetAddOnMetadata("DuffedUI", "Version"))
+local Version = tonumber(GetAddOnMetadata("DuffedUI", "Version"))
 
 --[[Guild]]--
 local function GuildText()
@@ -74,7 +74,7 @@ DuffedUIAFKPanelIcon.Texture:SetTexture(C["media"].duffed)
 DuffedUIAFKPanel.DuffedUIText = DuffedUIAFKPanel:CreateFontString(nil, "OVERLAY")
 DuffedUIAFKPanel.DuffedUIText:SetPoint("CENTER", DuffedUIAFKPanel, "CENTER", 0, -10)
 DuffedUIAFKPanel.DuffedUIText:SetFont(C["media"].font, 40, "OUTLINE")
---DuffedUIAFKPanel.DuffedUIText:SetText("|cffc41f3bDuffedUI " .. Version)
+DuffedUIAFKPanel.DuffedUIText:SetText("|cffc41f3bDuffedUI " .. Version)
 
 DuffedUIAFKPanel.DateText = DuffedUIAFKPanel:CreateFontString(nil, "OVERLAY")
 DuffedUIAFKPanel.DateText:SetPoint("BOTTOMLEFT", DuffedUIAFKPanel, "BOTTOMRIGHT", -100, 54)
