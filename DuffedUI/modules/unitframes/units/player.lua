@@ -306,37 +306,6 @@ D["ConstructUFPlayer"] = function(self)
 		self.CombatFeedbackText = CombatFeedbackText
 	end
 
-	--[[if C["unitframes"]["healcomm"] then
-		local mhpb = CreateFrame("StatusBar", nil, health)
-		mhpb:Point("LEFT", health:GetStatusBarTexture(), "RIGHT", 0, 0)
-		mhpb:SetHeight(health:GetHeight())
-		mhpb:SetWidth(218)
-		mhpb:SetStatusBarTexture(texture)
-		mhpb:SetStatusBarColor(0, 1, .5, .25)
-		mhpb:SetMinMaxValues(0,1)
-
-		local ohpb = CreateFrame("StatusBar", nil, health)
-		ohpb:Point("LEFT", mhpb:GetStatusBarTexture(), "RIGHT", 0, 0)
-		ohpb:SetHeight(health:GetHeight())
-		ohpb:SetWidth(218)
-		ohpb:SetStatusBarTexture(texture)
-		ohpb:SetStatusBarColor(0, 1, 0, .25)
-
-		local absb = CreateFrame("StatusBar", nil, health)
-		absb:Point("LEFT", ohpb:GetStatusBarTexture(), "RIGHT", 0, 0)
-		absb:SetHeight(health:GetHeight())
-		absb:SetWidth(218)
-		absb:SetStatusBarTexture(texture)
-		absb:SetStatusBarColor(1, 1, 0, .25)
-
-		self.HealPrediction = {
-			myBar = mhpb,
-			otherBar = ohpb,
-			absorbBar = absb,
-			maxOverflow = 1,
-		}
-	end]]--
-
 	--[[Castbar]]--
 	if C["castbar"]["enable"] then
 		local pcb = CreateFrame("Frame", "PlayerCastBarMover", UIParent)
