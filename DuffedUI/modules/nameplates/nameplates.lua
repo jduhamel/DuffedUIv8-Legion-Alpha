@@ -19,8 +19,7 @@ function nameplates:colorHealth()
 			if RAID_CLASS_COLORS[class].r == r and RAID_CLASS_COLORS[class].g == g and RAID_CLASS_COLORS[class].b == b then
 				self.hasClass = true
 				self.isFriendly = false
-				--self.health:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
-				self.health:SetStatusBarColor(unpack(D["UnitColor"].class[class]))
+				self.healthBar:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
 				return
 			end
 		end
