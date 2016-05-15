@@ -34,6 +34,7 @@ local function updateStatus()
 		local _, _, _, _, totalxp, pointsSpent, _, _, _, _, _, _ = C_ArtifactUI.GetEquippedArtifactInfo()
 		local _, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
 
+		backdrop:Show()
 		artifactBar:SetMinMaxValues(min(0, xp), xpForNextPoint)
 		artifactBar:SetValue(xp)
 	else
@@ -48,7 +49,6 @@ local function updateStatus()
 			local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalxp)
 
 			GameTooltip:AddLine(L["artifactBar"]["xptitle"])
-			--GameTooltip:AddLine(string.format(L["artifactBar"]["currentxp"], (xp + totalxp)))
 			GameTooltip:AddLine(string.format(L["artifactBar"]["xp"], xp, xpForNextPoint, (xp / xpForNextPoint) * 100))
 			GameTooltip:AddLine(string.format(L["artifactBar"]["xpremaining"], xpForNextPoint - xp))
 			GameTooltip:AddLine(string.format(L["artifactBar"]["traits"], numPointsAvailableToSpend))
@@ -61,4 +61,6 @@ end
 local frame = CreateFrame("Frame",nil,UIParent)
 frame:RegisterEvent("ARTIFACT_XP_UPDATE")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+frame:RegisterEvent("PLAYER_LOGIN")
+frame:RegisterEvent("UNIT_INVENTORY_CHANGED")
 frame:SetScript("OnEvent", updateStatus)
