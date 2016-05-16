@@ -53,6 +53,7 @@ function nameplates:SetName()
 
     if text then
         local class = select(2, UnitClass(self:GetParent().unit))
+		
 		if self.unit == "target" then
 			self:SetText("|cffffff00".. text .."|r")
 		else
@@ -110,6 +111,8 @@ end
 
 nameplates:RegisterEvent("ADDON_LOADED")
 nameplates:RegisterEvent("PLAYER_ENTERING_WORLD")
+nameplates:RegisterEvent("UNIT_TARGET")
+nameplates:RegisterEvent("PLAYER_TARGET_CHANGED")
 nameplates:SetScript("OnEvent", function(self, event, ...)
 	nameplates:enable()
 end)
