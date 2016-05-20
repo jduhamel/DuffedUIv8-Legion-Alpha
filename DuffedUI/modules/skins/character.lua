@@ -104,6 +104,16 @@ local function LoadSkin()
 
 	for _, scrollbar in pairs(scrollbars) do _G[scrollbar]:SkinScrollBar(5) end
 	for _, object in pairs(charframe) do _G[object]:StripTextures() end
+	CharacterStatsPane.AttributesCategory:StripTextures()
+	CharacterStatsPane.AttributesCategory:SetTemplate("Transparent")
+	CharacterStatsPane.AttributesCategory:SetHeight(CharacterStatsPane.AttributesCategory:GetHeight() - 20)
+	CharacterStatsPane.AttributesCategory.Title:ClearAllPoints()
+	CharacterStatsPane.AttributesCategory.Title:SetPoint("CENTER", 0, -1)
+	CharacterStatsPane.EnhancementsCategory:StripTextures()
+	CharacterStatsPane.EnhancementsCategory:SetTemplate("Transparent")
+	CharacterStatsPane.EnhancementsCategory:SetHeight(CharacterStatsPane.EnhancementsCategory:GetHeight() - 20)
+	CharacterStatsPane.EnhancementsCategory.Title:ClearAllPoints()
+	CharacterStatsPane.EnhancementsCategory.Title:SetPoint("CENTER", 0, -1)
 
 	CharacterFrame:SetTemplate("Transparent")
 
