@@ -16,4 +16,5 @@
 	<Script file="ses.lua" />
 	<Script file="spellcooldowns.lua" />
 	<Script file="spellID.lua" />
+	<Script file="stats.lua" />
 </Ui>
