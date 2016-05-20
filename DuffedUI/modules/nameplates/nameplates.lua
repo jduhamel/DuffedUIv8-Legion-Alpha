@@ -131,7 +131,7 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	castbar:GetStatusBarTexture():SetHorizTile(true)
 	castbar.background:ClearAllPoints()
 	castbar.background:SetOutside()
-	castbar.Text:SetFont(C["media"].font, 9)
+	castbar.Text:SetFont(C["media"].font, 8)
 	castbar.Text:SetShadowOffset(1.25, -1.25)
 
 	cicon:SetTexCoord(unpack(D["IconCoord"]))
@@ -142,7 +142,8 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	buffframe:ClearAllPoints()
 	buffframe:SetPoint("TOPLEFT", health, "TOPLEFT", 0, 30)
 
-	name:SetFont(C["media"].font, 9)
+	name:SetFont(C["media"].font, 8)
+	name:SetSize(C["nameplate"]["platewidth"], C["nameplate"]["plateheight"])
 	name:SetShadowOffset(1.25, -1.25)
 	hooksecurefunc(name, "Show", nameplates.SetName)
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
