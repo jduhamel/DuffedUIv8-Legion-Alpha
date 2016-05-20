@@ -161,7 +161,7 @@ function nameplates:enable()
 	if C["nameplate"]["ethreat"] then
 		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.UpdateAggroPlates)
 	else
-		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", colorHealth)
+		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
 	end
 end
 
