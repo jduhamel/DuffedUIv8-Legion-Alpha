@@ -64,14 +64,14 @@ function nameplates:UpdateAggroPlates()
 	
 	if IsPlayerEffectivelyTank() then
 		if not isTanking then
-			self.healthBar.barTexture:SetVertexColor(.78, .25, .25) -- bad
+			nameplates:colorHealth()
 		else
 			if (threatStatus == 3) then
 				self.healthBar.barTexture:SetVertexColor(.29,  .69, .3) -- good
 			elseif (threatStatus == 2) then
 				self.healthBar.barTexture:SetVertexColor(.86, .77, .36) -- transition
 			else
-				self.healthBar.barTexture:SetVertexColor(.78, .25, .25)
+				self.healthBar.barTexture:SetVertexColor(.78, .25, .25) -- bad
 			end
 		end
 	else
@@ -92,7 +92,7 @@ function nameplates:UpdateAggroPlates()
 				self.healthBar.barTexture:SetVertexColor(.29,  .69, .3) -- good
 				self:GetParent().playerHasAggro = false
 			else
-				self.healthBar.barTexture:SetVertexColor(.78, .25, .25)
+				nameplates:colorHealth()
 			end
 		end
 	end
@@ -161,7 +161,7 @@ function nameplates:enable()
 	if C["nameplate"]["ethreat"] then
 		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.UpdateAggroPlates)
 	else
-		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
+		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", colorHealth)
 	end
 end
 
