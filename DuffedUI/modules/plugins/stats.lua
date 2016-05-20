@@ -62,103 +62,103 @@ PAPERDOLL_STATCATEGORIES= {
 			[11] = { stat = "MOVESPEED" },
 		},
 	},
-};
+}
 
 function PaperDollFrame_SetAttackSpeed(statFrame, unit)
-	local meleeHaste = GetMeleeHaste();
-	local speed, offhandSpeed = UnitAttackSpeed(unit);
+	local meleeHaste = GetMeleeHaste()
+	local speed, offhandSpeed = UnitAttackSpeed(unit)
 
-	local displaySpeed = format("%.2F", speed);
+	local displaySpeed = format("%.2F", speed)
 	if ( offhandSpeed ) then
-		offhandSpeed = format("%.2F", offhandSpeed);
+		offhandSpeed = format("%.2F", offhandSpeed)
 	end
 	if ( offhandSpeed ) then
-		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed).." / ".. offhandSpeed;
+		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed).." / ".. offhandSpeed
 	else
-		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed);
+		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed)
 	end
-	PaperDollFrame_SetLabelAndText(statFrame, WEAPON_SPEED, displaySpeed, false, speed);
+	PaperDollFrame_SetLabelAndText(statFrame, WEAPON_SPEED, displaySpeed, false, speed)
 
-	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, ATTACK_SPEED).." "..displaySpeed..FONT_COLOR_CODE_CLOSE;
-	statFrame.tooltip2 = format(STAT_ATTACK_SPEED_BASE_TOOLTIP, BreakUpLargeNumbers(meleeHaste));
+	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, ATTACK_SPEED).." "..displaySpeed..FONT_COLOR_CODE_CLOSE
+	statFrame.tooltip2 = format(STAT_ATTACK_SPEED_BASE_TOOLTIP, BreakUpLargeNumbers(meleeHaste))
 	
-	statFrame:Show();
+	statFrame:Show()
 end
 
 function PaperDollFrame_SetMovementSpeed(statFrame, unit)
-	statFrame.wasSwimming = nil;
-	statFrame.unit = unit;
-	MovementSpeed_OnUpdate(statFrame);
+	statFrame.wasSwimming = nil
+	statFrame.unit = unit
+	MovementSpeed_OnUpdate(statFrame)
 	
-	statFrame.onEnterFunc = MovementSpeed_OnEnter;
+	statFrame.onEnterFunc = MovementSpeed_OnEnter
 	-- TODO: Fix if we decide to show movement speed
-	-- statFrame:SetScript("OnUpdate", MovementSpeed_OnUpdate);
+	-- statFrame:SetScript("OnUpdate", MovementSpeed_OnUpdate)
 
-	statFrame:Show();
+	statFrame:Show()
 end
 
 function PaperDollFrame_SetEnergyRegen(statFrame, unit)
 	if ( unit ~= "player" ) then
-		statFrame:Hide();
-		return;
+		statFrame:Hide()
+		return
 	end
 	
-	local powerType, powerToken = UnitPowerType(unit);
+	local powerType, powerToken = UnitPowerType(unit)
 	if (powerToken ~= "ENERGY") then
-		PaperDollFrame_SetLabelAndText(statFrame, STAT_ENERGY_REGEN, NOT_APPLICABLE, false, 0);
-		statFrame.tooltip = nil;
-		statFrame:Hide();
-		return;
+		PaperDollFrame_SetLabelAndText(statFrame, STAT_ENERGY_REGEN, NOT_APPLICABLE, false, 0)
+		statFrame.tooltip = nil
+		statFrame:Hide()
+		return
 	end
 	
-	local regenRate = GetPowerRegen();
-	local regenRateText = BreakUpLargeNumbers(regenRate);
-	PaperDollFrame_SetLabelAndText(statFrame, STAT_ENERGY_REGEN, regenRateText, false, regenRate);
-	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_ENERGY_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE;
-	statFrame.tooltip2 = STAT_ENERGY_REGEN_TOOLTIP;
-	statFrame:Show();
+	local regenRate = GetPowerRegen()
+	local regenRateText = BreakUpLargeNumbers(regenRate)
+	PaperDollFrame_SetLabelAndText(statFrame, STAT_ENERGY_REGEN, regenRateText, false, regenRate)
+	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_ENERGY_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE
+	statFrame.tooltip2 = STAT_ENERGY_REGEN_TOOLTIP
+	statFrame:Show()
 end
 
 function PaperDollFrame_SetFocusRegen(statFrame, unit)
 	if ( unit ~= "player" ) then
-		statFrame:Hide();
-		return;
+		statFrame:Hide()
+		return
 	end
 	
-	local powerType, powerToken = UnitPowerType(unit);
+	local powerType, powerToken = UnitPowerType(unit)
 	if (powerToken ~= "FOCUS") then
-		PaperDollFrame_SetLabelAndText(statFrame, STAT_FOCUS_REGEN, NOT_APPLICABLE, false, 0);
-		statFrame.tooltip = nil;
-		statFrame:Hide();
-		return;
+		PaperDollFrame_SetLabelAndText(statFrame, STAT_FOCUS_REGEN, NOT_APPLICABLE, false, 0)
+		statFrame.tooltip = nil
+		statFrame:Hide()
+		return
 	end
 	
-	local regenRate = GetPowerRegen();
-	local regenRateText = BreakUpLargeNumbers(regenRate);
-	PaperDollFrame_SetLabelAndText(statFrame, STAT_FOCUS_REGEN, regenRateText, false, regenRate);
-	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_FOCUS_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE;
-	statFrame.tooltip2 = STAT_FOCUS_REGEN_TOOLTIP;
-	statFrame:Show();
+	local regenRate = GetPowerRegen()
+	local regenRateText = BreakUpLargeNumbers(regenRate)
+	PaperDollFrame_SetLabelAndText(statFrame, STAT_FOCUS_REGEN, regenRateText, false, regenRate)
+	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_FOCUS_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE
+	statFrame.tooltip2 = STAT_FOCUS_REGEN_TOOLTIP
+	statFrame:Show()
 end
 
 function PaperDollFrame_SetRuneRegen(statFrame, unit)
 	if ( unit ~= "player" ) then
-		statFrame:Hide();
-		return;
+		statFrame:Hide()
+		return
 	end
 	
-	local _, class = UnitClass(unit);
+	local _, class = UnitClass(unit)
 	if (class ~= "DEATHKNIGHT") then
-		PaperDollFrame_SetLabelAndText(statFrame, STAT_RUNE_REGEN, NOT_APPLICABLE, false, 0);
-		statFrame.tooltip = nil;
-		statFrame:Hide();
-		return;
+		PaperDollFrame_SetLabelAndText(statFrame, STAT_RUNE_REGEN, NOT_APPLICABLE, false, 0)
+		statFrame.tooltip = nil
+		statFrame:Hide()
+		return
 	end
 	
-	local _, regenRate = GetRuneCooldown(1); -- Assuming they are all the same for now
-	local regenRateText = (format(STAT_RUNE_REGEN_FORMAT, regenRate));
-	PaperDollFrame_SetLabelAndText(statFrame, STAT_RUNE_REGEN, regenRateText, false, regenRate);
-	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_RUNE_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE;
-	statFrame.tooltip2 = STAT_RUNE_REGEN_TOOLTIP;
-	statFrame:Show();
+	local _, regenRate = GetRuneCooldown(1) -- Assuming they are all the same for now
+	local regenRateText = (format(STAT_RUNE_REGEN_FORMAT, regenRate))
+	PaperDollFrame_SetLabelAndText(statFrame, STAT_RUNE_REGEN, regenRateText, false, regenRate)
+	statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..format(PAPERDOLLFRAME_TOOLTIP_FORMAT, STAT_RUNE_REGEN).." "..regenRateText..FONT_COLOR_CODE_CLOSE
+	statFrame.tooltip2 = STAT_RUNE_REGEN_TOOLTIP
+	statFrame:Show()
 end
