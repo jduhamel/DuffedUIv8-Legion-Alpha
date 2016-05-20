@@ -176,9 +176,11 @@ vehicleleft:RegisterEvent("UNIT_ENTERED_VEHICLE")
 vehicleleft:RegisterEvent("UNIT_EXITED_VEHICLE")
 vehicleleft:RegisterEvent("VEHICLE_UPDATE")
 vehicleleft:SetScript("OnEvent", Vehicle_OnEvent)
+RegisterStateDriver(vehicleleft, "visibility", "[target=vehicle,exists] show;hide")
 
 vehicleleft:FontString("text", C["media"].font, 11)
 vehicleleft.text:Point("CENTER", 0, 0)
+vehicleleft.text:SetShadowOffset(1.25, -1.25)
 
 local init = CreateFrame("Frame")
 init:RegisterEvent("VARIABLES_LOADED")
