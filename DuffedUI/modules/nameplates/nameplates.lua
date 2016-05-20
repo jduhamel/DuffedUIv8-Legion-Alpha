@@ -35,16 +35,16 @@ function nameplates:colorHealth()
 		end
 
 		if g + b == 0 then
-			r, g, b = .87, .37, .37
+			r, g, b = .78, .25, .25 -- hostile
 			self.isFriendly = false
 		elseif r + b == 0 then
-			r, g, b = .31, .45, .63
+			r, g, b = .31, .45, .63 -- player
 			self.isFriendly = true
 		elseif r + g > 1.95 then
-			r, g, b = .86, .77, .36
+			r, g, b = .86, .77, .36 -- neutral
 			self.isFriendly = false
 		elseif r + g == 0 then
-			r, g, b = .29,  .69, .3
+			r, g, b = .29,  .69, .3 -- good
 			self.isFriendly = true
 		else
 			self.isFriendly = false
@@ -71,7 +71,7 @@ function nameplates:UpdateAggroPlates()
 			elseif (threatStatus == 2) then
 				self.healthBar.barTexture:SetVertexColor(.86, .77, .36) -- transition
 			else
-				nameplates:colorHealth()
+				self.healthBar.barTexture:SetVertexColor(.78, .25, .25)
 			end
 		end
 	else
@@ -92,7 +92,7 @@ function nameplates:UpdateAggroPlates()
 				self.healthBar.barTexture:SetVertexColor(.29,  .69, .3) -- good
 				self:GetParent().playerHasAggro = false
 			else
-				nameplates:colorHealth()
+				self.healthBar.barTexture:SetVertexColor(.78, .25, .25)
 			end
 		end
 	end
@@ -131,7 +131,8 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	castbar:GetStatusBarTexture():SetHorizTile(true)
 	castbar.background:ClearAllPoints()
 	castbar.background:SetOutside()
-	castbar.Text:SetFont(C["media"].font, 9, "THINOUTLINE")
+	castbar.Text:SetFont(C["media"].font, 9)
+	castbar.Text:SetShadowOffset(1.25, -1.25)
 
 	cicon:SetTexCoord(unpack(D["IconCoord"]))
 	cicon:Size(health:GetHeight() + castbar:GetHeight() + 3)
@@ -141,11 +142,12 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	buffframe:ClearAllPoints()
 	buffframe:SetPoint("TOPLEFT", health, "TOPLEFT", 0, 30)
 
-	name:SetFont(C["media"].font, 9, "THINOUTLINE")
+	name:SetFont(C["media"].font, 9)
+	name:SetShadowOffset(1.25, -1.25)
 	hooksecurefunc(name, "Show", nameplates.SetName)
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
-	highlight:Hide()
-	aggro:Hide()
+	highlight:SetAlpha(0)
+	--aggro:Hide()
 end
 
 --[[Enable & Running]]--
@@ -156,7 +158,7 @@ function nameplates:enable()
     self:SetScript("OnEvent", self.onEvent)
 	
 	hooksecurefunc("DefaultCompactNamePlateFrameSetup", self.visualStyle)
-	if C["nameplate"]["ethreat"] then 
+	if C["nameplate"]["ethreat"] then
 		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.UpdateAggroPlates)
 	else
 		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
