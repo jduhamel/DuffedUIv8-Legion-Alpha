@@ -158,7 +158,7 @@ local function Vehicle_OnClick(self)
 	if UnitOnTaxi("player") then TaxiRequestEarlyLanding() else VehicleExit() end
 end
 
-local vehicleleft = CreateFrame("Button", "DuffedUIExitVehicleButtonLeft", UIParent, "SecureHandlerClickTemplate")
+local vehicleleft = CreateFrame("Button", "DuffedUIExitVehicleButtonLeft", UIParent) --, "SecureHandlerClickTemplate"
 vehicleleft:SetPoint("TOP", UIParent, "TOP", 0, -5)
 vehicleleft:SetSize(225, 20)
 vehicleleft:SetFrameStrata("LOW")
