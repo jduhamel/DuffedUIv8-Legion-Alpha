@@ -67,6 +67,7 @@
  	DuffedUIConfigUILocalization.nameplateactive = "启用姓名版"
  	DuffedUIConfigUILocalization.nameplateplatewidth = "设置姓名板宽度 (默认 = 110)"
  	DuffedUIConfigUILocalization.nameplateplateheight = "设置姓名板高度 (默认 = 7)"
+	DuffedUIConfigUILocalization.nameplateethreat = "Enable Enhanced Threat"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "快捷栏"

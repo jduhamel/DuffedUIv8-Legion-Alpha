@@ -67,6 +67,7 @@
 	DuffedUIConfigUILocalization.nameplateactive = "Enable Nameplates"
 	DuffedUIConfigUILocalization.nameplateplatewidth = "Set width of nameplates (default = 110)"
 	DuffedUIConfigUILocalization.nameplateplateheight = "Set height of nameplates (default = 7)"
+	DuffedUIConfigUILocalization.nameplateethreat = "Aktiviere erweitertete Aggroanzeige"
 
 	--[[Actionbars]]--
 	DuffedUIConfigUILocalization.actionbar = "Aktionsleisten"
