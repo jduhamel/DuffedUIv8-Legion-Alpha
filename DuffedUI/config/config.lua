@@ -67,6 +67,7 @@ C["nameplate"] = {
  	["active"] = true,
  	["platewidth"] = 110,
  	["plateheight"] = 7,
+	["ethreat"] = true,
 }
 
 C["actionbar"] = {

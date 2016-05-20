@@ -8,6 +8,16 @@ local select = select
 local colors = D["UnitColor"]
 
 --[[Functions]]--
+local function IsPlayerEffectivelyTank()
+	local assignedRole = UnitGroupRolesAssigned("player")
+	
+	if assignedRole == "NONE" then
+		local spec GetSpecialization()
+		return spec and GetSpecializationRole(spec) == "TANK"
+	end
+	return assignedRole == "TANK"
+end
+
 function nameplates:customSize() C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight) end
 
 function nameplates:colorHealth()
@@ -46,6 +56,46 @@ function nameplates:colorHealth()
 		end
         self.healthBar:SetStatusBarColor(r, g, b)
     end
+end
+
+function nameplates:UpdateAggroPlates()
+	local isTanking, threatStatus = UnitDetailedThreatSituation("player", self.displayedUnit)
+	-- (3 = securely tanking, 2 = insecurely tanking, 1 = not tanking but higher threat than tank, 0 = not tanking and lower threat than tank)
+	
+	if IsPlayerEffectivelyTank() then
+		if not isTanking then
+			self.healthBar.barTexture:SetVertexColor(.78, .25, .25) -- bad
+		else
+			if (threatStatus == 3) then
+				self.healthBar.barTexture:SetVertexColor(.29,  .69, .3) -- good
+			elseif (threatStatus == 2) then
+				self.healthBar.barTexture:SetVertexColor(.86, .77, .36) -- transition
+			else
+				nameplates:colorHealth()
+			end
+		end
+	else
+		if isTanking then
+			self.healthBar.barTexture:SetVertexColor(.78, .25, .25) -- bad
+			self:GetParent().playerHasAggro = true
+		else
+			if (threatStatus == 3) then
+				self.healthBar.barTexture:SetVertexColor(.78, .25, .25) -- bad
+				self:GetParent().playerHasAggro = true
+			elseif (threatStatus == 2) then
+				self.healthBar.barTexture:SetVertexColor(.86, .77, .36) -- transition
+				self:GetParent().playerHasAggro = true
+			elseif (threatStatus == 1) then
+				self.healthBar.barTexture:SetVertexColor(.86, .77, .36) -- transition
+				self:GetParent().playerHasAggro = false
+			elseif (threatStatus == 0) then
+				self.healthBar.barTexture:SetVertexColor(.29,  .69, .3) -- good
+				self:GetParent().playerHasAggro = false
+			else
+				nameplates:colorHealth()
+			end
+		end
+	end
 end
 
 function nameplates:SetName()
@@ -94,8 +144,8 @@ function nameplates:visualStyle(setupOptions, frameOptions)
 	name:SetFont(C["media"].font, 9, "THINOUTLINE")
 	hooksecurefunc(name, "Show", nameplates.SetName)
 	if self.unit == "target" then name:SetTextColor(1, 1, 0) else name:SetTextColor(1, 1, 1) end
-	highlight:Kill()
-	aggro:Kill()
+	highlight:Hide()
+	aggro:Hide()
 end
 
 --[[Enable & Running]]--
@@ -106,13 +156,19 @@ function nameplates:enable()
     self:SetScript("OnEvent", self.onEvent)
 	
 	hooksecurefunc("DefaultCompactNamePlateFrameSetup", self.visualStyle)
-	hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
+	if C["nameplate"]["ethreat"] then 
+		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.UpdateAggroPlates)
+	else
+		hooksecurefunc("CompactUnitFrame_UpdateHealthColor", self.colorHealth)
+	end
 end
 
 nameplates:RegisterEvent("ADDON_LOADED")
 nameplates:RegisterEvent("PLAYER_ENTERING_WORLD")
 nameplates:RegisterEvent("UNIT_TARGET")
 nameplates:RegisterEvent("PLAYER_TARGET_CHANGED")
+nameplates:RegisterEvent("NAME_PLATE_CREATED")
+nameplates:RegisterEvent("NAME_PLATE_UNIT_ADDED")
 nameplates:SetScript("OnEvent", function(self, event, ...)
 	nameplates:enable()
 end)
