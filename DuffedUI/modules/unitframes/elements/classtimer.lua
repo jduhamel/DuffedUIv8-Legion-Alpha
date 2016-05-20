@@ -153,7 +153,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(49016), -- Unholy Frenzy
 			CreateSpellEntry(49028), -- Dancing Rune Weapon
 			CreateSpellEntry(49039), -- Lichborne
-			CreateSpellEntry(49222), -- Bone Shield
+			CreateSpellEntry(195181), -- Bone Shield
 			CreateSpellEntry(51124), -- Killing Machine
 			CreateSpellEntry(51271), -- Pillar of Frost
 			CreateSpellEntry(51460), -- Runic Corruption
