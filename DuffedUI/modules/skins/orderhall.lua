@@ -26,7 +26,12 @@ local function LoadOrderHallSkin()
 	OrderHallMissionFrameMissionsListScrollFrame:StripTextures()
 	OrderHallMissionFrameMissionsListScrollFrameScrollBar:SkinScrollBar()
 	OrderHallMissionFrameMissions.CombatAllyUI:StripTextures()
+	OrderHallMissionFrameMissions.CombatAllyUI.InProgress.Unassign:SkinButton()
 	OrderHallMissionFrameMissions.MaterialFrame:StripTextures()
+	OrderHallMissionFrame.MissionTab:StripTextures()
+	OrderHallMissionFrame.MissionTab.ZoneSupportMissionPage:StripTextures()
+	OrderHallMissionFrame.MissionTab.ZoneSupportMissionPage.CloseButton:SkinCloseButton()
+	OrderHallMissionFrame.MissionTab.ZoneSupportMissionPage.StartMissionButton:SkinButton()
 
 	for i = 1, 2 do
 		_G["OrderHallMissionFrameMissionsTab" .. i]:StripTextures()
