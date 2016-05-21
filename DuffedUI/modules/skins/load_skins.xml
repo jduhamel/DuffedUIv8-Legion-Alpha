@@ -21,9 +21,8 @@
 	<Script file="help.lua" />
 	<Script file="inspect.lua" />
 	<Script file="itemtext.lua" />
-	<Script file="itemtransmogrify.lua" />
 	<Script file="itemupgrade.lua" />
-	<!--<Script file="garrison.lua" />-->
+	<Script file="garrison.lua" />
 	<Script file="glyph.lua" />
 	<Script file="gossip.lua" />
 	<Script file="greeting.lua" />

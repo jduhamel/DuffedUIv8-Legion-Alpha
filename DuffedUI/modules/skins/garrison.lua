@@ -25,7 +25,7 @@ local function LoadGarrisonSkin()
 		end
 	end
 
-	local function HandleShipFollowerPage(followerTab)
+	--[[local function HandleShipFollowerPage(followerTab)
 		local traits = followerTab.Traits
 		for i = 1, #traits do
 			local icon = traits[i].Portrait
@@ -41,7 +41,7 @@ local function LoadGarrisonSkin()
 			border:SetAtlas("ShipMission_ShipFollower-TypeFrame")
 			if followerTab.isLandingPage then icon:SetTexCoord(unpack(D.IconCoord)) end
 		end
-	end
+	end]]--
 
 	--[[Building frame]]--
 	GarrisonBuildingFrame:StripTextures(true)
@@ -71,6 +71,8 @@ local function LoadGarrisonSkin()
 	CapacitiveDisplay.ShipmentIconFrame.Icon:SetTexCoord(unpack(D.IconCoord))
 	CapacitiveDisplay.ShipmentIconFrame:SetTemplate("Default", true)
 	CapacitiveDisplay.ShipmentIconFrame.Icon:SetInside()
+	CapacitiveDisplay.ShipmentIconFrame.Follower:StripTextures()
+	CapacitiveDisplay.ShipmentIconFrame.Follower.Portrait:SetTexCoord(unpack(D["IconCoord"]))
 	GarrisonCapacitiveDisplayFrame:SetFrameStrata("MEDIUM")
 	GarrisonCapacitiveDisplayFrame:SetFrameLevel(45)
 
@@ -329,7 +331,7 @@ local function LoadGarrisonSkin()
 	ShipFollowerList.SearchBox:SkinEditBox()
 	local scrollFrame = ShipFollowerList.listScroll
 	scrollFrame.scrollBar:SkinScrollBar()
-	HandleShipFollowerPage(ShipFollowerList.followerTab)
+	--HandleShipFollowerPage(ShipFollowerList.followerTab)
 
 
 	--[[ShipYard]]--
@@ -372,7 +374,7 @@ local function LoadGarrisonSkin()
 	FollowerList.SearchBox:SkinEditBox()
 	FollowerList.MaterialFrame:StripTextures()
 	FollowerList.MaterialFrame.Icon:SetAtlas("ShipMission_CurrencyIcon-Oil", false) --Re-add the material icon
-	HandleShipFollowerPage(FollowerList.followerTab)
+	--HandleShipFollowerPage(FollowerList.followerTab)
 
 	--[[ShipYard: Mission Tooltip]]--
 	local tooltip = GarrisonShipyardMapMissionTooltip
@@ -471,5 +473,16 @@ local function LoadGarrisonTooltipSkin()
 	end)
 end
 
+local function LoadOrderHallSkin()
+	--[[TalentFrame]]--
+	OrderHallTalentFrame:StripTextures()
+	OrderHallTalentFrame:SetTemplate("Transparent")
+	OrderHallTalentFrameCloseButton:SkinCloseButton()
+	ClassHallTalentInset:StripTextures()
+	OrderHallTalentFrame.Currency:SetFont(C["media"].font, 16)
+	OrderHallTalentFrame.CurrencyIcon:SetAtlas("legionmission-icon-currency", false)
+end
+
 D.SkinFuncs["Blizzard_GarrisonUI"] = LoadGarrisonSkin
+D.SkinFuncs["Blizzard_OrderHallUI"] = LoadOrderHallSkin
 tinsert(D.SkinFuncs["DuffedUI"], LoadGarrisonTooltipSkin)
