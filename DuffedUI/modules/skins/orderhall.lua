@@ -69,6 +69,13 @@ local function LoadOrderHallSkin()
 	OrderHallMissionFrame.MissionTab.MissionPage.StartMissionButton:SkinButton()
 	
 	--[[FollowerTab]]--
+	local FollowerList = OrderHallMissionFrame.FollowerTab
+	FollowerList:StripTextures()
+	FollowerList.ModelCluster:StripTextures()
+	FollowerList.Class:SetSize(50, 43)
+	FollowerList.XPBar:StripTextures()
+	FollowerList.XPBar:SetStatusBarTexture(C["media"].normTex)
+	FollowerList.XPBar:CreateBackdrop()
 	
 	--[[MissionStage]]--
 	local Mission = OrderHallMissionFrameMissions
