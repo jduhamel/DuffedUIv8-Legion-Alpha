@@ -53,6 +53,7 @@ local function LoadSkin()
 	AchievementFrameFilterDropDown:ClearAllPoints()
 	AchievementFrameFilterDropDown:Point("LEFT", AchievementFrameHeaderPoints, "RIGHT", 5, -2)
 	AchievementFrame.searchBox:SkinEditBox()
+	AchievementFrame.searchBox:SetHeight(15)
 	AchievementFrame.searchBox:ClearAllPoints()
 	AchievementFrame.searchBox:Point("TOPRIGHT", AchievementFrame, "TOPRIGHT", -40, 0)
 
