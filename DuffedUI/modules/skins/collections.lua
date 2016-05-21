@@ -340,12 +340,11 @@ if not IsAddOnLoaded("AddOnSkins") then
 			if C_Heirloom.PlayerHasHeirloom(button.itemID) then button.name:SetTextColor(1, 1, 1) else button.name:SetTextColor(.6, .6, .6) end
 		end)
 
-		--[[Tab 5 - Transmog]]--
+		--[[Tab 5 - Transmog (Collection)]]--
 		WardrobeCollectionFrame.progressBar:StripTextures()
 		WardrobeCollectionFrame.progressBar:SetStatusBarTexture(C["media"]["normTex"])
 		WardrobeCollectionFrame.progressBar:CreateBackdrop()
 		WardrobeCollectionFrameSearchBox:SkinEditBox()
-		WardrobeCollectionFrame.FilterButton:StripTextures()
 		WardrobeCollectionFrame.FilterButton:SkinButton()
 		WardrobeCollectionFrame.FilterButton:SetWidth(80)
 		WardrobeCollectionFrame.ModelsFrame:StripTextures()
@@ -354,6 +353,31 @@ if not IsAddOnLoaded("AddOnSkins") then
 		WardrobeCollectionFrame.NavigationFrame.NextPageButton:SkinCloseButton()
 		WardrobeCollectionFrame.NavigationFrame.PrevPageButton.t:SetText("<")
 		WardrobeCollectionFrame.NavigationFrame.NextPageButton.t:SetText(">")
+		
+		--[[Tab 5 - Transmog (NPC)]]--
+		WardrobeFrame:StripTextures()
+		WardrobeFrame:SetTemplate("Transparent")
+		WardrobeFrameCloseButton:SkinCloseButton()
+		WardrobeOutfitDropDown:SkinDropDownBox()
+		WardrobeOutfitDropDown:SetSize(200, 32)
+		WardrobeOutfitDropDownText:ClearAllPoints()
+		WardrobeOutfitDropDownText:SetPoint("CENTER", WardrobeOutfitDropDown, 10, 2)
+		WardrobeOutfitDropDown.SaveButton:SkinButton()
+		WardrobeOutfitDropDown.SaveButton:ClearAllPoints()
+		WardrobeOutfitDropDown.SaveButton:SetPoint("LEFT", WardrobeOutfitDropDown, "RIGHT", 1, 4)
+		WardrobeOutfitFrame:StripTextures()
+		WardrobeOutfitFrame:SetTemplate("Transparent")
+		
+		WardrobeTransmogFrame:StripTextures()
+		WardrobeTransmogFrame.Inset:StripTextures()
+		for i = 1, #WardrobeTransmogFrame.Model.SlotButtons do
+			WardrobeTransmogFrame.Model.SlotButtons[i]:StripTextures()
+			WardrobeTransmogFrame.Model.SlotButtons[i].Icon:SetTexCoord(unpack(D["IconCoord"]))
+		end
+		WardrobeTransmogFrame.SpecButton:SkinButton()
+		WardrobeTransmogFrame.SpecButton:ClearAllPoints()
+		WardrobeTransmogFrame.SpecButton:SetPoint("RIGHT", WardrobeTransmogFrame.ApplyButton, "LEFT", -2, 0)
+		WardrobeTransmogFrame.ApplyButton:SkinButton()
 	end
 
 	if CollectionsJournal then tinsert(D.SkinFuncs["DuffedUI"], LoadSkin) else D.SkinFuncs["Blizzard_Collections"] = LoadSkin end
