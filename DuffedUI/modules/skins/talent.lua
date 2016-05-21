@@ -251,11 +251,7 @@ local function LoadSkin()
 	TalentMicroButtonAlert.CloseButton.t:SetTextColor(1, 1, 0)
 	TalentMicroButtonAlert.Text:SetTextColor(1, 1, 0)
 	TalentMicroButtonAlert:ClearAllPoints()
-	if oUF_Player then
-		TalentMicroButtonAlert:SetPoint("BOTTOM", DuffedUIPlayer, "TOP", 0, -2)
-	else
-		TalentMicroButtonAlert:SetPoint("BOTTOM", UIPARENT, "BOTTOM", 0, -6)
-	end
+	TalentMicroButtonAlert:SetPoint("BOTTOM", DuffedUIBar1, "TOP", 0, 0)
 end
 
 D.SkinFuncs["Blizzard_TalentUI"] = LoadSkin
