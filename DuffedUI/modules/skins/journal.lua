@@ -134,6 +134,13 @@ local function LoadSkin()
 	end
 	SkinDungeons()
 	hooksecurefunc("EncounterJournal_ListInstances", SkinDungeons)
+
+	EncounterJournal.LootJournal:StripTextures()
+	LootJournalViewDropDown:SkinDropDownBox()
+	EncounterJournal.LootJournal.LegendariesFrame.ClassButton:StripTextures()
+	EncounterJournal.LootJournal.LegendariesFrame.ClassButton:SkinButton()
+	EncounterJournal.LootJournal.LegendariesFrame.SlotButton:StripTextures()
+	EncounterJournal.LootJournal.LegendariesFrame.SlotButton:SkinButton()
 end
 
 D.SkinFuncs["Blizzard_EncounterJournal"] = LoadSkin
