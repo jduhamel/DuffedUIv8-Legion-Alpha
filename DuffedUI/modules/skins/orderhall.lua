@@ -1,3 +1,5 @@
+local D, C, L = unpack(select(2, ...))
+
 local function LoadOrderHallSkin()
 	--[[OrderHall CommandBar]]--
 	OrderHallCommandBar:StripTextures()
@@ -57,7 +59,16 @@ local function LoadOrderHallSkin()
 	end
 	
 	--[[MissionTab]]--
+	local Follower = OrderHallMissionFrameFollowers
+	Follower:StripTextures()
+	Follower.SearchBox:SkinEditBox()
+	Follower.MaterialFrame:StripTextures()
+	OrderHallMissionFrameFollowersListScrollFrameScrollBar:SkinScrollBar()
+	OrderHallMissionFrame.MissionTab.MissionPage:StripTextures()
+	OrderHallMissionFrame.MissionTab.MissionPage.CloseButton:SkinCloseButton()
+	OrderHallMissionFrame.MissionTab.MissionPage.StartMissionButton:SkinButton()
 	
+	--[[FollowerTab]]--
 	
 	--[[MissionStage]]--
 	local Mission = OrderHallMissionFrameMissions

@@ -225,7 +225,7 @@ local function LoadGarrisonSkin()
 	--[[Mission list]]--
 	local MissionTab = GarrisonMissionFrame.MissionTab
 	local MissionList = MissionTab.MissionList
-	local MissionPage = GarrisonMissionFrame.MissionTab.MissionPage
+	local MissionPage = MissionTab.MissionPage
 	MissionList:DisableDrawLayer("BORDER")
 	MissionList.listScroll.scrollBar:SkinScrollBar()
 	MissionPage.CloseButton:SkinCloseButton()
