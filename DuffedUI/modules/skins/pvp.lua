@@ -4,8 +4,8 @@ if IsAddOnLoaded("AddOnSkins") then return end
 
 local function LoadSkin()
 	PVPUIFrame:StripTextures()
-	PVPUIFrame:SetTemplate("Transparent")
 
+	--[[Category Buttons]]--
 	for i = 1, 4 do
 		local button = _G["PVPQueueFrameCategoryButton" .. i]
 		button:SetTemplate()
@@ -20,8 +20,10 @@ local function LoadSkin()
 		button:StyleButton()
 	end
 
-	-- HONOR FRAME
+	--[[Honor Frame]]--
 	HonorFrameTypeDropDown:SkinDropDownBox()
+	HonorFrameTypeDropDown:ClearAllPoints()
+	HonorFrameTypeDropDown:SetPoint("BOTTOMRIGHT", HonorFrame.BonusFrame.RandomBGButton, "TOPRIGHT", 9, 19)
 	HonorFrame.Inset:StripTextures()
 	HonorFrameSpecificFrameScrollBar:SkinScrollBar()
 	HonorFrameQueueButton:SkinButton(true)
@@ -54,12 +56,20 @@ local function LoadSkin()
 	HonorFrame.RoleInset.HealerIcon.checkButton:SkinCheckBox()
 	HonorFrame.RoleInset.HealerIcon.checkButton:SetFrameLevel(HonorFrame.RoleInset.HealerIcon:GetFrameLevel() + 2)
 
-	-- CONQUEST FRAME
+	--[[Conquest Frame]]--
 	ConquestFrame.Inset:StripTextures()
 	ConquestFrame:StripTextures()
 	ConquestFrame:SetFrameLevel(5)
 	ConquestFrame:SetFrameStrata("HIGH")
 	ConquestFrame.ShadowOverlay:StripTextures()
+
+	ConquestFrame.RoleInset:StripTextures()
+	ConquestFrame.RoleInset.DPSIcon.checkButton:SkinCheckBox()
+	ConquestFrame.RoleInset.DPSIcon.checkButton:SetFrameLevel(ConquestFrame.RoleInset.DPSIcon:GetFrameLevel() + 2)
+	ConquestFrame.RoleInset.TankIcon.checkButton:SkinCheckBox()
+	ConquestFrame.RoleInset.TankIcon.checkButton:SetFrameLevel(ConquestFrame.RoleInset.TankIcon:GetFrameLevel() + 2)
+	ConquestFrame.RoleInset.HealerIcon.checkButton:SkinCheckBox()
+	ConquestFrame.RoleInset.HealerIcon.checkButton:SetFrameLevel(ConquestFrame.RoleInset.HealerIcon:GetFrameLevel() + 2)
 
 	local function SkinRated(button)
 		button:StripTextures()
@@ -73,7 +83,19 @@ local function LoadSkin()
 	SkinRated(ConquestFrame.Arena3v3)
 	ConquestJoinButton:SkinButton(true)
 
-	-- PvP Ready Dialog
+	--[[Wargames Frame]]--
+	WarGamesFrame:StripTextures()
+	WarGamesFrame.RightInset:StripTextures()
+	WarGameStartButton:SkinButton(true)
+	WarGamesFrameScrollFrameScrollBar:SkinScrollBar()
+	WarGamesFrameInfoScrollFrameScrollBar:StripTextures()
+	WarGamesFrameInfoScrollFrameScrollBar:SkinScrollBar()
+	WarGamesFrame.HorizontalBar:StripTextures()
+	WarGameStartButton:StripTextures()
+	WarGameStartButton:SkinButton()
+	WarGameTournamentModeCheckButton:SkinCheckBox()
+
+	--[[PvP Ready Dialog]]--
 	PVPReadyDialog:StripTextures()
 	PVPReadyDialog:SetTemplate("Transparent")
 	PVPReadyDialog.SetBackdrop = D.Dummy
@@ -83,16 +105,6 @@ local function LoadSkin()
 	PVPReadyDialogLeaveQueueButton:SkinButton()
 	PVPReadyDialogCloseButton:SkinCloseButton()
 	PVPReadyDialogCloseButton.t:SetText("_")
-
-	-- WARGRAMES FRAME
-	WarGamesFrame:StripTextures()
-	WarGamesFrame.RightInset:StripTextures()
-	WarGameStartButton:SkinButton(true)
-	WarGamesFrameScrollFrameScrollBar:SkinScrollBar()
-	WarGamesFrame.HorizontalBar:StripTextures()
-	WarGameStartButton:StripTextures()
-	WarGameStartButton:SkinButton()
-	WarGameTournamentModeCheckButton:SkinCheckBox()
 end
 
 D.SkinFuncs["Blizzard_PVPUI"] = LoadSkin
