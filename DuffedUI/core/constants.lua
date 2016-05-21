@@ -19,6 +19,7 @@ D["IconCoord"] = {.08, .92, .08, .92}
 D["Guild"] = select(1, GetGuildInfo("player"))
 
 D["Credits"] = {
+	"Dejablue",
 	"Tukz",
 	"Hydra",
 	"Elv",
