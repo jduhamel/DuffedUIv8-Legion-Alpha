@@ -25,24 +25,6 @@ local function LoadGarrisonSkin()
 		end
 	end
 
-	--[[local function HandleShipFollowerPage(followerTab)
-		local traits = followerTab.Traits
-		for i = 1, #traits do
-			local icon = traits[i].Portrait
-			local border = traits[i].Border
-			border:SetTexture(nil)
-			if followerTab.isLandingPage then icon:SetTexCoord(unpack(D.IconCoord)) end
-		end
-
-		local equipment = followerTab.EquipmentFrame.Equipment
-		for i = 1, #equipment do
-			local icon = equipment[i].Icon
-			local border = equipment[i].Border
-			border:SetAtlas("ShipMission_ShipFollower-TypeFrame")
-			if followerTab.isLandingPage then icon:SetTexCoord(unpack(D.IconCoord)) end
-		end
-	end]]--
-
 	--[[Building frame]]--
 	GarrisonBuildingFrame:StripTextures(true)
 	GarrisonBuildingFrame.TitleText:Show()
@@ -137,7 +119,7 @@ local function LoadGarrisonSkin()
 	GarrisonMissionFrame.TitleText:Show()
 	GarrisonMissionFrame:CreateBackdrop("Transparent")
 	GarrisonMissionFrame.CloseButton:SkinCloseButton()
-	for i = 1,2 do
+	for i = 1, 2 do
 		_G["GarrisonMissionFrameMissionsTab" .. i]:StripTextures()
 		_G["GarrisonMissionFrameMissionsTab" .. i]:SkinButton()
 		_G["GarrisonMissionFrameMissionsTab" .. i]:Height(_G["GarrisonMissionFrameMissionsTab" .. i]:GetHeight() - 10)
@@ -212,7 +194,6 @@ local function LoadGarrisonSkin()
 
 		Enemy.PortraitFrame:StripTextures()
 		Enemy.PortraitFrame:CreateBackdrop()
-		--Enemy.PortraitFrame.Portrait:SetTexCoord(unpack(D.IconCoord))
 		Follower:StripTextures()
 	end
 
@@ -331,7 +312,6 @@ local function LoadGarrisonSkin()
 	ShipFollowerList.SearchBox:SkinEditBox()
 	local scrollFrame = ShipFollowerList.listScroll
 	scrollFrame.scrollBar:SkinScrollBar()
-	--HandleShipFollowerPage(ShipFollowerList.followerTab)
 
 
 	--[[ShipYard]]--
@@ -374,7 +354,6 @@ local function LoadGarrisonSkin()
 	FollowerList.SearchBox:SkinEditBox()
 	FollowerList.MaterialFrame:StripTextures()
 	FollowerList.MaterialFrame.Icon:SetAtlas("ShipMission_CurrencyIcon-Oil", false) --Re-add the material icon
-	--HandleShipFollowerPage(FollowerList.followerTab)
 
 	--[[ShipYard: Mission Tooltip]]--
 	local tooltip = GarrisonShipyardMapMissionTooltip
@@ -474,6 +453,70 @@ local function LoadGarrisonTooltipSkin()
 end
 
 local function LoadOrderHallSkin()
+	--[[OrderHall CommandBar]]--
+	OrderHallCommandBar:StripTextures()
+	OrderHallCommandBar:SetTemplate("Transparent")
+	OrderHallCommandBar:ClearAllPoints()
+	OrderHallCommandBar:SetPoint("TOP", UIParent, 0, 0)
+	OrderHallCommandBar:SetWidth(480)
+	OrderHallCommandBar.ClassIcon:SetTexture("Interface\\TargetingFrame\\UI-Classes-Circles")
+	OrderHallCommandBar.ClassIcon:SetSize(46, 20)
+	OrderHallCommandBar.CurrencyIcon:SetAtlas("legionmission-icon-currency", false)
+	OrderHallCommandBar.AreaName:ClearAllPoints()
+	OrderHallCommandBar.AreaName:SetPoint("LEFT", OrderHallCommandBar.CurrencyIcon, "RIGHT", 10, 0)
+	OrderHallCommandBar.WorldMapButton:ClearAllPoints()
+	OrderHallCommandBar.WorldMapButton:SetPoint("RIGHT", OrderHallCommandBar, -5, -2)
+	OrderHallCommandBar.WorldMapButton:SetSize(23, 22)
+	
+	--[[MissionFrame]]--
+	OrderHallMissionFrame:StripTextures()
+	OrderHallMissionFrame:SetTemplate("Transparent")
+	OrderHallMissionFrame.CloseButton:SkinCloseButton()
+	for i = 1, 3 do _G["OrderHallMissionFrameTab" .. i]:SkinTab() end
+	OrderHallMissionFrame.GarrCorners:StripTextures()
+	OrderHallMissionFrameMissions:StripTextures()
+	OrderHallMissionFrameMissionsListScrollFrame:StripTextures()
+	OrderHallMissionFrameMissionsListScrollFrameScrollBar:SkinScrollBar()
+	OrderHallMissionFrameMissions.CombatAllyUI:StripTextures()
+	OrderHallMissionFrameMissions.MaterialFrame:StripTextures()
+
+	for i = 1, 2 do
+		_G["OrderHallMissionFrameMissionsTab" .. i]:StripTextures()
+		_G["OrderHallMissionFrameMissionsTab" .. i]:SkinButton()
+		_G["OrderHallMissionFrameMissionsTab" .. i]:Height(_G["GarrisonMissionFrameMissionsTab" .. i]:GetHeight() - 10)
+	end
+
+	for i, v in ipairs(OrderHallMissionFrame.MissionTab.MissionList.listScroll.buttons) do
+		local Button = _G["OrderHallMissionFrameMissionsListScrollFrameButton" .. i]
+		if Button and not Button.skinned then
+			Button:StripTextures()
+			Button:SetTemplate()
+			Button:SkinButton()
+			Button:SetBackdropBorderColor(0, 0, 0, 0)
+			Button:HideInsets()
+			Button.LocBG:Hide()
+			for i = 1, #Button.Rewards do
+				local Texture = Button.Rewards[i].Icon:GetTexture()
+
+				Button.Rewards[i]:StripTextures()
+				Button.Rewards[i]:StyleButton()
+				Button.Rewards[i]:CreateBackdrop()
+				Button.Rewards[i].Icon:SetTexture(Texture)
+				Button.Rewards[i].backdrop:ClearAllPoints()
+				Button.Rewards[i].backdrop:SetOutside(Button.Rewards[i].Icon)
+				Button.Rewards[i].Icon:SetTexCoord(unpack(D.IconCoord))
+			end
+			Button.isSkinned = true
+		end
+	end
+	
+	--[[MissionStage]]--
+	local Mission = OrderHallMissionFrameMissions
+	Mission.CompleteDialog:StripTextures()
+	Mission.CompleteDialog:SetTemplate("Transparent")
+	Mission.CompleteDialog.BorderFrame.ViewButton:SkinButton()
+	OrderHallMissionFrame.MissionComplete.NextMissionButton:SkinButton()
+
 	--[[TalentFrame]]--
 	OrderHallTalentFrame:StripTextures()
 	OrderHallTalentFrame:SetTemplate("Transparent")
