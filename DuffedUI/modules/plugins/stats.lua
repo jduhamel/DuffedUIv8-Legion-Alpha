@@ -1,4 +1,5 @@
 local D, C, L = unpack(select(2, ...))
+if C["general"].blizzardreskin ~= true then return end
 --[[
 	Taken from DejaStats, adjusted for DuffedUI
 	Credits for the mainparts of the script goes to Dejablue!
