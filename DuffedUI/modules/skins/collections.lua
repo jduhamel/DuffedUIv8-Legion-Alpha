@@ -6,10 +6,9 @@ if not IsAddOnLoaded("AddOnSkins") then
 		CollectionsJournal:StripTextures()
 		CollectionsJournal:SetTemplate("Transparent")
 		CollectionsJournalPortrait:Hide()
-		CollectionsJournalTab1:SkinTab()
-		CollectionsJournalTab2:SkinTab()
-		CollectionsJournalTab3:SkinTab()
-		CollectionsJournalTab4:SkinTab()
+		for i = 1, 5 do
+			_G["CollectionsJournalTab" .. i]:SkinTab()
+		end
 		CollectionsJournalCloseButton:SkinCloseButton()
 
 		--[[Tab 1 - Mounts]]--
@@ -340,6 +339,21 @@ if not IsAddOnLoaded("AddOnSkins") then
 			button.iconTextureUncollected:SetTexture(button.iconTexture:GetTexture())
 			if C_Heirloom.PlayerHasHeirloom(button.itemID) then button.name:SetTextColor(1, 1, 1) else button.name:SetTextColor(.6, .6, .6) end
 		end)
+
+		--[[Tab 5 - Transmog]]--
+		WardrobeCollectionFrame.progressBar:StripTextures()
+		WardrobeCollectionFrame.progressBar:SetStatusBarTexture(C["media"]["normTex"])
+		WardrobeCollectionFrame.progressBar:CreateBackdrop()
+		WardrobeCollectionFrameSearchBox:SkinEditBox()
+		WardrobeCollectionFrame.FilterButton:StripTextures()
+		WardrobeCollectionFrame.FilterButton:SkinButton()
+		WardrobeCollectionFrame.FilterButton:SetWidth(80)
+		WardrobeCollectionFrame.ModelsFrame:StripTextures()
+		WardrobeCollectionFrameWeaponDropDown:SkinDropDownBox()
+		WardrobeCollectionFrame.NavigationFrame.PrevPageButton:SkinCloseButton()
+		WardrobeCollectionFrame.NavigationFrame.NextPageButton:SkinCloseButton()
+		WardrobeCollectionFrame.NavigationFrame.PrevPageButton.t:SetText("<")
+		WardrobeCollectionFrame.NavigationFrame.NextPageButton.t:SetText(">")
 	end
 
 	if CollectionsJournal then tinsert(D.SkinFuncs["DuffedUI"], LoadSkin) else D.SkinFuncs["Blizzard_Collections"] = LoadSkin end
