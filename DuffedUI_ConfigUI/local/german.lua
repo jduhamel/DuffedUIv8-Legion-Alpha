@@ -22,8 +22,6 @@
 	DuffedUIConfigUILocalization.unitframesColorGradient = "Aktiviere Farbverlauf für die Heilleiste"
 	DuffedUIConfigUILocalization.unitframescharportrait = "Aktviere Charakterportraits am Spieler- und Zielframe"
 	DuffedUIConfigUILocalization.unitframesweakenedsoulbar = "Aktiviere 'Geschwächte Seele' Leiste (Priester ->Rote Leiste)"
-	DuffedUIConfigUILocalization.unitframesclassbar = "Aktiviere die Klassenleisten"
-	DuffedUIConfigUILocalization.unitframesruneofpower = "Aktiviere die 'Rune der Macht' Leiste"
 	DuffedUIConfigUILocalization.unitframestargetauras = "Aktiviere Auren am Einheitenfenster des Ziels"
 	DuffedUIConfigUILocalization.unitframesonlyselfdebuffs = "Zeige nur deine Schwächungszauber am Einheitenfester des Ziels"
 	DuffedUIConfigUILocalization.unitframescombatfeedback = "Zeige Kampf-Feedback auf dem Spieler- und Zieleinheitenfenster"
@@ -33,13 +31,9 @@
 	DuffedUIConfigUILocalization.unitframestotdbsize = "Wähle die Größe für Schwächungszauber vom 'Ziel des Ziels' Einheitenfester"
 	DuffedUIConfigUILocalization.unitframesfocusdebuffs = "Aktiviere Schwächungszauber am Fokuseinheitenfenster"
 	DuffedUIConfigUILocalization.unitframesfocusbutton = "Aktiviere den Fokusbutton für Spieler- / Fokuseinheitenfenster"
-	DuffedUIConfigUILocalization.unitframesattached = "Verbinde die Klassenleisten und die Einheitenfenster"
-	DuffedUIConfigUILocalization.unitframesoocHide = "Verstecke die Klassenleisten, wenn Du nicht im Kampf bist"
 	DuffedUIConfigUILocalization.unitframesplayermodel = "Setze den Portraitstil (Icon oder Model, Standard => Model)"
 	DuffedUIConfigUILocalization.unitframesbuffsize = "Wähle die Größe der Stärkungszauber am Ziel"
 	DuffedUIConfigUILocalization.unitframesdebuffsize = "Wähle die Größe der Schwächungszauber am Ziel"
-	DuffedUIConfigUILocalization.unitframesDruidMana = "Aktiviere die Manaanzeige bei Gestaltswandlung"
-	DuffedUIConfigUILocalization.unitframesAnticipationBar = "Aktiviere die Erwartungsleiste wenn die Fähigkeit gelernt wurde"
 
 	--[[Chat]]--
 	DuffedUIConfigUILocalization.chat = "Chat"

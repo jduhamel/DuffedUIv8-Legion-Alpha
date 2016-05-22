@@ -22,8 +22,6 @@
 	DuffedUIConfigUILocalization.unitframesColorGradient = "启用生命条颜色渐变功能(随血量变化)"
 	DuffedUIConfigUILocalization.unitframescharportrait = "为自身和目标启用头像显示"
 	DuffedUIConfigUILocalization.unitframesweakenedsoulbar = "启用灵魂虚弱指示 (牧师)"
-	DuffedUIConfigUILocalization.unitframesclassbar = "启用职业条"
-	DuffedUIConfigUILocalization.unitframesruneofpower = "启用秘法符能能量条（法师）"
 	DuffedUIConfigUILocalization.unitframestargetauras = "启用目标光环"
 	DuffedUIConfigUILocalization.unitframesonlyselfdebuffs = "只在目标框体上显示你释放的DEBUFF"
 	DuffedUIConfigUILocalization.unitframescombatfeedback = "在玩家和目标框体上显示战斗信息"
@@ -33,13 +31,9 @@
 	DuffedUIConfigUILocalization.unitframestotdbsize = "设置目标的目标减益光环大小"
 	DuffedUIConfigUILocalization.unitframesfocusdebuffs = "启用焦点目标Debuff"
 	DuffedUIConfigUILocalization.unitframesfocusbutton = "在玩家/焦点目标框体上启用焦点按钮"
-	DuffedUIConfigUILocalization.unitframesattached = "职业条依附在头像框体上"
-	DuffedUIConfigUILocalization.unitframesoocHide = "脱离战斗隐藏职业条"
 	DuffedUIConfigUILocalization.unitframesplayermodel = "设定头像显示类型(职业图标 or 3D头像, 默认 => 3D头像)"
 	DuffedUIConfigUILocalization.unitframesbuffsize = "设定目标框体增益光环大小"
 	DuffedUIConfigUILocalization.unitframesdebuffsize = "设定目标框体减益光环大小"
-	DuffedUIConfigUILocalization.unitframesDruidMana = "Enable the display for Mana if shapeshifted"
-	DuffedUIConfigUILocalization.unitframesAnticipationBar = "Enable Anticipationbar if skill is learned"
 
 	--[[Chat]]--
 	DuffedUIConfigUILocalization.chat = "聊天框体"

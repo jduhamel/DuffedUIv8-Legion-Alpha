@@ -22,8 +22,6 @@
 	DuffedUIConfigUILocalization.unitframesColorGradient = "Enable ColorGradient for Healthbar"
 	DuffedUIConfigUILocalization.unitframescharportrait = "Enable portraits on player and target"
 	DuffedUIConfigUILocalization.unitframesweakenedsoulbar = "Enable Weakened Soul bar notification (Priest)"
-	DuffedUIConfigUILocalization.unitframesclassbar = "Enable class bar"
-	DuffedUIConfigUILocalization.unitframesruneofpower = "Enable rune of power bar"
 	DuffedUIConfigUILocalization.unitframestargetauras = "Enable target auras"
 	DuffedUIConfigUILocalization.unitframesonlyselfdebuffs = "Display only our debuffs on target"
 	DuffedUIConfigUILocalization.unitframescombatfeedback = "Combat Feedback on player and target"
@@ -33,13 +31,9 @@
 	DuffedUIConfigUILocalization.unitframestotdbsize = "Set size of debuffs for Target of Target"
 	DuffedUIConfigUILocalization.unitframesfocusdebuffs = "Enable focus debuffs"
 	DuffedUIConfigUILocalization.unitframesfocusbutton = "Enable focus button on player / focus frame"
-	DuffedUIConfigUILocalization.unitframesattached = "Attach Classbars to Unitframes"
-	DuffedUIConfigUILocalization.unitframesoocHide = "Hide Classbars out of Combat"
 	DuffedUIConfigUILocalization.unitframesplayermodel = "Set Portraitstyle (Icon or Model, default => Model)"
 	DuffedUIConfigUILocalization.unitframesbuffsize = "Set size of Buffs on Targetframe"
 	DuffedUIConfigUILocalization.unitframesdebuffsize = "Set size of Debuffs on Targetframe"
-	DuffedUIConfigUILocalization.unitframesDruidMana = "Enable the display for Mana if shapeshifted"
-	DuffedUIConfigUILocalization.unitframesAnticipationBar = "Enable Anticipationbar if skill is learned"
 
 	--[[Chat]]--
 	DuffedUIConfigUILocalization.chat = "Chat"

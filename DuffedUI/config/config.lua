@@ -22,8 +22,6 @@ C["unitframes"] = {
 	["ColorGradient"] = true,
 	["charportrait"] = true,
 	["weakenedsoulbar"] = true,
-	["classbar"] = true,
-	["runeofpower"] = true,
 	["targetauras"] = true,
 	["onlyselfdebuffs"] = false,
 	["combatfeedback"] = true,
@@ -33,13 +31,9 @@ C["unitframes"] = {
 	["totdbsize"] = 20,
 	["focusdebuffs"] = true,
 	["focusbutton"] = true,
-	["attached"] = false,
-	["oocHide"] = true,
 	["playermodel"] = "Model",
 	["buffsize"] = 20,
 	["debuffsize"] = 20,
-	["DruidMana"] = true,
-	["AnticipationBar"] = true,
 }
 
 C["chat"] = {
