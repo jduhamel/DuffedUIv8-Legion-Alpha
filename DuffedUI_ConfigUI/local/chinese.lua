@@ -192,7 +192,6 @@
 	DuffedUIConfigUILocalization.misccombatanimation = "启用进战/脱战动画提示"
 	DuffedUIConfigUILocalization.miscflightpoint = "启用飞行点列表"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "启用人物面板显示装备等级"
-	DuffedUIConfigUILocalization.miscloc = "禁用快捷栏<角色失去控制>功能"
 	DuffedUIConfigUILocalization.miscacm_screen = "启用成就自动截图功能"
 	DuffedUIConfigUILocalization.miscAFKCamera = "启用暂离镜头效果"
 	DuffedUIConfigUILocalization.miscXPBar = "启用经验条"

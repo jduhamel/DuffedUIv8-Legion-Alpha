@@ -81,8 +81,6 @@
 	DuffedUIConfigUILocalization.actionbarpetbuttonsize = "寵物或姿態欄按鈕大小"
 	DuffedUIConfigUILocalization.actionbarLeftsidebars = "啟用滑鼠劃過顯示左邊聊天框體上的快捷欄"
 	DuffedUIConfigUILocalization.actionbarRightsidebars = "啟用滑鼠劃過顯示右邊聊天框體上的快捷欄"
-	DuffedUIConfigUILocalization.actionbarLeftsidebarshorizontal = "設定左邊快捷欄水平顯示"
-	DuffedUIConfigUILocalization.actionbarRightsidebarshorizontal = "設定右邊快捷欄水平顯示"
 	DuffedUIConfigUILocalization.actionbarSidebarButtonsize = "Set size of buttons for sidebars on chat (only when vertical)"
 
 	--[[Raid Frames]]--
@@ -102,11 +100,6 @@
 	DuffedUIConfigUILocalization.raidframewidth = "設定框體寬度"
 	DuffedUIConfigUILocalization.raidframeheight = "設定框體高度"
 	DuffedUIConfigUILocalization.raidlayout = "設定隊伍佈局樣式(默認 = heal, 數值為: |cffC41F3Bheal|r 或 |cffC41F3Bdps|r)"
-	DuffedUIConfigUILocalization.raidcenter = "治療佈局設定為界面中部"
-	DuffedUIConfigUILocalization.raidHidePower = "顯示DPS職業能量條(僅適用於dps佈局)"
-	DuffedUIConfigUILocalization.raidNameOutside = "玩家姓名外置(僅適用於dps佈局)"
-	DuffedUIConfigUILocalization.raidMaxGroup = "啟用團隊界面隊伍數量最大顯示"
-	DuffedUIConfigUILocalization.raidRoleIcons = "啟用默認的團隊角色職能(tank,dps,heal)圖標(彩色方塊)"
 
 	--[[DataText]]--
 	DuffedUIConfigUILocalization.datatext = "信息欄資訊"
@@ -177,7 +170,6 @@
 	DuffedUIConfigUILocalization.aurasflash = "啟用光環持續時間低於30秒閃爍動畫"
 	DuffedUIConfigUILocalization.aurasclassictimer = "傳統模式顯示玩家光環"
 	DuffedUIConfigUILocalization.auraswrap = "設定(小地圖旁)單行Buff顯示數量(默認 = 18)"
-	DuffedUIConfigUILocalization.aurasInside = "設定持續時間在光環內顯示"
 
 	--[[Bags]]--
 	DuffedUIConfigUILocalization.bags = "背包"
@@ -187,7 +179,6 @@
 	DuffedUIConfigUILocalization.bagsspacing = "設置包內物品顯示間距"
 	DuffedUIConfigUILocalization.bagsbuttonsize = "設置篩選器(搜索框)大小"
 	DuffedUIConfigUILocalization.bagsBounce = "啟用獲得新物品跳躍動畫"
-	DuffedUIConfigUILocalization.bagsSortBlizzard = "啟用遊戲自帶的排序功能"
 	DuffedUIConfigUILocalization.bagsSortingButton = "Enable the sorting button on bags and bank"
 
 	--[[Misc]]--
@@ -201,12 +192,10 @@
 	DuffedUIConfigUILocalization.misccombatanimation = "啟用進戰/脫戰動畫提示"
 	DuffedUIConfigUILocalization.miscflightpoint = "啟用飛行點列表"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "啟用人物面板顯示裝備等級"
-	DuffedUIConfigUILocalization.miscloc = "禁用快捷欄<角色失去控制>功能"
 	DuffedUIConfigUILocalization.miscacm_screen = "啟用成就自動截圖功能"
 	DuffedUIConfigUILocalization.miscAFKCamera = "啟用暫離鏡頭效果"
 	DuffedUIConfigUILocalization.miscXPBar = "啟用經驗條"
 	DuffedUIConfigUILocalization.miscXPBarWidth = "設置經驗條寬度"
-	DuffedUIConfigUILocalization.miscQuestLevel = "啟用任務等級顯示"
 	DuffedUIConfigUILocalization.miscmagemenu = "Enable Teleportmenu (works only on Mages)"
 
 	--[[Duffed]]--

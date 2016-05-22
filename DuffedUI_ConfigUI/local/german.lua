@@ -193,7 +193,6 @@
 	DuffedUIConfigUILocalization.misccombatanimation = "Aktviere die Kampf beginnen und verlassen Anzeige"
 	DuffedUIConfigUILocalization.miscflightpoint = "Zeige alle Flugpunkte auf der Weltkarte an"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "Aktviere die Gegenstandsstufenanzeige im Charakterbildschirm"
-	DuffedUIConfigUILocalization.miscloc = "Deaktiviere die 'Kontrollverlustanzeige' an den Aktionsleisten"
 	DuffedUIConfigUILocalization.miscacm_screen = "Aktiviere ein automatisches Bildschirmfoto beim Erreichen eines Achievements"
 	DuffedUIConfigUILocalization.miscAFKCamera = "Aktiviere die AFK Kamera"
 	DuffedUIConfigUILocalization.miscXPBar = "Aktiviere XP-Leiste"

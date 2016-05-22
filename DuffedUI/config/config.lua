@@ -191,7 +191,6 @@ C["misc"] = {
 	["combatanimation"] = true,
 	["flightpoint"] = true,
 	["ilvlcharacter"] = true,
-	["loc"] = true,
 	["acm_screen"] = true,
 	["AFKCamera"] = true,
 	["XPBar"] = true,

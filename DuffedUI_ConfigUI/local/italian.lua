@@ -191,7 +191,6 @@
 	DuffedUIConfigUILocalization.misccombatanimation = "Enable Combatanimation"
 	DuffedUIConfigUILocalization.miscflightpoint = "Enable Flightpointlist"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "Enable itemlevel on character screen"
-	DuffedUIConfigUILocalization.miscloc = "Disable Loss of Control for actionbars"
 	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
 	DuffedUIConfigUILocalization.miscAFKCamera = "Enable AFKCamera"
 	DuffedUIConfigUILocalization.miscXPBar = "Enable XP-Bar"
