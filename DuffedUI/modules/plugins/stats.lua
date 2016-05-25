@@ -74,9 +74,9 @@ function PaperDollFrame_SetAttackSpeed(statFrame, unit)
 		offhandSpeed = format("%.2F", offhandSpeed)
 	end
 	if ( offhandSpeed ) then
-		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed).." / ".. offhandSpeed
+		displaySpeedxt = displaySpeed.." / ".. offhandSpeed
 	else
-		displaySpeedxt =  BreakUpLargeNumbers(displaySpeed)
+		displaySpeedxt = displaySpeed
 	end
 	PaperDollFrame_SetLabelAndText(statFrame, WEAPON_SPEED, displaySpeed, false, speed)
 
