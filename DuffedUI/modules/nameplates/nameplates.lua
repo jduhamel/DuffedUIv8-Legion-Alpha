@@ -18,7 +18,9 @@ local function IsPlayerEffectivelyTank()
 	return assignedRole == "TANK"
 end
 
-function nameplates:customSize() C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight) end
+function nameplates:customSize()
+	C_NamePlate.SetNamePlateOtherSize(C["nameplate"].platewidth, C["nameplate"].plateheight)
+end
 
 function nameplates:colorHealth()
     if (self:GetName() and string.find(self:GetName(), "NamePlate")) then
