@@ -172,6 +172,7 @@ Stat:SetScript("OnEnter", function(self)
 		Currency(824)
 		Currency(980)
 		Currency(1101)
+		Currency(1220)
 	end
 
 	if ImprovedCurrency["Raid"] then
@@ -188,6 +189,7 @@ Stat:SetScript("OnEnter", function(self)
 		Currency(614)
 		Currency(823)
 		Currency(1166)
+		Currency(1155, false, true)
 	end
 
 	if ImprovedCurrency["PvP"] then
