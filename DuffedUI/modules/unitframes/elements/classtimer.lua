@@ -138,39 +138,52 @@ local TRINKET_FILTER = {
 local CLASS_FILTERS = {
 	DEATHKNIGHT = {
 		target = {
-			CreateSpellEntry(55095), -- Frost Fever
+			-- Blood
 			CreateSpellEntry(55078), -- Blood Plague
+			-- Frost
+			CreateSpellEntry(55095), -- Frost Fever
+			-- Unholy
 			CreateSpellEntry(81130), -- Scarlet Fever
 			CreateSpellEntry(108194), -- Asphyxiate
-			CreateSpellEntry(114866), -- Soul Reaper (Blood)
 			CreateSpellEntry(130735), -- Soul Reaper (Frost)
 			CreateSpellEntry(130736), -- Soul Reaper (Unholy)
 			CreateSpellEntry(155159), -- Necrotic Plague
 		},
 		player = {
+			-- Global
 			CreateSpellEntry(48707), -- Anti-Magic Shell
+			-- Blood
+			CreateSpellEntry(55233), -- Vampiric Blood
+			CreateSpellEntry(195181), -- Bone Shield
+			CreateSpellEntry(194679), -- Rune Tap
+			CreateSpellEntry(194844), -- Bonestorm
+			CreateSpellEntry(219809), -- Tombstone
+			CreateSpellEntry(215377), -- Maw of the Damned
+			-- Frost
+			-- Unholy
+			
 			CreateSpellEntry(48792), -- Ice Bound Fortitude
 			CreateSpellEntry(49016), -- Unholy Frenzy
 			CreateSpellEntry(49028), -- Dancing Rune Weapon
 			CreateSpellEntry(49039), -- Lichborne
-			CreateSpellEntry(195181), -- Bone Shield
 			CreateSpellEntry(51124), -- Killing Machine
 			CreateSpellEntry(51271), -- Pillar of Frost
 			CreateSpellEntry(51460), -- Runic Corruption
-			CreateSpellEntry(55233), -- Vampiric Blood
 			CreateSpellEntry(57330), -- Horn of Winter
 			CreateSpellEntry(59052), -- Freezing Fog
 			CreateSpellEntry(91342), -- Shadow Infusion
 			CreateSpellEntry(108200), -- Remorseless Winter
 			CreateSpellEntry(114851), -- Blood Charge
 			CreateSpellEntry(115989), -- Unholy Blight
-			CreateSpellEntry(171049), -- Rune Tap
 			CreateSpellEntry(63560), -- Dark Transformation
 		},
 		procs = {
+			-- Blood
+			CreateSpellEntry(77535), -- Blood Shield
+			-- Frost
+			-- Unholy
 			CreateSpellEntry(50421), -- Scent of Blood
 			CreateSpellEntry(53365), -- Unholy Strength
-			CreateSpellEntry(77535), -- Blood Shield
 			CreateSpellEntry(81340), -- Sudden Doom
 			CreateSpellEntry(164047), -- Shadow of Death
 		}
