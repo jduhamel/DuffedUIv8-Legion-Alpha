@@ -52,9 +52,6 @@ local function LoadSkin()
 		"PaperDollEquipmentManagerPane",
 	}
 
-	CharacterFrameExpandButton:Size(CharacterFrameExpandButton:GetWidth() - 7, CharacterFrameExpandButton:GetHeight() - 7)
-	CharacterFrameExpandButton:SkinNextPrevButton()
-
 	ReputationDetailCloseButton:SkinCloseButton()
 	TokenFramePopupCloseButton:SkinCloseButton()
 
