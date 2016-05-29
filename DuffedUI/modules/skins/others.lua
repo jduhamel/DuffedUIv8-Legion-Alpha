@@ -516,7 +516,7 @@ local function LoadSkin()
 		RaidButton:SkinButton()
 		RaidGraphics_Quality:SetScript("OnUpdate", function(self) RaidGraphics_Quality:SkinSlideBar(11) end)
 
-		if IsMacClient() then
+		--[[if IsMacClient() then
 			MacOptionsFrame:StripTextures()
 			MacOptionsFrame:SetTemplate()
 			MacOptionsButtonCompress:SkinButton()
@@ -545,7 +545,7 @@ local function LoadSkin()
 			MacOptionsFrameCancel:ClearAllPoints()
 			MacOptionsFrameCancel:SetPoint("LEFT", MacOptionsFrameOkay, "RIGHT", 2, 0)
 			MacOptionsFrameCancel:SetWidth(MacOptionsFrameCancel:GetWidth() - 6)
-		end
+		end]]--
 	end
 end
 
