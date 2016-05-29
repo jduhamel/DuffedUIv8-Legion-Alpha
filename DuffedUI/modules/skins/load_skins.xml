@@ -57,10 +57,11 @@
 	<Script file="survey.lua" />
 	<Script file="tabard.lua" />
 	<Script file="talent.lua" />
+	<script file="talkinghead.lua" />
 	<Script file="taxi.lua" />
 	<Script file="timemanager.lua" />
 	<Script file="trade.lua" />
-	<!--<Script file="tradeskill.lua" />-->
+	<Script file="tradeskill.lua" />
 	<Script file="trainer.lua" />
 	<Script file="tutorial.lua" />
 	<Script file="voidstorage.lua" />
