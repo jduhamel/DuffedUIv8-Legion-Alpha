@@ -21,8 +21,6 @@
  The following options are listed by priority. The first check that returns
  true decides the color of the bar.
 
- .colorTapping      - Use `self.colors.tapping` to color the bar if the unit
-                      isn't tapped by the player.
  .colorDisconnected - Use `self.colors.disconnected` to color the bar if the
                       unit is offline.
  .colorClass        - Use `self.colors.class[class]` to color the bar based on
@@ -60,7 +58,7 @@
    -- Add a background
    local Background = Health:CreateTexture(nil, 'BACKGROUND')
    Background:SetAllPoints(Health)
-   Background:SetTexture(1, 1, 1, .5)
+   Background:SetColorTexture(1, 1, 1, .5)
    
    -- Options
    Health.frequentUpdates = true
@@ -107,11 +105,7 @@ local Update = function(self, event, unit)
 	health.disconnected = disconnected
 
 	local r, g, b, t
-	if(health.colorTapping and not UnitPlayerControlled(unit) and
-		UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) and not
-		UnitIsTappedByAllThreatList(unit)) then
-		t = self.colors.tapped
-	elseif(health.colorDisconnected and not UnitIsConnected(unit)) then
+	if(health.colorDisconnected and not UnitIsConnected(unit)) then
 		t = self.colors.disconnected
 	elseif(health.colorClass and UnitIsPlayer(unit)) or
 		(health.colorClassNPC and not UnitIsPlayer(unit)) or
