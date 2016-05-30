@@ -138,7 +138,7 @@ D["PostUpdateHealthRaid"] = function(health, unit, min, max)
 			local c = D.UnitColor.reaction[5]
 			local r, g, b = c[1], c[2], c[3]
 			health:SetStatusBarColor(r, g, b)
-			health.bg:SetTexture(.1, .1, .1)
+			health.bg:SetColorTexture(.1, .1, .1)
 		end
 
 		if min ~= max then health.value:SetText("|cff559655-" .. D["ShortValue"](max-min) .. "|r") else health.value:SetText("") end
@@ -156,7 +156,7 @@ D.PostUpdatePetColor = function(health, unit, min, max)
 		local r, g, b = c[1], c[2], c[3]
 
 		if health then health:SetStatusBarColor(r, g, b) end
-		if health.bg then health.bg:SetTexture(.1, .1, .1) end
+		if health.bg then health.bg:SetColorTexture(.1, .1, .1) end
 	end
 end
 

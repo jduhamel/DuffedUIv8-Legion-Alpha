@@ -44,7 +44,7 @@ local function LoadSkin()
 			end
 
 			if _G["SpellButton"..i.."Highlight"] then
-				_G["SpellButton"..i.."Highlight"]:SetTexture(1, 1, 1, 0.3)
+				_G["SpellButton"..i.."Highlight"]:SetColorTexture(1, 1, 1, 0.3)
 				_G["SpellButton"..i.."Highlight"]:ClearAllPoints()
 				_G["SpellButton"..i.."Highlight"]:SetAllPoints(icon)
 			end

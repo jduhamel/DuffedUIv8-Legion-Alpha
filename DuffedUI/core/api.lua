@@ -89,56 +89,56 @@ local function SetTemplate(f, t, tex)
 		f.insettop:Point("TOPLEFT", f, "TOPLEFT", -1, 1)
 		f.insettop:Point("TOPRIGHT", f, "TOPRIGHT", 1, -1)
 		f.insettop:Height(1)
-		f.insettop:SetTexture(0, 0, 0)	
+		f.insettop:SetColorTexture(0, 0, 0)	
 		f.insettop:SetDrawLayer("BORDER", -7)
 
 		f.insetbottom = f:CreateTexture(nil, "BORDER")
 		f.insetbottom:Point("BOTTOMLEFT", f, "BOTTOMLEFT", -1, -1)
 		f.insetbottom:Point("BOTTOMRIGHT", f, "BOTTOMRIGHT", 1, -1)
 		f.insetbottom:Height(1)
-		f.insetbottom:SetTexture(0, 0, 0)	
+		f.insetbottom:SetColorTexture(0, 0, 0)	
 		f.insetbottom:SetDrawLayer("BORDER", -7)
 
 		f.insetleft = f:CreateTexture(nil, "BORDER")
 		f.insetleft:Point("TOPLEFT", f, "TOPLEFT", -1, 1)
 		f.insetleft:Point("BOTTOMLEFT", f, "BOTTOMLEFT", 1, -1)
 		f.insetleft:Width(1)
-		f.insetleft:SetTexture(0, 0, 0)
+		f.insetleft:SetColorTexture(0, 0, 0)
 		f.insetleft:SetDrawLayer("BORDER", -7)
 
 		f.insetright = f:CreateTexture(nil, "BORDER")
 		f.insetright:Point("TOPRIGHT", f, "TOPRIGHT", 1, 1)
 		f.insetright:Point("BOTTOMRIGHT", f, "BOTTOMRIGHT", -1, -1)
 		f.insetright:Width(1)
-		f.insetright:SetTexture(0, 0, 0)
+		f.insetright:SetColorTexture(0, 0, 0)
 		f.insetright:SetDrawLayer("BORDER", -7)
 
 		f.insetinsidetop = f:CreateTexture(nil, "BORDER")
 		f.insetinsidetop:Point("TOPLEFT", f, "TOPLEFT", 1, -1)
 		f.insetinsidetop:Point("TOPRIGHT", f, "TOPRIGHT", -1, 1)
 		f.insetinsidetop:Height(1)
-		f.insetinsidetop:SetTexture(0, 0, 0)	
+		f.insetinsidetop:SetColorTexture(0, 0, 0)	
 		f.insetinsidetop:SetDrawLayer("BORDER", -7)
 
 		f.insetinsidebottom = f:CreateTexture(nil, "BORDER")
 		f.insetinsidebottom:Point("BOTTOMLEFT", f, "BOTTOMLEFT", 1, 1)
 		f.insetinsidebottom:Point("BOTTOMRIGHT", f, "BOTTOMRIGHT", -1, 1)
 		f.insetinsidebottom:Height(1)
-		f.insetinsidebottom:SetTexture(0, 0, 0)	
+		f.insetinsidebottom:SetColorTexture(0, 0, 0)	
 		f.insetinsidebottom:SetDrawLayer("BORDER", -7)
 
 		f.insetinsideleft = f:CreateTexture(nil, "BORDER")
 		f.insetinsideleft:Point("TOPLEFT", f, "TOPLEFT", 1, -1)
 		f.insetinsideleft:Point("BOTTOMLEFT", f, "BOTTOMLEFT", -1, 1)
 		f.insetinsideleft:Width(1)
-		f.insetinsideleft:SetTexture(0, 0, 0)
+		f.insetinsideleft:SetColorTexture(0, 0, 0)
 		f.insetinsideleft:SetDrawLayer("BORDER", -7)
 
 		f.insetinsideright = f:CreateTexture(nil, "BORDER")
 		f.insetinsideright:Point("TOPRIGHT", f, "TOPRIGHT", -1, -1)
 		f.insetinsideright:Point("BOTTOMRIGHT", f, "BOTTOMRIGHT", 1, 1)
 		f.insetinsideright:Width(1)
-		f.insetinsideright:SetTexture(0, 0, 0)	
+		f.insetinsideright:SetColorTexture(0, 0, 0)	
 		f.insetinsideright:SetDrawLayer("BORDER", -7)
 
 		f.isInsetDone = true
@@ -160,7 +160,7 @@ local borders = {
 
 local function HideInsets(f)
 	for i, border in pairs(borders) do
-		if f[border] then f[border]:SetTexture(0, 0, 0, 0) end
+		if f[border] then f[border]:SetColorTexture(0, 0, 0, 0) end
 	end
 end
 
@@ -209,7 +209,7 @@ end
 local function StyleButton(button) 
 	if button.SetHighlightTexture and not button.hover then
 		local hover = button:CreateTexture("frame", nil, self)
-		hover:SetTexture(1, 1, 1, .3)
+		hover:SetColorTexture(1, 1, 1, .3)
 		hover:SetInside()
 		button.hover = hover
 		button:SetHighlightTexture(hover)
@@ -217,7 +217,7 @@ local function StyleButton(button)
 
 	if button.SetPushedTexture and not button.pushed then
 		local pushed = button:CreateTexture("frame", nil, self)
-		pushed:SetTexture(.9, .8, .1, .3)
+		pushed:SetColorTexture(.9, .8, .1, .3)
 		pushed:SetInside()
 		button.pushed = pushed
 		button:SetPushedTexture(pushed)
@@ -225,7 +225,7 @@ local function StyleButton(button)
 
 	if button.SetCheckedTexture and not button.checked then
 		local checked = button:CreateTexture("frame", nil, self)
-		checked:SetTexture(0, 1, 0, .3)
+		checked:SetColorTexture(0, 1, 0, .3)
 		checked:SetInside()
 		button.checked = checked
 		button:SetCheckedTexture(checked)
@@ -510,7 +510,7 @@ local function SkinNextPrevButton(btn, horizonal)
 	Point(btn:GetNormalTexture(), "BOTTOMRIGHT", -2, 2)
 	if btn:GetDisabledTexture() then btn:GetDisabledTexture():SetAllPoints(btn:GetNormalTexture()) end
 	if btn:GetPushedTexture() then btn:GetPushedTexture():SetAllPoints(btn:GetNormalTexture()) end
-	btn:GetHighlightTexture():SetTexture(1, 1, 1, .3)
+	btn:GetHighlightTexture():SetColorTexture(1, 1, 1, .3)
 	btn:GetHighlightTexture():SetAllPoints(btn:GetNormalTexture())
 end
 
@@ -520,7 +520,7 @@ local function SkinRotateButton(btn)
 
 	btn:GetNormalTexture():SetTexCoord(.3, .29, .3, .65, .69, .29, .69, .65)
 	btn:GetPushedTexture():SetTexCoord(.3, .29, .3, .65, .69, .29, .69, .65)
-	btn:GetHighlightTexture():SetTexture(1, 1, 1, .3)
+	btn:GetHighlightTexture():SetColorTexture(1, 1, 1, .3)
 
 	btn:GetNormalTexture():ClearAllPoints()
 	Point(btn:GetNormalTexture(), "TOPLEFT", 2, -2)

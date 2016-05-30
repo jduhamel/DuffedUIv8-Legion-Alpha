@@ -55,16 +55,16 @@ D["ConstructUFRaid"] = function(self)
 		health.colorClass = false
 		health:SetStatusBarColor(unpack(C["unitframes"].healthbarcolor))
 		health.bg:SetVertexColor(unpack(C["unitframes"].deficitcolor))
-		health.bg:SetTexture(.6, .6, .6)
+		health.bg:SetColorTexture(.6, .6, .6)
 		if C["unitframes"].ColorGradient then
 			health.colorSmooth = true
-			health.bg:SetTexture(0, 0, 0)
+			health.bg:SetColorTexture(0, 0, 0)
 		end
 	else
 		health.colorDisconnected = true
 		health.colorClass = true
 		health.colorReaction = true
-		health.bg:SetTexture(.1, .1, .1)
+		health.bg:SetColorTexture(.1, .1, .1)
 	end
 
 	self.Health = health

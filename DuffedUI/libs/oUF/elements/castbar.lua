@@ -36,7 +36,7 @@
    -- Add a background
    local Background = Castbar:CreateTexture(nil, 'BACKGROUND')
    Background:SetAllPoints(Castbar)
-   Background:SetTexture(1, 1, 1, .5)
+   Background:SetColorTexture(1, 1, 1, .5)
    
    -- Add a spark
    local Spark = Castbar:CreateTexture(nil, "OVERLAY")
@@ -479,7 +479,7 @@ local Enable = function(object, unit)
 
 		local sz = castbar.SafeZone
 		if(sz and sz:IsObjectType'Texture' and not sz:GetTexture()) then
-			sz:SetTexture(1, 0, 0)
+			sz:SetColorTexture(1, 0, 0)
 		end
 
 		castbar:Hide()

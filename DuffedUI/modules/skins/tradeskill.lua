@@ -13,12 +13,6 @@ local function LoadSkin()
 
 	TradeSkillFrame.FilterButton:StripTextures()
 	TradeSkillFrame.FilterButton:SkinButton()
-	local function skin(self)
-		self:StripTextures()
-		self:SkinButton()
-	end
-	TradeSkillFrame.FilterButton:SetScript("OnEnter", self.skin)
-	TradeSkillFrame.FilterButton:SetScript("OnLeave", self.skin)
 end
 
 D.SkinFuncs["Blizzard_TradeSkillUI"] = LoadSkin

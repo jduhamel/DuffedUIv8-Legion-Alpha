@@ -179,7 +179,7 @@ D.ShiftBarUpdate = function(self)
 
 			if isActive then
 				StanceBarFrame.lastSelected = button:GetID()
-				button:GetCheckedTexture():SetTexture(0, 1, 0, .3)
+				button:GetCheckedTexture():SetColorTexture(0, 1, 0, .3)
 			else
 				button:SetCheckedTexture(0, 0, 0, 0)
 			end
@@ -210,7 +210,7 @@ D.PetBarUpdate = function(...)
 		petActionButton.tooltipSubtext = subtext
 
 		if isActive and name ~= "PET_ACTION_FOLLOW" then
-			petActionButton:GetCheckedTexture():SetTexture(0, 1, 0, .3)
+			petActionButton:GetCheckedTexture():SetColorTexture(0, 1, 0, .3)
 			if IsPetAttackAction(i) then PetActionButton_StartFlash(petActionButton) end
 		else
 			petActionButton:SetCheckedTexture(0, 0, 0, 0)

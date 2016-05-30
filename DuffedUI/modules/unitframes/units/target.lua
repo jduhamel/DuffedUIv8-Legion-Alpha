@@ -63,7 +63,7 @@ D["ConstructUFTarget"] = function(self)
 
 	local healthBG = health:CreateTexture(nil, "BORDER")
 	healthBG:SetAllPoints()
-	healthBG:SetTexture(0, 0, 0)
+	healthBG:SetColorTexture(0, 0, 0)
 
 	if C["unitframes"]["percent"] then
 		local percHP
@@ -87,10 +87,10 @@ D["ConstructUFTarget"] = function(self)
 		health.colorClass = false
 		health:SetStatusBarColor(unpack(C["unitframes"].healthbarcolor))
 		healthBG:SetVertexColor(unpack(C["unitframes"].deficitcolor))
-		healthBG:SetTexture(.6, .6, .6)
+		healthBG:SetColorTexture(.6, .6, .6)
 		if C["unitframes"]["ColorGradient"] then
 			health.colorSmooth = true
-			healthBG:SetTexture(0, 0, 0)
+			healthBG:SetColorTexture(0, 0, 0)
 		end
 	else
 		health.colorDisconnected = true
