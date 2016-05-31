@@ -206,81 +206,110 @@ local CLASS_FILTERS = {
 	DRUID = {
 		target = {
 			CreateSpellEntry(339), -- Entangling Roots
-			CreateSpellEntry(770, true), -- Farie Fire
-			CreateSpellEntry(774), -- Rejuvenation
-			CreateSpellEntry(1079), -- Rip
-			CreateSpellEntry(1822), CreateSpellEntry(155722), -- Rake
-			CreateSpellEntry(2637), -- Hibernate
-			CreateSpellEntry(6795), -- Growl
-			CreateSpellEntry(8936, false, nil, nil, 8936), -- Regrowth
-			CreateSpellEntry(9005), -- Pounce stun
-			CreateSpellEntry(9007), -- Pounce bleed
-			CreateSpellEntry(22570), -- Maim
-			CreateSpellEntry(33745), -- Lacerate
-			CreateSpellEntry(33763), -- Lifebloom
-			CreateSpellEntry(33786), -- Cyclone
-			CreateSpellEntry(33878, true), -- Mangle (Bear)
-			CreateSpellEntry(48438), -- Wild Growth
-			CreateSpellEntry(58180), -- Infected Wounds
-			CreateSpellEntry(78675), -- Solar Beam
-			CreateSpellEntry(82365), -- Skull Bash (Bear)
-			CreateSpellEntry(93402), -- Sunfire
-			CreateSpellEntry(102355), -- Faerie Swarm
-			CreateSpellEntry(106830), -- Thrash
-			CreateSpellEntry(113746), -- Weakened Armor
-			CreateSpellEntry(115798), -- Weakened Blows
-			CreateSpellEntry(155777), -- Germination
-			CreateSpellEntry(162359), -- Genesis
+			CreateSpellEntry(5211), -- Mighty Bash
+			CreateSpellEntry(61391), -- Typhoon
+			CreateSpellEntry(102359), -- Mass Entanglement
+			CreateSpellEntry(137452), -- Displacer Beast
 			CreateSpellEntry(164812), -- Moonfire
+			-- Balance
+			CreateSpellEntry(81261), -- Solar Beam
 			CreateSpellEntry(164815), -- Sunfire
+			CreateSpellEntry(197637), -- Stellar Empowerment
+			CreateSpellEntry(202347), -- Stellar Flare
+			CreateSpellEntry(205644), -- Force of Nature
+			-- Feral
+			CreateSpellEntry(1079), -- Rip
+			CreateSpellEntry(58180), -- Infected Wounds
+			CreateSpellEntry(106830), -- Thrash
+			CreateSpellEntry(155625), -- Moonfire (Feral)
+			CreateSpellEntry(155722), -- Rake
+			CreateSpellEntry(203123), -- Main
+			CreateSpellEntry(210664), -- Scent of Blood
+			CreateSpellEntry(210670), -- Open Wounds
+			CreateSpellEntry(210705), -- Ashamane's Rip
+			CreateSpellEntry(210723), -- Ashamane's Frenzy
+			-- Guardian
+			CreateSpellEntry(99), -- Incapacitating Roar
+			CreateSpellEntry(6795), -- Growl
+			CreateSpellEntry(77758), -- Thrash
+			CreateSpellEntry(214995), -- Bloody Paws
+			-- Restoration
+			CreateSpellEntry(774), -- Rejuvenation
+			CreateSpellEntry(8936), -- Regrowth
+			CreateSpellEntry(33763), -- Lifebloom
+			CreateSpellEntry(42231), -- Hurricane
+			CreateSpellEntry(48438), -- Wild Growth
+			CreateSpellEntry(48504), -- Living Seed
+			CreateSpellEntry(102342), -- Ironbark
+			CreateSpellEntry(102351), -- Cenarion Ward
+			CreateSpellEntry(127797), -- Ursol's Vortex
+			CreateSpellEntry(155777), -- Rejuvenation (Germination)
+			CreateSpellEntry(200389), -- Cultivation
+			CreateSpellEntry(207386), -- Spring Blossom
 		},
 		player = {
-			CreateSpellEntry(774), -- Rejuvenation
+			-- Global
 			CreateSpellEntry(1850), -- Dash
 			CreateSpellEntry(5215), -- Prowl
-			CreateSpellEntry(5217), -- Tiger's Fury
-			CreateSpellEntry(5229), -- Enrage
-			CreateSpellEntry(8936, false, nil, nil, 8936), -- Regrowth
-			CreateSpellEntry(16689), -- Nature's Grasp
-			CreateSpellEntry(16870), -- Clearcasting
 			CreateSpellEntry(22812), -- Barkskin
-			CreateSpellEntry(29166), -- Innervate
-			CreateSpellEntry(33763), -- Lifebloom
-			CreateSpellEntry(48438), -- Wild Growth
-			CreateSpellEntry(48505), -- Starfall
-			CreateSpellEntry(52610), -- Savage Roar
 			CreateSpellEntry(61336), -- Survival Instincts
-			CreateSpellEntry(77761), -- Stampeding Roar Bear
-			CreateSpellEntry(77764), -- Stampeding Roar Cat
-			CreateSpellEntry(100977), -- Harmony
-			CreateSpellEntry(106922), -- Might of Ursoc
-			CreateSpellEntry(106951), -- Berserk (Cat)
-			CreateSpellEntry(106952), -- Berserk (Bear)
-			CreateSpellEntry(112071), -- Celestial Alignment
-			CreateSpellEntry(124769), -- Frenzied Regeneration
-			CreateSpellEntry(124974), -- Nature's Vigil
-			CreateSpellEntry(127538), -- Savage Roar
-			CreateSpellEntry(132402, true), -- Savage Defense
-			CreateSpellEntry(108373), -- Dream of Cenarius (Balance)
-			CreateSpellEntry(158504), -- Dream of Cenarius (Restoration)
-			CreateSpellEntry(158501), -- Dream of Cenarius (Guardian)
-			CreateSpellEntry(158497), -- Dream of Cenarius (Feral)
-			CreateSpellEntry(145162), -- Bloodtalons
-			CreateSpellEntry(155777), -- Germination
+			-- Balance
+			CreateSpellEntry(102560), -- Incarnation: Chosen of Elune
+			CreateSpellEntry(164545), -- Solar Empowerment
+			CreateSpellEntry(165547), -- Lunar Empowerment
+			CreateSpellEntry(191034), -- Starfall
+			CreateSpellEntry(194223), -- Celestial Alignment
+			CreateSpellEntry(202425), -- Warrior of Elune
+			CreateSpellEntry(202737), -- Blessing of Elune
+			CreateSpellEntry(202739), -- Blessing of An'she
+			CreateSpellEntry(202770), -- Fury of Elune
+			CreateSpellEntry(202942), -- Star Power
+			-- Feral
+			CreateSpellEntry(5217), -- Tiger's Fury
+			CreateSpellEntry(52610), -- Savage Roar
+			CreateSpellEntry(69369), -- Predatory Swiftness
+			CreateSpellEntry(77764), -- Stampeding Roar
+			CreateSpellEntry(102543), -- Incarnation: King of the Jungle
+			CreateSpellEntry(106951), -- Berserk
+			CreateSpellEntry(135700), -- Omen of Clarity
+			CreateSpellEntry(145152), -- Bloodtalons
+			CreateSpellEntry(210583), -- Ashamane's Energy
+			CreateSpellEntry(210649), -- Feral Instinct
+			-- Guardian
+			CreateSpellEntry(93622), -- Mangle!
+			CreateSpellEntry(102558), -- Incarnation: Son of Ursoc
+			CreateSpellEntry(155835), -- Bristling Fur
 			CreateSpellEntry(158792), -- Pulverize
-			CreateSpellEntry(162359), -- Genesis
+			CreateSpellEntry(192081), -- Ironfur
+			CreateSpellEntry(192083), -- Mark of Ursol
+			CreateSpellEntry(200851), -- Rage of the Sleeper
+			CreateSpellEntry(201671), -- Gory Fur
+			CreateSpellEntry(203975), -- Earthwarden
+			CreateSpellEntry(213680), -- Guardian of Elune
+			CreateSpellEntry(213708), -- Galactic Guardian
+			-- Restoration
+			CreateSpellEntry(774), -- Rejuvenation
+			CreateSpellEntry(8936), -- Regrowth
+			CreateSpellEntry(16870), -- Clearcasting
+			CreateSpellEntry(33763), -- Lifebloom
+			CreateSpellEntry(48504), -- Living Seed
+			CreateSpellEntry(48438), -- Wild Growth
+			CreateSpellEntry(102342), -- Ironbark
+			CreateSpellEntry(102351), -- Cenarion Ward
+			CreateSpellEntry(114108), -- Soul of the Forest
+			CreateSpellEntry(117679), -- Incarnation: Tree of Life
+			CreateSpellEntry(155777), -- Rejuvenation (Germination)
+			CreateSpellEntry(200389), -- Cultivation
+			CreateSpellEntry(207386), -- Spring Blossom
+			CreateSpellEntry(207640), -- Abundance
 		},
 		procs = {
-			CreateSpellEntry(16886), -- Nature's Grace
-			CreateSpellEntry(48517), -- Eclipse Solar
-			CreateSpellEntry(48518), -- Eclipse Lunar
-			CreateSpellEntry(69369), -- Predator's Swiftness
-			CreateSpellEntry(81006), CreateSpellEntry(81191), CreateSpellEntry(81192), -- Lunar Shower Rank 1/2/3
-			CreateSpellEntry(93400), -- Shooting Stars
-			CreateSpellEntry(104993), -- Jade Spirit
-			CreateSpellEntry(144865), -- Feral Fury (New)
-			CreateSpellEntry(146874), -- Feral Rage (New)
-		},
+			-- Global
+			-- Balance
+			-- Feral
+			-- Guardian
+			-- Restoration
+		}
 	},
 	HUNTER = {
 		target = {
