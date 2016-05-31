@@ -158,7 +158,7 @@ local function Vehicle_OnClick(self)
 	if UnitOnTaxi("player") then TaxiRequestEarlyLanding() else VehicleExit() end
 end
 
-local vehicleleft = CreateFrame("Button", "DuffedUIExitVehicleButtonLeft", UIParent) --, "SecureHandlerClickTemplate"
+local vehicleleft = CreateFrame("Button", "DuffedUIExitVehicleButtonLeft", UIParent)
 vehicleleft:SetPoint("TOP", UIParent, "TOP", 0, -5)
 vehicleleft:SetSize(225, 20)
 vehicleleft:SetFrameStrata("LOW")
@@ -176,7 +176,6 @@ vehicleleft:RegisterEvent("UNIT_ENTERED_VEHICLE")
 vehicleleft:RegisterEvent("UNIT_EXITED_VEHICLE")
 vehicleleft:RegisterEvent("VEHICLE_UPDATE")
 vehicleleft:SetScript("OnEvent", Vehicle_OnEvent)
-RegisterStateDriver(vehicleleft, "visibility", "[target=vehicle,exists] show;hide")
 
 vehicleleft:FontString("text", C["media"].font, 11)
 vehicleleft.text:Point("CENTER", 0, 0)
