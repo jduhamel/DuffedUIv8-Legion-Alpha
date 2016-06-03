@@ -11,6 +11,8 @@ local bordera = 1
 local template
 local inset = 0
 local noinset = C["media"].noinset
+local UIFrameFadeIn = UIFrameFadeIn
+local UIFrameFadeOut = UIFrameFadeOut
 
 if noinset then inset = D.mult end
 
@@ -287,8 +289,6 @@ local strlower = string.lower
 local select = select
 local unpack = unpack
 local modf = math.modf
-local UIFrameFadeIn = UIFrameFadeIn
-local UIFrameFadeOut = UIFrameFadeOut
 
 local Show = Frame.Show
 local Hide = Frame.Hide
