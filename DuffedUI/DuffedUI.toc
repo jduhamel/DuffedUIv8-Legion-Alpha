@@ -7,6 +7,5 @@
 ## SavedVariablesPerCharacter: DuffedUIDataPerChar, ImprovedCurrency, CurrencyData
 ## OptionalDeps: DuffedUI_ConfigUI
 ## X-oUF: oUFDuffedUI
-## Website: http://www.duffed.net
 
 DuffedUI.xml
