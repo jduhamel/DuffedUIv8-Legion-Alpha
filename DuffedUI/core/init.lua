@@ -9,10 +9,11 @@ DuffedUI = engine
 ERR_NOT_IN_RAID = ""
 
 local UIHider = CreateFrame("Frame", "DuffedUIUIHider", UIParent)
+UIHider:SetAllPoints(UIParent)
 UIHider:Hide()
 
 local PetBattleHider = CreateFrame("Frame", "DuffedUIPetBattleHider", UIParent, "SecureHandlerStateTemplate");
---PetBattleHider:SetAllPoints(UIParent)
+PetBattleHider:SetAllPoints(UIParent)
 RegisterStateDriver(PetBattleHider, "visibility", "[petbattle] hide; show")
 
 DuffedUI [1].SetPerCharVariable = function(varName, value)
