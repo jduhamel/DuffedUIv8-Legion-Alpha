@@ -661,6 +661,7 @@ end
 -- merge api
 local function addapi(object)
 	local mt = getmetatable(object).__index
+
 	if not object.Size then mt.Size = Size end
 	if not object.Point then mt.Point = Point end
 	if not object.SetOutside then mt.SetOutside = SetOutside end
@@ -704,7 +705,7 @@ addapi(object:CreateFontString())
 
 object = EnumerateFrames()
 while object do
-	if not handled[object:GetObjectType()] then
+	if not object:IsForbidden() and not handled[object:GetObjectType()] then
 		addapi(object)
 		handled[object:GetObjectType()] = true
 	end
