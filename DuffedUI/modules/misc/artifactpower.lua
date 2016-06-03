@@ -61,6 +61,5 @@ end
 local frame = CreateFrame("Frame",nil,UIParent)
 frame:RegisterEvent("ARTIFACT_XP_UPDATE")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:RegisterEvent("PLAYER_LOGIN")
 frame:RegisterEvent("UNIT_INVENTORY_CHANGED")
 frame:SetScript("OnEvent", updateStatus)

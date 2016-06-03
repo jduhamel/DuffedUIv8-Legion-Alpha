@@ -22,7 +22,7 @@ if C["datatext"].bags and C["datatext"].bags > 0 then
 		self:SetAllPoints(Text)
 	end
 
-	Stat:RegisterEvent("PLAYER_LOGIN")
+	Stat:RegisterEvent("PLAYER_ENTERING_WORLD")
 	Stat:RegisterEvent("BAG_UPDATE")
 	Stat:SetScript("OnEvent", OnEvent)
 	Stat:SetScript("OnMouseDown", function() ToggleAllBags() end)

@@ -82,7 +82,7 @@ local function Enable(self, unit)
 		pb.Visibility = CreateFrame("Frame", nil, pb)
 		pb.Visibility:RegisterEvent("PLAYER_TALENT_UPDATE")
 		pb.Visibility:RegisterEvent("PLAYER_LEVEL_UP")
-		pb.Visibility:RegisterEvent("PLAYER_LOGIN")
+		--pb.Visibility:RegisterEvent("PLAYER_LOGIN")
 		pb.Visibility:RegisterEvent("PLAYER_ENTERING_WORLD")
 		pb.Visibility:SetScript("OnEvent", function(frame, event, unit) Visibility(self, event, unit) end)
 

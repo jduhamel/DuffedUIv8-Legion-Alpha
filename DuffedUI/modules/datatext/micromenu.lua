@@ -36,7 +36,7 @@ if C["datatext"].micromenu and C["datatext"].micromenu > 0 then
 		EasyMenu(D.MicroMenu, DuffedUIMicroButtonsDropDown, "cursor", 0, 0, "MENU", 2)
 	end
 
-	Stat:RegisterEvent("PLAYER_LOGIN")
+	Stat:RegisterEvent("PLAYER_ENTERING_WORLD")
 	Stat:SetScript("OnEvent", OnEvent)
 	Stat:SetScript("OnMouseDown", function() OpenMenu() end)
 end

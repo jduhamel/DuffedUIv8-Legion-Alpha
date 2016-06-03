@@ -102,13 +102,13 @@ local function UpdateButtonsText(frame)
 end
 
 local OnEvent = CreateFrame("Frame")
-OnEvent:RegisterEvent("PLAYER_LOGIN")
+OnEvent:RegisterEvent("PLAYER_ENTERING_WORLD")
 OnEvent:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 OnEvent:SetScript("OnEvent", function(self, event)
-	if event == "PLAYER_LOGIN"  then
+	if event == "PLAYER_ENTERING_WORLD"  then
 		CreateButtonsText("Character")
 		UpdateButtonsText("Character")
-		self:UnregisterEvent("PLAYER_LOGIN")
+		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 	elseif event == "PLAYER_TARGET_CHANGED" or event == "INSPECT_READY"  then
 		UpdateButtonsText("Inspect")
 	else

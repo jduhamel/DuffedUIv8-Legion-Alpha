@@ -116,7 +116,7 @@ DuffedUIAFKPanel:SetScript("OnUpdate", function(self, elapsed)
 end)
 
 --[[Register events, script to start]]--
-DuffedUIAFKPanel:RegisterEvent("PLAYER_LOGIN")
+--DuffedUIAFKPanel:RegisterEvent("PLAYER_LOGIN")
 DuffedUIAFKPanel:RegisterEvent("PLAYER_ENTERING_WORLD")
 DuffedUIAFKPanel:RegisterEvent("PLAYER_LEAVING_WORLD")
 DuffedUIAFKPanel:RegisterEvent("PLAYER_FLAGS_CHANGED")
