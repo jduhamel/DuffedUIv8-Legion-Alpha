@@ -616,7 +616,6 @@ end
 
 do
 	SLASH_CONFIG1 = "/duffedui"
-	SLASH_CONFIG2 = "/dc"
 	function SlashCmdList.CONFIG(msg, editbox)
 		if not DuffedUIConfigUI or not DuffedUIConfigUI:IsShown() then CreateDuffedUIConfigUI() else DuffedUIConfigUI:Hide() end
 	end
