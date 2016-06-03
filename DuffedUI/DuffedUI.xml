@@ -1,29 +1,24 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<!-- engine -->
 	<Script file="libs\LibStub\LibStub.lua" />
-	<Script file="libs\CallbackHandler-1.0\CallbackHandler-1.0.lua" />
 	<Script file="core\init.lua" />
 	<Script file="core\constants.lua" />
 
 	<!-- core -->
-	<Include file="locales\load_locales.xml" />
 	<Script file="config\config.lua" />
+	<Script file="medias\medias.lua" />
+	<Script file="core\api.lua" />
 	<Script file="core\customconfig.lua" />
 	<Script file="core\config.lua" />
-	<Script file="medias\medias.lua" />
-	<Include file="libs\LibSharedMedia-3.0\lib.xml" />
-	<Include file="libs\oUF\oUF.xml" />
-	<Include file="libs\plugins\load_oUFPlugins.xml" />
-	<Include file="libs\LibItemUpgradeInfo-1.0\LibItemUpgradeInfo-1.0.xml" />
-	<Script file="libs\templates\colors.lua" />
+	<Include file="libs\load_libs.xml" />
 	<Script file="core\video.lua" />
-	<Script file="core\api.lua" />
 	<Script file="core\move.lua" />
-	<Script file="core\func_Font.lua" />
 	<Script file="core\func_Core.lua" />
+	<Script file="core\func_Font.lua" />
 	<Script file="core\func_UF.lua" />
 	<Script file="core\func_Skins.lua" />
 	<Script file="core\popup.lua" />
+	<Include file="locales\load_locales.xml" />
 	<Script file="core\install.lua" />
 	<Script file="core\filters\f_cbticks.lua" />
 	<Script file="core\cversion.lua" />
