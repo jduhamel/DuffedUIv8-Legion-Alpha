@@ -190,17 +190,31 @@ local CLASS_FILTERS = {
 	},
 	DEMONHUNTER = {
 		target = {
+			-- Global
+			-- Havoc
+			-- Vengeance
 			CreateSpellEntry(179057), -- Chaos Nova
 			CreateSpellEntry(211881), -- Fel Eruption
 		},
 		player = {
-			CreateSpellEntry(162264), -- Metamorphosis
+			-- Global
+			CreateSpellEntry(163073), -- Demon Soul
+			-- Havoc
+			CreateSpellEntry(162264), -- Metamorphosis (Havoc)
 			CreateSpellEntry(188501), -- Spectral Sight
 			CreateSpellEntry(209426), -- Darkness
 			CreateSpellEntry(212800), -- Blur
+			-- Vengeance
+			CreateSpellEntry(178740), -- Immolation Aura
+			CreateSpellEntry(187827), -- Metamorphosis (Vengeance)
+			CreateSpellEntry(203819), -- Demon Spikes
+			CreateSpellEntry(207693), -- Feast of Souls
+			CreateSpellEntry(218256), -- Empower Wards
 		},
 		procs = {
-			
+			-- Global
+			-- Havoc
+			-- Vengeance			
 		}
 	},
 	DRUID = {
