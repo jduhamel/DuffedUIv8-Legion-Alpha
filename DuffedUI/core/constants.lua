@@ -46,8 +46,11 @@ D["Credits"] = {
 
 D["DuffedCredits"] = {
 	"Darryn/Nyle",
+	"Hizuro",
 	"Chrisey",
 	"Niraya",
 	"Roflman",
 	"siweia",
+	"Kahad",
+	"Blinks",
 }
