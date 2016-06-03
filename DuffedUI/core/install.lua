@@ -124,6 +124,7 @@ local function cvarsetup()
 	SetCVar("violenceLevel", 5)
 	SetCVar("synchronizeBindings", 0)
 	SetCVar("countdownForCooldowns", 0)
+	SetCVar("autoSelfCast", 1)
 end
 
 local OnLogon = CreateFrame("Frame")
@@ -383,10 +384,6 @@ DuffedUIOnLogon:SetScript("OnEvent", function(self, event)
 		if not DuffedUIDataPerChar.install then install() end
 	end
 end)
-
-SLASH_TUTORIAL1 = "/uihelp"
-SLASH_TUTORIAL2 = "/tutorial"
-SlashCmdList.TUTORIAL = function() f:Show() tut1() end
 
 SLASH_VERSION1 = "/version"
 SlashCmdList.VERSION = function() if v:IsShown() then v:Hide() else v:Show() end end
