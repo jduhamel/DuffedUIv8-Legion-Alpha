@@ -25,8 +25,9 @@
 
 	<!-- modules -->
 	<Script file="modules\maps\minimap.lua" />
+	<Script file="modules\maps\worldmap.lua" />
+	<Script file="modules\maps\zonemap.lua" />
 	<Script file="modules\panels\panels.lua" />
-	<Script file="modules\plugins\spellalert.lua" />
 	<Include file="modules\misc\load_misc.xml" />
 	<Script file="modules\loot\merchant.lua" />
 	<Script file="modules\chat\copyurl.lua" />
@@ -34,7 +35,6 @@
 	<Include file="modules\buffs\template.xml" />
 	<Script file="modules\buffs\buffs.lua" />
 	<Script file="modules\buffs\header.lua" />
-	<Script file="modules\maps\worldmap.lua" />
 	<Include file="modules\datatext\load_dt.xml" />
 	<Include file="modules\actionbars\load_ab.xml" />
 	<Script file="modules\chat\chatframes.lua" />
@@ -47,7 +47,6 @@
 	<Script file="modules\loot\bags.lua" />
 	<Script file="modules\loot\masterloot.lua" />
 	<Script file="modules\loot\rollframe.lua" />
-	<Script file="modules\maps\zonemap.lua" />
 
 	<!-- unitframes -->
 	<Include file="libs\templates\tankassist.xml" />

@@ -14,6 +14,7 @@
 	<Script file="misc.lua" />
 	<Script file="raidcooldowns.lua" />
 	<Script file="ses.lua" />
+	<Script file="spellalert.lua" />
 	<Script file="spellcooldowns.lua" />
 	<Script file="spellID.lua" />
 	<Script file="stats.lua" />
