@@ -337,8 +337,8 @@ D["LoadUF"] = function()
 end
 
 local LoadUF = CreateFrame("Frame")
-LoadUF:RegisterEvent("PLAYER_LOGIN")
+LoadUF:RegisterEvent("PLAYER_ENTERING_WORLD")
 LoadUF:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
-function LoadUF:PLAYER_LOGIN()
+function LoadUF:PLAYER_ENTERING_WORLD()
 	D["LoadUF"]()
 end
