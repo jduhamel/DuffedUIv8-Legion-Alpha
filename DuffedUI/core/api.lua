@@ -39,6 +39,12 @@ local function UpdateColor(t)
 	template = t
 end
 
+local UIHider = CreateFrame("Frame", "DuffedUIUIHider", UIParent)
+UIHider:Hide()
+
+--local PetBattleHider = CreateFrame("Frame", "DuffedUIPetBattleHider", UIParent, "SecureHandlerStateTemplate");
+--RegisterStateDriver(PetBattleHider, "visibility", "[petbattle] hide; show")
+
 --[[DuffedUI API START HERE]]--
 local function Size(frame, width, height) frame:SetSize(D.Scale(width), D.Scale(height or width)) end
 
