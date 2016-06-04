@@ -125,6 +125,8 @@ local function cvarsetup()
 	SetCVar("synchronizeBindings", 0)
 	SetCVar("countdownForCooldowns", 0)
 	SetCVar("autoSelfCast", 1)
+	SetCVar("NamePlateVerticalScale", 1)
+	SetCVar("NamePlateHorizontalScale", 1)
 end
 
 local OnLogon = CreateFrame("Frame")
