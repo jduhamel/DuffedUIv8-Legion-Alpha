@@ -79,6 +79,10 @@ local function SetChatStyle(frame)
 	_G[chat.."TabText"]:SetTextColor(unpack(C["media"].datatextcolor1))
 	_G[chat.."TabText"].SetTextColor = D.Dummy
 	_G[chat.."TabText"]:SetFont(C["media"].font, 11)
+	if id == 4 then
+		_G[chat.."TabText"]:ClearAllPoints()
+		_G[chat.."TabText"]:SetPoint("CENTER", _G[chat.."Tab"], 0, -4)
+	end
 
 	_G[chat]:SetClampRectInsets(0, 0, 0, 0)
 	_G[chat]:SetClampedToScreen(false)
