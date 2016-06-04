@@ -14,7 +14,6 @@ local function LoadOrderHallSkin()
 	OrderHallCommandBar.AreaName:SetPoint("LEFT", OrderHallCommandBar.CurrencyIcon, "RIGHT", 10, 0)
 	OrderHallCommandBar.WorldMapButton:ClearAllPoints()
 	OrderHallCommandBar.WorldMapButton:SetPoint("RIGHT", OrderHallCommandBar, -5, -2)
-	OrderHallCommandBar.WorldMapButton:SetSize(23, 22)
 	
 	--[[MissionFrame]]--
 	OrderHallMissionFrame:StripTextures()
