@@ -1,7 +1,7 @@
 local D, C, L = unpack(select(2, ...))
 
 local move = D["move"]
-local DuffedUIMinimap = CreateFrame("Frame", "DuffedUIMinimap", DuffedUIPetBattleHider)
+local DuffedUIMinimap = CreateFrame("Frame", "DuffedUIMinimap", oUF_PetBattleFrameHider)
 DuffedUIMinimap:SetTemplate()
 DuffedUIMinimap:RegisterEvent("ADDON_LOADED")
 DuffedUIMinimap:Point("TOPRIGHT", UIParent, "TOPRIGHT", -5, -5)

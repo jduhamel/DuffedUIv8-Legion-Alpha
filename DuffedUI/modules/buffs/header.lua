@@ -14,7 +14,7 @@ for _, frame in next, {
 	local wrap
 	wrap = C["auras"].wrap
 
-	header = CreateFrame("Frame", frame, DuffedUIPetBattleHider, "SecureAuraHeaderTemplate")
+	header = CreateFrame("Frame", frame, oUF_PetBattleFrameHider, "SecureAuraHeaderTemplate")
 	header:SetClampedToScreen(true)
 	header:SetMovable(true)
 	header:SetAttribute("minHeight", 30)
