@@ -275,8 +275,7 @@ Stat:SetScript("OnEnter", function(self)
 			for i = 1, #friendTable do
 				if friendTable[i][5] then
 					if GetRealZoneText() == friendTable[i][4] then zonec = activezone else zonec = inactivezone end
-					classc = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[BNTable[i][14]]
-					levelc = GetQuestDifficultyColor(BNTable[i][16])
+					classc, levelc = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[friendTable[i][3]], GetQuestDifficultyColor(friendTable[i][2])
 					
 					if not classc then classc = {r=1, g=1, b=1} end
 					
