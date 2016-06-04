@@ -24,8 +24,6 @@ D["MaxGroup"] = function(frame)
 			frame:SetAttribute("groupFilter", "1,2,3,4")
 		elseif (inInstance and instanceType == "raid" and maxPlayers == 30) then
 			frame:SetAttribute("groupFilter", "1,2,3,4,5,6")
-		else
-			frame:SetAttribute("groupFilter", "1,2,3,4,5,6,7,8")
 		end
 	end)
 end
