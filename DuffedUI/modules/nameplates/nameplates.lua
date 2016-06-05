@@ -44,7 +44,6 @@ function nameplates:RegisterOptions()
 		displayNameWhenSelected = true,
 		displayNameByPlayerNameRules = true,
 		greyOutWhenTapDenied = true,
-
 		selectedBorderColor = CreateColor(1, 1, 1, .55),
 		tankBorderColor = CreateColor(1, 1, 0, .6),
 		defaultBorderColor = CreateColor(0, 0, 0, 1),
@@ -61,7 +60,6 @@ function nameplates:RegisterOptions()
 		displayNameWhenSelected = false,
 		hideCastbar = true,
 		healthBarColorOverride = CreateColor(0, 1, 0),
-
 		defaultBorderColor = CreateColor(0, 0, 0, 1),
 	}
 
@@ -71,10 +69,8 @@ function nameplates:RegisterOptions()
 		castBarHeight = 5,
 		castBarFontHeight = 9,
 		useLargeNameFont = false,
-
 		castBarShieldWidth = 10,
 		castBarShieldHeight = 12,
-
 		castIconWidth = C["nameplate"].plateheight + 7,
 		castIconHeight = C["nameplate"].plateheight + 7,
 	}
@@ -85,10 +81,8 @@ function nameplates:RegisterOptions()
 		castBarHeight = 5,
 		castBarFontHeight = 10,
 		useLargeNameFont = false,
-
 		castBarShieldWidth = 10,
 		castBarShieldHeight = 12,
-
 		castIconWidth = 10,
 		castIconHeight = 10,
 	}
@@ -96,9 +90,9 @@ function nameplates:RegisterOptions()
 	nameplates.Options.castBarColors = {
 		StartNormal =  oUFDuffedUI.colors.power["ENERGY"],
 		StartChannel = oUFDuffedUI.colors.power["MANA"],
-		Success = {0.0, 1.0, 0.0},
-		NonInterrupt = {0.7, 0.7, 0.7},
-		Failed = {1.0, 0.0, 0.0},
+		Success = {0, 1, 0},
+		NonInterrupt = {.7, .7, .7},
+		Failed = {1, 0, 0},
 	}
 end
 
@@ -286,9 +280,7 @@ end
 
 function nameplates:SetClassNameplateBar(frame)
 	self.ClassBar = frame
-	if frame then
-		frame:SetScale(1.1)
-	end
+	if frame then frame:SetScale(1.05) end
 end
 
 function nameplates:enable()
@@ -311,9 +303,7 @@ function nameplates:enable()
 		ClassNameplateManaBarFrame:SetBackdropColor(.2, .2, .2)
 	end
 	self.ClassBar = NamePlateDriverFrame.nameplateBar
-	if self.ClassBar then
-		self.ClassBar:SetScale(1.1)
-	end
+	if self.ClassBar then self.ClassBar:SetScale(1.05) end
 	hooksecurefunc(NamePlateDriverFrame, "SetClassNameplateBar", self.SetClassNameplateBar)
 
 	hooksecurefunc("DefaultCompactNamePlateFrameSetupInternal", self.setupPlate)
