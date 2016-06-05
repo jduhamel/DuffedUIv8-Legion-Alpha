@@ -4,8 +4,8 @@ local noop = D.Dummy
 local floor = math.floor
 local class = D.Class
 local texture = C["media"].blank
-local backdropr, backdropg, backdropb = unpack(C["media"].backdropcolor)
-local borderr, borderg, borderb = unpack(C["media"].bordercolor)
+local backdropr, backdropg, backdropb = unpack(C["general"].backdropcolor)
+local borderr, borderg, borderb = unpack(C["general"].bordercolor)
 local backdropa = 1
 local bordera = 1
 local template
@@ -26,13 +26,13 @@ local function UpdateColor(t)
 	if t == "ClassColor" or t == "Class Color" or t == "Class" then
 		local c = D.UnitColor.class[class]
 		borderr, borderg, borderb = c[1], c[2], c[3]
-		backdropr, backdropg, backdropb = unpack(C["media"].backdropcolor)
+		backdropr, backdropg, backdropb = unpack(C["general"].backdropcolor)
 		backdropa = 1
 	else
 		local balpha = 1
 		if t == "Transparent" then balpha = 0.8 end
-		borderr, borderg, borderb = unpack(C["media"].bordercolor)
-		backdropr, backdropg, backdropb = unpack(C["media"].backdropcolor)
+		borderr, borderg, borderb = unpack(C["general"].bordercolor)
+		backdropr, backdropg, backdropb = unpack(C["general"].backdropcolor)
 		backdropa = balpha
 	end
 
@@ -42,8 +42,8 @@ end
 local UIHider = CreateFrame("Frame", "DuffedUIUIHider", UIParent)
 UIHider:Hide()
 
---local PetBattleHider = CreateFrame("Frame", "DuffedUIPetBattleHider", UIParent, "SecureHandlerStateTemplate");
---RegisterStateDriver(PetBattleHider, "visibility", "[petbattle] hide; show")
+local PetBattleHider = CreateFrame("Frame", "DuffedUIPetBattleHider", UIParent, "SecureHandlerStateTemplate");
+RegisterStateDriver(PetBattleHider, "visibility", "[petbattle] hide; show")
 
 --[[DuffedUI API START HERE]]--
 local function Size(frame, width, height) frame:SetSize(D.Scale(width), D.Scale(height or width)) end
