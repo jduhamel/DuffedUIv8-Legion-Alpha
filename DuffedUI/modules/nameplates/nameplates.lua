@@ -114,10 +114,20 @@ end
 
 function nameplates:SetName()
     local text = self:GetText()
+	local level, elite, mylevel = UnitLevel("target"), UnitClassification("target"), UnitLevel("player")
 
     if text then
-        local Class = select(2, UnitClass(self:GetParent().unit))
-        self:SetText("|cffffffff".. text .."|r")
+		if (level == -1 or not level) then
+			self:SetText("|cffCC0D00" .. ("??") .. "|r " .. "|cffffffff".. text .."|r")
+		elseif elite then
+			local colr = GetQuestDifficultyColor(level)
+			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level .. (elite and "+") .. "|r " .. "|cffffffff".. text .."|r")
+		elseif not elite and level == mylevel then
+			self.SetText("|cffffffff".. text .."|r")
+		elseif level then
+			local colr = GetQuestDifficultyColor(level)
+			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level .. (elite and "+" or "") .. "|r " .. "|cffffffff".. text .."|r")
+		end
     end
 end
 
@@ -264,7 +274,7 @@ function nameplates:setupPlate(options)
 	name:SetFont(C["media"].font, 8)
 	name:SetShadowOffset(1.25, -1.25)
 	hooksecurefunc(name, "Show", nameplates.SetName)
-
+	
 	highlight:Kill()
 	shield:Kill()
 	aggro:Kill()
