@@ -426,7 +426,6 @@ spellCooldowns = {
 		47536, -- Rapture
 		47540, -- Penance
 		62618, -- Power Word: Barrier
-		123040, -- Mindbender (Discipline)
 		204197, -- Purge the Wicked
 		207946, -- Light's Wrath (Artifact)
 		-- Holy
@@ -447,7 +446,6 @@ spellCooldowns = {
 		15487, -- Silence
 		47585, -- Dispersion
 		193223, -- Surrender to Madness
-		200174, -- Mindbender (Shadow)
 		205065, -- Void Torrent (Artifact)
 		205351, -- Shadow Word: Void
 		205369, -- Mind Bomb
