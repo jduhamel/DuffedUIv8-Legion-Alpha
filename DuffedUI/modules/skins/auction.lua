@@ -53,15 +53,7 @@ local function LoadSkin()
 	AuctionProgressFrameCancelButton:GetNormalTexture():SetTexCoord(.67, .37, .61, .26)
 	AuctionProgressFrameCancelButton:Size(28, 28)
 	AuctionProgressFrameCancelButton:Point("LEFT", AuctionProgressBar, "RIGHT", 8, 0)
-	AuctionProgressBarIcon:SetTexCoord(.67, .37, .61, .26)
 
-	local backdrop = CreateFrame("Frame", nil, AuctionProgressBarIcon:GetParent())
-	backdrop:Point("TOPLEFT", AuctionProgressBarIcon, "TOPLEFT", -2, 2)
-	backdrop:Point("BOTTOMRIGHT", AuctionProgressBarIcon, "BOTTOMRIGHT", 2, -2)
-	backdrop:SetTemplate("Default")
-	AuctionProgressBarIcon:SetParent(backdrop)
-	AuctionProgressBarText:ClearAllPoints()
-	AuctionProgressBarText:SetPoint("CENTER")
 	AuctionProgressBar:StripTextures()
 	AuctionProgressBar:CreateBackdrop("Default")
 	AuctionProgressBar:SetStatusBarTexture(C["media"].normTex)
@@ -84,7 +76,10 @@ local function LoadSkin()
 		"AuctionsStackSizeMaxButton",
 		"AuctionsNumStacksMaxButton",
 	}
-	for _, button in pairs(buttons) do _G[button]:SkinButton() end
+	for _, button in pairs(buttons) do
+		_G[button]:StripTextures()
+		_G[button]:SkinButton()
+	end
 
 	--Fix Button Positions
 	AuctionsCloseButton:Point("BOTTOMRIGHT", AuctionFrameAuctions, "BOTTOMRIGHT", 66, 10)
