@@ -284,15 +284,14 @@ D.PostCreateAura = function(self, button)
 	button.Glow:SetBackdropColor(0, 0, 0, 0)
 	button.Glow:SetBackdropBorderColor(0, 0, 0)
 
-	--[[local Animation = button:CreateAnimationGroup()
+	local Animation = button:CreateAnimationGroup()
 	Animation:SetLooping("BOUNCE")
 
 	local FadeOut = Animation:CreateAnimation("Alpha")
-	FadeOut:SetChange(-.9)
 	FadeOut:SetDuration(.6)
 	FadeOut:SetSmoothing("IN_OUT")
 
-	button.Animation = Animation]]--
+	button.Animation = Animation
 end
 
 D.PostUpdateAura = function(self, unit, icon, index, offset, filter, isDebuff, duration, timeLeft)
@@ -307,15 +306,15 @@ D.PostUpdateAura = function(self, unit, icon, index, offset, filter, isDebuff, d
 				icon.icon:SetDesaturated(false)
 				icon:SetBackdropBorderColor(color.r * .8, color.g * .8, color.b * .8)
 			end
-		--[[else
+		else
 			if isStealable or ((D.Class == "MAGE" or D.Class == "PRIEST" or D.Class == "SHAMAN") and dtype == "Magic") and not UnitIsFriend("player", unit) then
 				if not icon.Animation:IsPlaying() then icon.Animation:Play() end
 			else
 				if icon.Animation:IsPlaying() then icon.Animation:Stop() end
-			end]]--
+			end
 		end
 
-		--if duration and duration > 0 then icon.remaining:Show() else icon.remaining:Hide() end
+		if duration and duration > 0 then icon.remaining:Show() else icon.remaining:Hide() end
 
 		icon.duration = duration
 		icon.timeLeft = expirationTime
