@@ -113,14 +113,14 @@ function nameplates:SetName()
     if text then
 		if (level == -1 or not level) then
 			self:SetText("|cffCC0D00" .. ("??") .. "|r " .. "|cffffffff".. text .."|r")
-		elseif elite then
+		elseif elite == "elite" then
 			local colr = GetQuestDifficultyColor(level)
-			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level .. (elite and "+") .. "|r " .. "|cffffffff".. text .."|r")
+			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level .. (elite and "+")  .. "|r " .. "|cffffffff".. text .."|r")
 		elseif not elite and level == mylevel then
 			self.SetText("|cffffffff".. text .."|r")
 		elseif level then
 			local colr = GetQuestDifficultyColor(level)
-			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level .. (elite and "+" or "") .. "|r " .. "|cffffffff".. text .."|r")
+			self:SetText(D["RGBToHex"](colr.r, colr.g, colr.b) .. level ..  "|r " .. "|cffffffff".. text .."|r") 
 		end
     end
 end
