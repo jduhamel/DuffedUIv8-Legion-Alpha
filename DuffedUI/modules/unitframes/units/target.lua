@@ -143,12 +143,17 @@ D["ConstructUFTarget"] = function(self)
 	power.colorDisconnected = true
 	if C["unitframes"]["showsmooth"] == true then power.Smooth = true end
 	if C["unitframes"]["unicolor"] == true then
+		power.colorPower = true
+		power.colorTapping = false
+		power.colorClass = false
+		power.colorClassNPC = false
+		power.colorClassPet = false
+	else
 		power.colorTapping = true
 		power.colorClass = true
 		power.colorClassNPC = true
 		power.colorClassPet = true
-	else
-		power.colorPower = true
+		power.colorPower = false
 	end
 
 	--[[Elements]]--
