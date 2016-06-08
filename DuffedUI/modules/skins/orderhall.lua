@@ -17,7 +17,8 @@ local function LoadOrderHallSkin()
 	
 	--[[MissionFrame]]--
 	OrderHallMissionFrame:StripTextures()
-	OrderHallMissionFrame:SetTemplate("Transparent")
+	OrderHallMissionFrame:CreateBackdrop("Transparent")
+	OrderHallMissionFrame.backdrop:SetOutside(OrderHallMissionFrame.BorderFrame)
 	OrderHallMissionFrame.CloseButton:SkinCloseButton()
 	for i = 1, 3 do _G["OrderHallMissionFrameTab" .. i]:SkinTab() end
 	OrderHallMissionFrame.GarrCorners:StripTextures()
