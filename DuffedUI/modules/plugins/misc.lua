@@ -285,14 +285,13 @@ end
 --[[Dispel Announcement]]--
 if C["duffed"].dispelannouncement == true then
 	local textcolor = "|cff00ff00"
-	local f, fs, ff = C["media"].font, 11, "THINOUTLINE"
 
 	local f = CreateFrame("MessageFrame", "dDispelFrame", UIParent)
 	f:SetPoint("TOP", 0, -220)
 	f:SetSize(200, 100)
-	f:SetFont(f, fs, ff)
+	f:SetFont(C["media"].font, 11)
 	f:SetShadowOffset(1, -1)
-	f:SetShadowColor(0,0,0)
+	f:SetShadowColor(0, 0, 0)
 	f:SetTimeVisible(2)
 	f:SetBackdrop({bgFile = "Interface\\ChatFrame\\ChatFrameBackground"})
 	f:SetBackdropColor(0,0,0,0)
