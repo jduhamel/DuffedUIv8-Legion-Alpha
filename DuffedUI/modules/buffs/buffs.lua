@@ -180,7 +180,6 @@ local Skin = function(self)
 			Animation:SetLooping"BOUNCE"
 
 			local FadeOut = Animation:CreateAnimation"Alpha"
-			FadeOut:SetChange(-.5)
 			FadeOut:SetDuration(.4)
 			FadeOut:SetSmoothing("IN_OUT")
 
