@@ -380,5 +380,6 @@ D["ConstructUFPlayer"] = function(self)
 
 	self:RegisterEvent("PLAYER_ENTERING_WORLD", D.updateAllElements)
 	--if C["unitframes"]["classbar"] then D["ClassRessource"][class](self) end
+	--D["ClassRessource"][class](self)
 	if C["classtimer"]["enable"] then D["ClassTimer"](self) end
 end

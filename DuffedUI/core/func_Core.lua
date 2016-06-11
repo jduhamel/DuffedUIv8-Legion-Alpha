@@ -7,6 +7,8 @@ D["buttonspacing"] = D["Scale"](C["actionbar"]["buttonspacing"])
 D["petbuttonsize"] = D["Scale"](C["actionbar"]["petbuttonsize"])
 D["petbuttonspacing"] = D["Scale"](C["actionbar"]["buttonspacing"])
 
+UIParent:UnregisterEvent("TALKINGHEAD_REQUESTED")
+
 --[[Hover tooltip]]--
 local orig1, orig2 = {}, {}
 local GameTooltip = GameTooltip

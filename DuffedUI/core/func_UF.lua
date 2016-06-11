@@ -167,7 +167,7 @@ D.PostUpdatePower = function(power, unit, min, max)
 	local Parent = power:GetParent()
 	local pType, pToken = UnitPowerType(unit)
 	local colors = D.UnitColor
-	local color = oUF.colors.power[pToken]
+	local color = colors.power[pToken]
 
 	if color then power.value:SetTextColor(color[1], color[2], color[3]) end
 	if (not UnitIsPlayer(unit) and not UnitPlayerControlled(unit) or not UnitIsConnected(unit)) then
