@@ -214,6 +214,9 @@ L["dt"] = {
 	["goldreset"] = "|cffC41F3BReset Data: Hold Shift + Right Click|r",
 	["systemleft"] = "|cffC41F3BLeft Click: Open PvE-Frame|r",
 	["systemright"] = "|cffC41F3BRight Click: Clean Memoryusage|r",
+	["prof"] = "Professions",
+	["profless"] = "No Professions",
+	["proftooltip"] = "Click to open professions",
 }
 
 L["Slots"] = {

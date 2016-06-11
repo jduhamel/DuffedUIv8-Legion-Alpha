@@ -216,6 +216,9 @@ if D.Client == "deDE" then
 		["notalents"] = "Keine Talente",
 		["systemleft"] = "|cffC41F3BLeft Click: Öffne PvE-Frame|r",
 		["systemright"] = "|cffC41F3BRight Click: Speichernutzung bereinigen|r",
+		["prof"] = "Berufe",
+		["profless"] = "Berufslos",
+		["proftooltip"] = "Beliebiger Klick öffnet die Berufsübersicht",
 	}
 
 	L["Slots"] = {
