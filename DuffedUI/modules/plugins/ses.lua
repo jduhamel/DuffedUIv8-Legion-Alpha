@@ -12,7 +12,7 @@ local Autogearswap = C["misc"].sesgearswap
 local set1 = C["misc"].sesset1
 local set2 = C["misc"].sesset2
 
---[[local function HasDualSpec() if GetNumSpecGroups() > 1 then return true end end --removed?
+local function HasDualSpec() if GetNumSpecGroups() > 1 then return true end end --removed?
 
 local function GetSecondaryTalentIndex() -- removed
 	local secondary
@@ -43,7 +43,7 @@ local function AutoGear(set1, set2)
 	else
 		if name2 then UseEquipmentSet(name2) end
 	end
-end]]
+end
 
 local function SpecSwitcherSpamFilter(self, event, msg, ...)
 	if strfind(msg, string.gsub(ERR_LEARN_ABILITY_S:gsub('%.', '%.'), '%%s', '(.*)')) then
@@ -76,7 +76,7 @@ spec.t = spec:CreateFontString(spec, "OVERLAY")
 spec.t:SetPoint("CENTER")
 spec.t:SetFont(f, fs, ff)
 
---[[local int = 1
+local int = 1
 local function Update(self, t)
 	int = int - t
 	if int > 0 then return end
@@ -120,7 +120,7 @@ spec:SetScript("OnClick", function(self)
 		if i == 2 then SetActiveSpecGroup(1) end
 		EnableSpecSwitcherSpamFilter()
 	end
-end)]]
+end)
 
 D.CreateBtn("MB_reload", DuffedUIMinimap, 19, 19, L["buttons"]["ses_reload"], "R")
 MB_reload:Point("TOPLEFT", spec, "BOTTOMLEFT", 0, -2)
@@ -139,7 +139,7 @@ D.CreateBtn("MB_switch", MB_reload, 19, 19, L["buttons"]["ses_switch"], "S")
 MB_switch:Point("LEFT", MB_binds, "RIGHT", 2, 0)
 MB_switch:SetAttribute("macrotext1", "/switch")
 
---[[if Enablegear == true then
+if Enablegear == true then
 	local gearSets = CreateFrame("Frame", nil, MB_reload)
 	for i = 1, 10 do
 		gearSets[i] = CreateFrame("Button", nil, MB_reload)
@@ -197,7 +197,7 @@ MB_switch:SetAttribute("macrotext1", "/switch")
 		gearsetfunc:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
 		gearsetfunc:SetScript("OnEvent", OnEvent)
 	end
-end]]
+end
 
 -- toggle button
 local toggle = CreateFrame("Button", nil, spec)
