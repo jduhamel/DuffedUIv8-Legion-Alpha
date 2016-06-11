@@ -1,5 +1,4 @@
 local D, C, L = unpack(select(2, ...))
-
 if not C["datatext"].profession or C["datatext"].profession == 0 then return end
 
 local Stat = CreateFrame("Frame", "DuffedUIStatProfession")
@@ -7,7 +6,7 @@ Stat:EnableMouse(true)
 Stat:SetFrameStrata("BACKGROUND")
 Stat:SetFrameLevel(3)
 
-local f, fs, ff = C["media"].pixelfont, 10, "MONOCHROMEOUTLINE", "OVERLAY"
+local f, fs, ff = C["media"].["font"], 11, "THINOUTLINE"
 local Text = Stat:CreateFontString("DuffedUIStatProfessionText", "OVERLAY")
 Text:SetFont(f, fs, ff)
 D.DataTextPosition(C["datatext"].profession, Text)
@@ -108,18 +107,14 @@ Stat:SetScript("OnEnter", function()
 	if #professions == 0 then return end	
 	sort(professions, function(a, b) return a["name"] < b["name"] end)
 	
-	for i = 1, #professions do
-		GameTooltip:AddDoubleLine(join("", professions[i].texture, "  ", professions[i].name), professions[i].rank.." / "..professions[i].maxRank,.75,.9,1,.3,1,.3)
-	end
+	for i = 1, #professions do GameTooltip:AddDoubleLine(join("", professions[i].texture, "  ", professions[i].name), professions[i].rank.." / "..professions[i].maxRank,.75,.9,1,.3,1,.3) end
 	GameTooltip:AddLine(" ")
-	GameTooltip:AddLine(L["dt"]["proftooltip"] , 0.7, 0.7, 1, 0.7, 0.7, 1)
+	GameTooltip:AddLine(L["dt"]["proftooltip"] , .7, .7, 1, .7, .7, 1)
 	GameTooltip:Show()
 end)
 Stat:SetScript("OnUpdate", Update)
 Stat:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
 Stat:SetScript('OnMouseDown', function(self, btn)
-	if btn == 'LeftButton' then
-		ToggleSpellBook("professions")
-	end
+	if btn == 'LeftButton' then ToggleSpellBook("professions") end
 end)
