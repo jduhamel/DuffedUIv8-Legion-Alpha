@@ -88,8 +88,8 @@ function nameplates:RegisterOptions()
 	}
 
 	nameplates.Options.castBarColors = {
-		StartNormal =  oUFDuffedUI.colors.power["ENERGY"],
-		StartChannel = oUFDuffedUI.colors.power["MANA"],
+		StartNormal =  D.UnitColor.power["ENERGY"],
+		StartChannel = D.UnitColor.power["MANA"],
 		Success = {0, 1, 0},
 		NonInterrupt = {.7, .7, .7},
 		Failed = {1, 0, 0},
@@ -134,7 +134,7 @@ function nameplates:colorHealth()
 			if RAID_CLASS_COLORS[class].r == r and RAID_CLASS_COLORS[class].g == g and RAID_CLASS_COLORS[class].b == b then
 				self.hasClass = true
 				self.isFriendly = false
-				self.healthBar:SetStatusBarColor(unpack(oUFDuffedUI.colors.class[class]))
+				self.healthBar:SetStatusBarColor(unpack(D.UnitColor.class[class]))
 				return
 			end
 		end
