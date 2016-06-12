@@ -54,3 +54,8 @@ D["DuffedCredits"] = {
 	"Kahad",
 	"Blinks",
 }
+
+D["CoAutor"] = {
+	"Djriff",
+	"Rav",
+}
