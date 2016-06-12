@@ -628,14 +628,14 @@ function CreateDuffedUIConfigUI()
 	scroll3:SetPoint("CENTER", cf3)
 	sf3:SetScrollChild(scroll3)
 
-	local credit3 = "Special thanks to CoAutors: "
-	for i = 1, #D.DuffedCredits do
-		if (i ~= 1) then credit3 = credit3 .. ", " .. "|cffC41F3B" ..  D.CoAutor[i]  .. "|r" else credit3 = credit3 .. "|cffC41F3B" ..  D.CoAutor[i]  .. "|r" end
+	local credit3 = "Special thanks to my CoAutors: "
+	for i = 1, #D.CoAutor do
+		if (i ~= 1) then credit3 = credit3 .. ", " .. "|cff1d669d" ..  D.CoAutor[i]  .. "|r" else credit3 = credit3 .. "|cff1d669d" ..  D.CoAutor[i]  .. "|r" end
 	end
 
 	local ct3 = scroll3:CreateFontString(nil, "OVERLAY")
 	ct3:SetFont(C["media"].font, 14)
-	ct3:SetText(credit2)
+	ct3:SetText(credit3)
 	ct3:Point("LEFT", scroll3, "RIGHT", 4, 0)
 	scroll3:SetAnimation("Move", "Horizontal", -1500, 0.5)
 
