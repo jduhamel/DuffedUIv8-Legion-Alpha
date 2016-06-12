@@ -360,43 +360,71 @@ local CLASS_FILTERS = {
 	},
 	MAGE = {
 		target = {
-			CreateSpellEntry(44457), -- Living Bomb
+			-- Global
 			CreateSpellEntry(118), -- Polymorph
+			CreateSpellEntry(122), -- Frost Nova
 			CreateSpellEntry(28271), -- Polymorph Turtle
+			-- Fire
+			CreateSpellEntry(12654), -- Ignite
+			CreateSpellEntry(31661), -- Dragon's Breath
+			CreateSpellEntry(217694), -- Living Bomb
+			CreateSpellEntry(226757), -- Conflagration
+			
+			
+			
+			
+			
+			
 			CreateSpellEntry(31589), -- Slow
 			CreateSpellEntry(116), -- Frostbolt
 			CreateSpellEntry(120), -- Cone of Cold
-			CreateSpellEntry(122), -- Frost Nova
+			
 			CreateSpellEntry(44614), -- Frostfire Bolt
 			CreateSpellEntry(11366), -- Pyroblastdebuff
-			CreateSpellEntry(12654), -- Ignite
-			CreateSpellEntry(83853), -- Combustion
-			CreateSpellEntry(31661), -- Dragon's Breath
 			CreateSpellEntry(44572), -- Deep Freeze
 			CreateSpellEntry(82691), -- Ring of Frost
 			CreateSpellEntry(118271), -- Impact
 			CreateSpellEntry(114923), -- Nether Tempest
 		},
 		player = {
+			-- Global
+			CreateSpellEntry(130), -- Slow Fall
+			CreateSpellEntry(11426), -- Ice Barrier
+			CreateSpellEntry(32612), -- Invisibility
+			CreateSpellEntry(45438), -- Ice Block
+			-- Fire
+			CreateSpellEntry(48108), -- Hot Streak
+			CreateSpellEntry(190319), -- Combustion
+			
+			
+			
+			
+			
 			CreateSpellEntry(36032), -- Arcane Blast
 			CreateSpellEntry(12042), -- Arcane Power
-			CreateSpellEntry(32612), -- Invisibility
+			
 			CreateSpellEntry(1463), -- Mana Shield
-			CreateSpellEntry(11426), -- Ice Barrier
-			CreateSpellEntry(45438), -- Ice Block
+			
+			
 			CreateSpellEntry(12472), -- Icy Veins
-			CreateSpellEntry(130), -- Slow Fall
+			
 			CreateSpellEntry(57761), -- Brain Freeze
 			CreateSpellEntry(12536), -- Clearcasting
-			CreateSpellEntry(48108), -- Pyroblast!
+			
 			CreateSpellEntry(115610), -- Temporal Shield
 			CreateSpellEntry(116257), -- Invocation
 			CreateSpellEntry(116267), -- Incanter's Flow
 		},
 		procs = {
+			-- Fire
+			CreateSpellEntry(48107), -- Heating Up!
+			
+			
+			
+			
 			CreateSpellEntry(44544), -- Fingers of Frost
 			CreateSpellEntry(79683), -- Arcane Missiles!
-			CreateSpellEntry(48107), -- Heating Up!
+			
 		},
 	},
 	MONK = {

@@ -6,7 +6,7 @@ Stat:EnableMouse(true)
 Stat:SetFrameStrata("BACKGROUND")
 Stat:SetFrameLevel(3)
 
-local f, fs, ff = C["media"].["font"], 11, "THINOUTLINE"
+local f, fs, ff = C["media"]["font"], 11, "THINOUTLINE"
 local Text = Stat:CreateFontString("DuffedUIStatProfessionText", "OVERLAY")
 Text:SetFont(f, fs, ff)
 D.DataTextPosition(C["datatext"].profession, Text)
@@ -28,9 +28,9 @@ local function Update(self)
 	local prof1, prof2, archy, fishing, cooking, firstAid = GetProfessions()
 		if prof1 ~= nil then
 			local name, _, rank, maxRank, _, _, _, _ = GetProfessionInfo(prof1)
-			Text:SetFormattedText(D.PanelColor.. L["dt"]["prof"])
+			Text:SetFormattedText(D.PanelColor .. L["dt"]["prof"])
 		else
-			Text:SetFormattedText(D.PanelColor.. L["dt"]["profless"])
+			Text:SetFormattedText(D.PanelColor .. L["dt"]["profless"])
 		end
 	self:SetAllPoints(Text)
 end
@@ -39,7 +39,7 @@ Stat:SetScript("OnEnter", function()
 	local anchor, panel, xoff, yoff = D.DataTextTooltipAnchor(Text)
 	GameTooltip:SetOwner(panel, anchor, xoff, yoff)
 	GameTooltip:ClearLines()
-	GameTooltip:AddLine(D.PanelColor.. D.MyName.."'s " .. L["dt"]["prof"])
+	GameTooltip:AddLine(D.PanelColor .. D.MyName .."'s " .. L["dt"]["prof"])
 	GameTooltip:AddLine(" ")
 	local prof1, prof2, archy, fishing, cooking, firstAid = GetProfessions()
 	local professions = {}
@@ -107,7 +107,7 @@ Stat:SetScript("OnEnter", function()
 	if #professions == 0 then return end	
 	sort(professions, function(a, b) return a["name"] < b["name"] end)
 	
-	for i = 1, #professions do GameTooltip:AddDoubleLine(join("", professions[i].texture, "  ", professions[i].name), professions[i].rank.." / "..professions[i].maxRank,.75,.9,1,.3,1,.3) end
+	for i = 1, #professions do GameTooltip:AddDoubleLine(join("", professions[i].texture, "  ", professions[i].name), professions[i].rank .. " / " .. professions[i].maxRank,.75,.9,1,.3,1,.3) end
 	GameTooltip:AddLine(" ")
 	GameTooltip:AddLine(L["dt"]["proftooltip"] , .7, .7, 1, .7, .7, 1)
 	GameTooltip:Show()
