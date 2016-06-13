@@ -189,6 +189,8 @@
 	DuffedUIConfigUILocalization.miscsesgearswap = "启用切换天赋时自动切换装备功能"
 	DuffedUIConfigUILocalization.miscsesset1 = "为主天赋设置装备序号 (必须是1-10之间的序号)"
 	DuffedUIConfigUILocalization.miscsesset2 = "为副天赋设置装备序号 (必须是1-10之间的序号)"
+	DuffedUIConfigUILocalization.miscsesset3 = "Set set for third spec (must be an value between 1 10)"
+	DuffedUIConfigUILocalization.miscsesset4 = "Set set for fourth spec (must be an value between 1 10)"
 	DuffedUIConfigUILocalization.misccombatanimation = "启用进战/脱战动画提示"
 	DuffedUIConfigUILocalization.miscflightpoint = "启用飞行点列表"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "启用人物面板显示装备等级"

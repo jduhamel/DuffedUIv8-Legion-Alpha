@@ -188,6 +188,8 @@
 	DuffedUIConfigUILocalization.miscsesgearswap = "Enable automatic setswap on respec"
 	DuffedUIConfigUILocalization.miscsesset1 = "Set set for first spec (must be an value between 1 - 10)"
 	DuffedUIConfigUILocalization.miscsesset2 = "Set set for second spec (must be an value between 1 - 10)"
+	DuffedUIConfigUILocalization.miscsesset3 = "Set set for third spec (must be an value between 1 10)"
+	DuffedUIConfigUILocalization.miscsesset4 = "Set set for fourth spec (must be an value between 1 10)"
 	DuffedUIConfigUILocalization.misccombatanimation = "Enable Combatanimation"
 	DuffedUIConfigUILocalization.miscflightpoint = "Enable Flightpointlist"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "Enable itemlevel on character screen"

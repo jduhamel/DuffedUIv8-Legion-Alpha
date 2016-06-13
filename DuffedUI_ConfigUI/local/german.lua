@@ -190,6 +190,8 @@
 	DuffedUIConfigUILocalization.miscsesgearswap = "Aktviere automatischen Setwechsel bei Talentwechsel"
 	DuffedUIConfigUILocalization.miscsesset1 = "Aktiviere das Set für die erste Spezalisierung (muss ein Wert zwischen 1 - 10 sein)"
 	DuffedUIConfigUILocalization.miscsesset2 = "Aktiviere das Set für die zweite Spezalisierung (muss ein Wert zwischen 1 - 10 sein)"
+	DuffedUIConfigUILocalization.miscsesset3 = "Aktiviere das Set für die dritte Spezalisierung (muss ein Wert zwischen 1 - 10 sein)"
+	DuffedUIConfigUILocalization.miscsesset4 = "Aktiviere das Set für die vierte Spezalisierung (muss ein Wert zwischen 1 - 10 sein)"
 	DuffedUIConfigUILocalization.misccombatanimation = "Aktviere die Kampf beginnen und verlassen Anzeige"
 	DuffedUIConfigUILocalization.miscflightpoint = "Zeige alle Flugpunkte auf der Weltkarte an"
 	DuffedUIConfigUILocalization.miscilvlcharacter = "Aktviere die Gegenstandsstufenanzeige im Charakterbildschirm"
