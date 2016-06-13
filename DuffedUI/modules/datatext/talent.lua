@@ -46,7 +46,7 @@ if C["datatext"].talent and C["datatext"].talent > 0 then
 		else
 			local tree = GetSpecialization()
 			local spec = select(2,GetSpecializationInfo(tree)) or ""
-			Text:SetText(Stat.Color1.."S:|r "..Stat.Color2..spec.."|r")
+			Text:SetText(Stat.Color1.."Spec:|r "..Stat.Color2..spec.."|r")
 		end
 		self:SetAllPoints(Text)
 	end
@@ -57,7 +57,7 @@ if C["datatext"].talent and C["datatext"].talent > 0 then
 	Stat:SetScript("OnEvent", Update)
 	Stat:SetScript("OnMouseDown", function(self, btn)
 		if btn == "LeftButton" then 
-		EasyMenu(LeftClickMenu, DuffedUISpecSwap, "cursor", 0, 0, "MENU", 2) --Dropdown/popup menu for spec selection.
+			EasyMenu(LeftClickMenu, DuffedUISpecSwap, "cursor", 0, 0, "MENU", 2) --Dropdown/popup menu for spec selection.
 		end
     end)
 end
